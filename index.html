@@ -20,18 +20,17 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
 
 	<nav class="navbar navbar-expand-xl fixed-top">
 		<div class="container">
-
 			<div class="collapse navbar-collapse" id="mobileNaviToggler">
 				<a class="navbar-brand" href="#">
 					<img src="gfx/dsr_weiss.png" alt="DSR24 Logo" class="logo">
 				</a>
 				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 					<li class="nav-item nav-reportdamage">
-						<a class="nav-link" href="/schaden-melden/">Schadenfall melden</a>
+						<a class="nav-link" href="#welcome">Schadenfall melden</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -39,7 +38,7 @@
 							Leistungen
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Sachverständiger</a></li>
+							<li><a class="dropdown-item" href="#services">Sachverständiger</a></li>
 							<li><a class="dropdown-item" href="#">Anwalt</a></li>
 							<li><a class="dropdown-item" href="#">Leihwagen</a></li>
 							<li><a class="dropdown-item" href="#">Werkstatt</a></li>
@@ -90,7 +89,7 @@
 		</div>
 	</nav>
 
-	<section class="container-fluid sectwelcome">
+	<section class="container-fluid sectwelcome" id="welcome">
 		<div data-aos="fade-up">
 			<h1>Du hattest einen<br class="d-none d-lg-inline"> unverschuldeten Autounfall<span>?</span></h1>
 			<p>Die <strong>DSR24</strong> hilft dir <strong>kostenfrei</strong>!</p>
@@ -103,7 +102,7 @@
 	</section>
 
 	<main>
-		<section class="sectservices">
+		<section class="sectservices" id="services">
 			<div class="container" data-aos="fade-up">
 				<div>
 					<h1 class="aux">Services<br class="d-none d-lg-inline"></h1>
@@ -146,7 +145,7 @@
 					<div class="col-12 col-md-4">
 						<div class="service-box text-center">
 							<div class="service-icon">
-								<svg class="service-svg" aria-hidden="true" >
+								<svg class="service-svg" aria-hidden="true">
 									<use href="/gfx/icons/hook1.svg"></use>
 								</svg>
 							</div>
@@ -181,47 +180,223 @@
 			</div>
 		</section>
 
+		<section id="action" class="sectaction">
+			<div class="action-box py-5">
+				<div class="container text-center">
+					<h1 class="text-body-emphasis">Call To Action</h1>
+					<button type="button" class="btn btn-outline-secondary">Call to action</button>
+					<p class="col-lg-8 mx-auto lead">
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+						mollit anim id est laborum.
+					</p>
+				</div>
+			</div>
+		</section>
+
+
+
+		<p>LALALALAALALAL</p>
+		<p>Test1</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+		<p>Test</p>
+
+		<section id="reviews" class="sectreviews">
+			
+			<div class="container" data-aos="fade-up">
+				<div>
+					<h1 class="aux">Reviews<br class="d-none d-lg-inline"></h1>
+					<p>Die <strong>DSR24</strong> hilft dir <strong>kostenfrei</strong>!</p>
+				</div>
+				<div class="d-flex align-items-center py-5 mh-100">
+					<a class="carousel-control-prev text-decoration-none " href="#mycarousel" role="button"
+						data-bs-slide="prev">
+						<div class="d-flex flex-column justify-content-center me-2 ms-auto left">Prev<span
+								class="fas fa-arrow-left"></span> </div> <span class="sr-only">Previous</span>
+					</a>
+					<div class="container-review">
+						<div id="mycarousel" class="carousel slide" data-bs-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></li>
+								<li data-bs-target="#mycarousel" data-bs-slide-to="1"></li>
+								<li data-bs-target="#mycarousel" data-bs-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="row">
+										<div class="col-lg-5">
+											<div class="img-area">
+												<img src="img/1.jpg" alt="">
+											</div>
+										</div>
+										<div class="col-lg-7">
+											<div class="d-flex flex-column justify-content-center my-5 px-3 img-text">
+												<p class="review">"We have received the best service from this person.
+													We
+													will definitely hire for our next project."</p>
+												<div class="person">
+													<p class="m-0">Jason Walker</p>
+												</div>
+												<p class="designation">Graphics Designer</p>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="row">
+										<div class="col-lg-5">
+											<div class="img-area">
+												<img src="img/2.jpg" alt="">
+											</div>
+										</div>
+										<div class="col-lg-7">
+											<div class=" d-flex flex-column justify-content-center my-5 px-3 img-text">
+												<p class="review">"We have received the best service from this person.
+													We
+													will definitely hire for our next project."</p>
+												<div class="person">
+													<p class="m-0">Mike Jones</p>
+												</div>
+												<p class="designation">Human Resource Manager</p>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="row">
+										<div class="col-lg-5 ">
+											<div class="img-area">
+												<img src="img/3.jpg" alt="">
+											</div>
+										</div>
+										<div class="col-lg-7">
+											<div class=" d-flex flex-column justify-content-center my-5 px-3 img-text">
+												<p class="review">"We have received the best service from this person.
+													We
+													will definitely hire for our next project."</p>
+												<div class="person">
+													<p class="m-0">Stephen Jones</p>
+												</div>
+												<p class="designation">Web Developer</p>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-next text-decoration-none " href="#mycarousel" role="button"
+						data-bs-slide="next">
+						<div class="d-flex flex-column justify-content-center right ms-2 me-auto"> Next <span
+								class="fas fa-arrow-right"></span> </div> <span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
 	</main>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
-	<p>Test</p>
+	<footer class="footer">
+		<div class="container py-5">
+			<div class="row gy-4">
+				<!-- Column 1-->
+				<div class="col-lg-4 col-md-6">
+					<img src="gfx/dsr_weiss.png" alt="DSR24" class="footer-logo mb-3">
 
+					<p class="small mb-1">DSR Deutsche Schadenregulierung GmbH</p>
+					<p class="small mb-1">Münchhausenring 11</p>
+					<p class="small mb-3">31840 Hessisch Oldendorf</p>
 
+					<p class="small mb-1"><strong>Telefon:</strong> 0800 - 321 24 24</p>
+					<p class="small"><strong>E-Mail:</strong> info@dsr24.de</p>
+
+					<div class="footer-social mt-3">
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-facebook"></i></a>
+						<a href="#"><i class="fab fa-skype"></i></a>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+
+				<!-- Column 2-->
+				<div class="col-lg-2 col-md-6">
+					<h5>Useful Links</h5>
+					<ul class="footer-links">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Services</a></li>
+						<li><a href="#">Terms of service</a></li>
+						<li><a href="#">Privacy policy</a></li>
+					</ul>
+				</div>
+
+				<!-- Column 3 -->
+				<div class="col-lg-3 col-md-6">
+					<h5>Our Services</h5>
+					<ul class="footer-links">
+						<li><a href="#">Web Design</a></li>
+						<li><a href="#">Web Development</a></li>
+						<li><a href="#">Product Management</a></li>
+						<li><a href="#">Marketing</a></li>
+						<li><a href="#">Graphic Design</a></li>
+					</ul>
+				</div>
+
+				<!-- Column 4 -->
+				<div class="col-lg-3 col-md-6">
+					<h5>Our Newsletter</h5>
+					<p class="small">
+						Tamen quem nulla quae legam multos aute sint culpa legam noster magna
+					</p>
+
+					<form class="footer-newsletter">
+						<input type="email" placeholder="">
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom text-center py-3">
+			<p class="mb-1">© Copyright DSR24. All Rights Reserved</p>
+		</div>
+	</footer>
 
 
 </body>
