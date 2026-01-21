@@ -258,6 +258,69 @@ section.sectwelcome a:hover {
 }
 
 
+/****************************************
+/************ BRands SECTION ************/
+/****************************************/
+
+.partners-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.partners-track {
+  display: flex;
+  gap: 3rem;
+  transition: transform 0.6s ease;
+}
+
+.partner {
+  flex: 0 0 auto;
+}
+
+.partner img {
+  height: 80px;
+  opacity: 0.85;
+}
+
+/* dots */
+.slider-dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #777;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background: var(--dsr-yellow);
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 767px) {
+  .slider-area h2 {
+    font-size: 32px;
+  }
+
+  .slide {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .slide img {
+    height: 60px;
+  }
+}
+
+
 /****************************************/
 /************ SERVICES SECTION ************/
 /****************************************/
@@ -284,7 +347,7 @@ section.sectservices h1 span {
 	color:var( --dsr-yellow );
 }
 
-section.sectservices .aux{
+section.sectservices .aux, section.sectreviews .aux{
 	text-decoration-line: underline;
     text-decoration-thickness: 5px;
     text-decoration-color: var(--dsr-yellow);
@@ -353,6 +416,19 @@ section.sectservices .aux{
 /************ Reviews SECTION ************/
 /****************************************/
 
+#reviews{
+  scroll-margin-top: 300px;
+}
+
+
+.sectreviews .background-review {
+  background-image: url('../gfx/welcome2.avif');
+  background-color: rgba(25,89,156,0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 section.sectreviews h1 {
 	font-size:3.75rem;
 	line-height:4rem;
@@ -366,20 +442,34 @@ section.sectreviews h1 span {
 }
 
 
-.container-review {
-	max-width: 800px;
-	background-color: white;
-	padding: 0;
-	border-radius: 8px;
-	box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+section.sectreviews p{
+	color:white;
 }
+.container-review {
+	width: 100%;
+	max-width: 1100px; 
+	margin: 0 auto;
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.carousel-inner {
+	width: 100%;
+}
+
 .img-area {
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	margin: 20% auto;
 	border-radius: 50%;
 	overflow: hidden;
 	border: 10px ridge var(--dsr-yellow);
+}
+
+.img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* avoids distortion */
 }
 .review {
 	font-size: 20px;
@@ -388,16 +478,14 @@ section.sectreviews h1 span {
 }
 .person{
     font-size: 18px;
-    color: #101010;
+    color: white;
     margin: 0;
 }
 .designation{
-    color: #101010;
+    color: white;
     font-size: 14px;
 }
-.carousel-inner{
-    max-width: 800px;
-}
+
 .carousel-indicators {
 	bottom: -40px;
 	right: 0;
@@ -416,15 +504,16 @@ section.sectreviews h1 span {
     background-color:#fff;
 }
 .left {
-	color: #fff;
+	color: white;
 	font-weight: 900;
 }
 .right{
-    color: #fff;
+    color: white;
     font-weight: 900;
 }
 .carousel-control-next, .carousel-control-prev {
     position: relative;
+	color: white;
 
 }
 @media (max-width:560px) {

@@ -1,4 +1,4 @@
-$( document ).ready( function() {
+$(document).ready(function () {
 	AOS.init({
 		// Global settings:
 		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -14,14 +14,33 @@ $( document ).ready( function() {
 		mirror: false, // whether elements should animate out while scrolling past them
 		anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 	});
-} );
+});
 
 document.addEventListener("scroll", function () {
-    const navbar = document.querySelector("nav.navbar");
+	const navbar = document.querySelector("nav.navbar");
 
-    if (window.scrollY > 100) {
-        navbar.classList.add("nav-scrolled");
-    } else {
-        navbar.classList.remove("nav-scrolled");
-    }
+	if (window.scrollY > 100) {
+		navbar.classList.add("nav-scrolled");
+	} else {
+		navbar.classList.remove("nav-scrolled");
+	}
 });
+
+
+const track = document.querySelector(".partners-track");
+const dots = document.querySelectorAll(".dot");
+
+// quanto anda por clique (ajusta!)
+const STEP = 320; // px
+
+dots.forEach(dot => {
+	dot.addEventListener("click", () => {
+		const step = dot.dataset.step;
+
+		track.style.transform = `translateX(-${STEP * step}px)`;
+
+		dots.forEach(d => d.classList.remove("active"));
+		dot.classList.add("active");
+	});
+});
+
