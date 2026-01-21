@@ -44,3 +44,48 @@ dots.forEach(dot => {
 	});
 });
 
+// Portfolio Filter
+const portfolioFilters = document.querySelectorAll(".portfolio-filters button");
+const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+portfolioFilters.forEach(filter => {
+	filter.addEventListener("click", () => {
+		// Remove active class from all buttons
+		portfolioFilters.forEach(btn => {
+			btn.classList.remove("active", "btn-primary");
+			btn.classList.add("btn-outline-secondary");
+		});
+		
+		// Add active class to clicked button
+		filter.classList.add("active", "btn-primary");
+		filter.classList.remove("btn-outline-secondary");
+		
+		// Get filter category
+		const category = filter.dataset.filter;
+		
+		// Filter items
+		portfolioItems.forEach(item => {
+			if (category === "all" || item.dataset.category === category) {
+				item.style.display = "block";
+			} else {
+				item.style.display = "none";
+			}
+		});
+	});
+});
+
+// Video Modal - Stop video when modal closes
+const videoModal = document.getElementById('videoModal');
+const videoIframe = document.getElementById('videoIframe');
+const videoUrl = 'https://www.youtube.com/embed/yln99sC_okY'; // Formato embed
+
+if (videoModal) {
+	videoModal.addEventListener('show.bs.modal', function () {
+		videoIframe.src = videoUrl + '?autoplay=1';
+	});
+	
+	videoModal.addEventListener('hide.bs.modal', function () {
+		videoIframe.src = '';
+	});
+}
+
