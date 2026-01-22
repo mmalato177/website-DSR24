@@ -90,6 +90,155 @@ body {
     color: var(--dsr-yellow);
 }
 
+/****************************************************/
+/************ ACCESSIBILITY MENU SECTION ************/
+/****************************************************/
+#accessibility-toggle {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10001;
+  border-radius: 8px 0 0 8px;
+  transition: opacity 0.3s ease;
+}
+
+
+#accessibility-menu {
+  position: fixed;
+  top: 50%;
+  right: -190px;
+  transform: translateY(-50%);
+  background: #333;
+  color: white;
+  padding: 15px;
+  width: 170px;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: right 0.3s ease;
+  z-index: 10000;
+}
+
+.menu-svg {
+  width: 20px;
+  height: 20px;
+  
+  fill: var(--dsr-blue);
+  transition: 
+    transform 0.3s ease,
+    fill 0.3s ease;
+}
+
+.menu-svg {
+  transform: scale(1.1);
+}
+
+
+#accessibility-menu.open {
+  right: 0;
+}
+
+
+#close-menu {
+  background: #900;
+  color: white;
+  border: none;
+  padding: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 20%;
+}
+
+#reset-btn {
+  margin-left: auto;
+}
+
+.menu-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+
+#accessibility-menu button:not(#close-menu) {
+  background: #555;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+#accessibility-menu button:not(#close-menu):hover {
+  background: #777;
+}
+/****************************************/
+/************ FILTERS *******************/
+/****************************************/
+
+#main-content.invert-colors {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+#main-content.bw {
+  filter: grayscale(1);
+}
+
+#main-content.high-contrast,
+#main-content.high-contrast * {
+    background-color: black !important;
+    color: yellow !important;
+    border-color: yellow !important;
+}
+
+/* Remove overlays das seções com background */
+#main-content.high-contrast .sectwelcome::before,
+#main-content.high-contrast .sectreviews::before,
+#main-content.high-contrast .sectaction::before {
+    background-color: transparent !important;
+}
+
+/* Garante que o conteúdo fique acima das pseudo-camadas */
+#main-content.high-contrast .sectwelcome *,
+#main-content.high-contrast .sectreviews *,
+#main-content.high-contrast .sectaction * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Se necessário, remove imagens de fundo para máxima legibilidade */
+#main-content.high-contrast .sectwelcome,
+#main-content.high-contrast .sectreviews,
+#main-content.high-contrast .sectaction {
+    background-image: none !important;
+}
+
+
+#main-content.high-contrast a {
+    color: #00ffff !important; /* links */
+}
+
+#main-content.high-contrast .btn {
+    background-color: yellow !important;
+    color: black !important;
+}
+
+
+#main-content {
+  isolation: isolate;
+}
+
 
 
 /****************************************/
@@ -307,22 +456,22 @@ section.sectwelcome a:hover {
 /************ BRands SECTION ************/
 /****************************************/
 
-.partners-viewport {
+.brands-viewport {
   overflow: hidden;
   width: 100%;
 }
 
-.partners-track {
+.brands-track {
   display: flex;
   gap: 3rem;
   transition: transform 0.6s ease;
 }
 
-.partner {
+.brand {
   flex: 0 0 auto;
 }
 
-.partner img {
+.brand img {
   height: 80px;
   opacity: 0.85;
 }
