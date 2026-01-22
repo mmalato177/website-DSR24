@@ -44,7 +44,7 @@ body, div, nav, section, main, li, p, a, button, h1, h2, h3, h4, h5, h6, input, 
 	font-family: 'Fira Sans', Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h6 {
+h1, h2, h3, h4, h5, h6 {
 	color:var(--dsr-blue);
 }
 
@@ -72,6 +72,10 @@ body {
 	text-shadow:1px 1px 1px #000;
 	padding-left:20px;
 	padding-right:20px;
+}
+
+.yellow-icon {
+    color: var(--dsr-yellow);
 }
 
 
@@ -347,12 +351,18 @@ section.sectservices h1 span {
 	color:var( --dsr-yellow );
 }
 
-section.sectservices .aux, section.sectreviews .aux{
-	text-decoration-line: underline;
-    text-decoration-thickness: 5px;
-    text-decoration-color: var(--dsr-yellow);
-    text-underline-offset: 10px;
+ .aux {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
 }
+
+ .aux-line {
+  width: 10vw;
+  height: 5px;
+  background-color: var(--dsr-yellow);
+}
+
 
 .sectservices .service-box {
   background-color: #ffffff;
@@ -567,6 +577,7 @@ section.sectreviews p{
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: white;
 }
 
 .footer p {
@@ -651,6 +662,10 @@ section.sectreviews p{
   color: #f1d90d;
 }
 
+/****************************************/
+/********* VIDEO PLAYER SECTION **********/
+/****************************************/
+
 /* Video Player Thumbnail */
 .video-thumbnail {
   position: relative;
@@ -704,7 +719,12 @@ section.sectreviews p{
   border-color: #fff;
 }
 
-/* Team Section */
+
+/****************************************/
+/************ TEAM SECTION **************/
+/****************************************/
+
+
 .sectteam {
   background: #f8f9fa;
 }
@@ -803,3 +823,17 @@ section.sectreviews p{
   transform: translateY(-3px);
 }
 
+
+/****************************************/
+/************ CONTACT SECTION ***********/
+/****************************************/
+ .sectcontact .aux-line {
+  width: 5vw;
+  height: 5px;
+  background-color: var(--dsr-yellow);
+}
+
+.sectcontact .map {
+  border: 1px solid red;
+  border-radius:8px;
+}
