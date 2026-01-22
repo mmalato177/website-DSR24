@@ -1,180 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        /* Toggle button */
-        #accessibility-toggle {
-            position: fixed;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            background: #333;
-            color: white;
-            border: none;
-            padding: 12px 18px;
-            font-size: 20px;
-            cursor: pointer;
-            z-index: 10001;
-            border-radius: 8px 0 0 8px;
-            transition: opacity 0.3s ease;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Accessibility Menu</title>
 
-        /* Accessibility menu */
-        #accessibility-menu {
-            position: fixed;
-            top: 50%;
-            right: -180px;
-            /* hidden initially */
-            transform: translateY(-50%);
-            background: #333;
-            color: white;
-            padding: 15px;
-            width: 160px;
-            border-radius: 8px 0 0 8px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            transition: right 0.3s ease;
-            z-index: 10000;
-        }
+<style>
+/* =========================
+   ACCESSIBILITY TOGGLE
+========================= */
+#accessibility-toggle {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10001;
+  border-radius: 8px 0 0 8px;
+  transition: opacity 0.3s ease;
+}
 
-        /* Menu open */
-        #accessibility-menu.open {
-            right: 0;
-        }
+/* =========================
+   ACCESSIBILITY MENU
+========================= */
+#accessibility-menu {
+  position: fixed;
+  top: 50%;
+  right: -190px;
+  transform: translateY(-50%);
+  background: #333;
+  color: white;
+  padding: 15px;
+  width: 170px;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: right 0.3s ease;
+  z-index: 10000;
+}
 
-        /* Close button inside menu */
-        #close-menu {
-            background: #900;
-            color: white;
-            border: none;
-            padding: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
+#accessibility-menu.open {
+  right: 0;
+}
 
-        /* Accessibility buttons */
-        #accessibility-menu button:not(#close-menu) {
-            background: #555;
-            color: white;
-            border: none;
-            padding: 8px;
-            cursor: pointer;
-            font-size: 14px;
-            border-radius: 4px;
-        }
+/* Close button */
+#close-menu {
+  background: #900;
+  color: white;
+  border: none;
+  padding: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
-        #accessibility-menu button:not(#close-menu):hover {
-            background: #777;
-        }
+/* Menu buttons */
+#accessibility-menu button:not(#close-menu) {
+  background: #555;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
 
-        /* Back to top button */
-        #btn-back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            font-size: 20px;
-            padding: 10px;
-            z-index: 9999;
-        }
+#accessibility-menu button:not(#close-menu):hover {
+  background: #777;
+}
 
-        /* Accessibility classes */
-        .high-contrast {
-            background-color: black !important;
-            color: yellow !important;
-        }
+/* =========================
+   PAGE CONTENT
+========================= */
+/* Page content base */
+#page-content {
+  background: white;
+  color: black;
+  min-height: 200vh;
+}
 
-        .invert-colors {
-            filter: invert(100%);
-        }
+/* High contrast */
+.high-contrast {
+  background: black !important;
+  color: yellow !important;
+}
 
-        .bw {
-            filter: grayscale(100%);
-        }
-    </style>
+/* Invert colors (correct way) */
+.invert-colors {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Black & white */
+.bw {
+  filter: grayscale(1);
+}
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  font-size: 20px;
+  padding: 10px;
+  z-index: 9999;
+}
+
+/* =========================
+   ACCESSIBILITY MODES
+========================= */
+.high-contrast {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.invert-colors {
+  filter: invert(100%);
+}
+
+.bw {
+  filter: grayscale(100%);
+}
+</style>
 </head>
 
 <body>
-    <!-- Accessibility Toggle Button -->
-    <button id="accessibility-toggle" aria-label="Open Accessibility Menu">♿</button>
 
-    <!-- Accessibility Menu -->
-    <div id="accessibility-menu">
-        <button id="close-menu" aria-label="Close Accessibility Menu">✖</button>
-        <button data-action="high-contrast">High Contrast</button>
-        <button data-action="invert-colors">Invert Colors</button>
-        <button data-action="bw">Black & White</button>
-        <button data-action="font-increase">A+</button>
-        <button data-action="font-decrease">A-</button>
-    </div>
-    <!-- Example content -->
-    <section id="welcome">
-        <h1>Welcome to DSR24</h1>
-        <p>This is some example text to test accessibility features.</p>
-    </section> <button id="btn-back-to-top">⬆</button>
+<!-- Toggle Button -->
+<button id="accessibility-toggle" aria-label="Open accessibility menu">♿</button>
 
-</body>
+<!-- Accessibility Menu -->
+<div id="accessibility-menu" aria-label="Accessibility menu">
+  <button id="close-menu" aria-label="Close menu">✖</button>
+  <button data-action="high-contrast">High Contrast</button>
+  <button data-action="invert-colors">Invert Colors</button>
+  <button data-action="bw">Black & White</button>
+  <button data-action="font-increase">A+</button>
+  <button data-action="font-decrease">A-</button>
+</div>
+
+<!-- Page Content -->
+<div id="page-content">
+  <section id="welcome">
+    <h1>Welcome to DSR24</h1>
+    <p>This is example content to test accessibility features.</p>
+  </section>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p>Scroll down to see the back-to-top button.</p>
+</div>
+
+
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const toggleBtn = document.getElementById("accessibility-toggle");
-        const menu = document.getElementById("accessibility-menu");
-        const closeMenu = document.getElementById("close-menu");
-        const body = document.body;
-        const backToTop = document.getElementById("btn-back-to-top");
-        const welcomeSection = document.getElementById("welcome");
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("accessibility-toggle");
+  const menu = document.getElementById("accessibility-menu");
+  const closeBtn = document.getElementById("close-menu");
+  const content = document.getElementById("page-content");
+  const backToTop = document.getElementById("btn-back-to-top");
+  const welcome = document.getElementById("welcome");
 
-        let fontSize = 16;
+  let fontSize = 16;
 
-        // Open menu
-        toggleBtn.addEventListener("click", () => {
-            menu.classList.add("open");
-            toggleBtn.style.opacity = 0; // hide toggle while menu open
-            toggleBtn.style.pointerEvents = "none";
-        });
+  /* Open menu */
+  toggleBtn.addEventListener("click", () => {
+    menu.classList.add("open");
+    toggleBtn.style.opacity = "0";
+    toggleBtn.style.pointerEvents = "none";
+  });
 
-        // Close menu
-        closeMenu.addEventListener("click", () => {
-            menu.classList.remove("open");
-            toggleBtn.style.opacity = 1; // show toggle again
-            toggleBtn.style.pointerEvents = "auto";
-        });
+  /* Close menu */
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("open");
+    toggleBtn.style.opacity = "1";
+    toggleBtn.style.pointerEvents = "auto";
+  });
 
-        // Menu actions
-        menu.querySelectorAll("button:not(#close-menu)").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const action = btn.dataset.action;
-                switch (action) {
-                    case "high-contrast": body.classList.toggle("high-contrast"); break;
-                    case "invert-colors": body.classList.toggle("invert-colors"); break;
-                    case "bw": body.classList.toggle("bw"); break;
-                    case "font-increase":
-                        fontSize += 2;
-                        body.style.fontSize = fontSize + "px";
-                        break;
-                    case "font-decrease":
-                        fontSize = Math.max(12, fontSize - 2);
-                        body.style.fontSize = fontSize + "px";
-                        break;
-                }
-            });
-        });
+  /* Menu actions */
+  menu.querySelectorAll("button[data-action]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const action = btn.dataset.action;
 
-        // Back to top button
-        window.addEventListener("scroll", () => {
-            backToTop.style.display = window.scrollY > welcomeSection.offsetHeight ? "block" : "none";
-        });
+      switch (action) {
+        case "high-contrast":
+          content.classList.toggle("high-contrast");
+          break;
 
-        backToTop.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+        case "invert-colors":
+          content.classList.toggle("invert-colors");
+          break;
+
+        case "bw":
+          content.classList.toggle("bw");
+          break;
+
+        case "font-increase":
+          fontSize += 2;
+          content.style.fontSize = fontSize + "px";
+          break;
+
+        case "font-decrease":
+          fontSize = Math.max(12, fontSize - 2);
+          content.style.fontSize = fontSize + "px";
+          break;
+      }
     });
+  });
 
+});
 </script>
 
+</body>
 </html>
