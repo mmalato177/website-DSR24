@@ -16,6 +16,8 @@ $(document).ready(function () {
 	});
 });
 
+
+
 document.addEventListener("scroll", function () {
 	const navbar = document.querySelector("nav.navbar");
 
@@ -88,4 +90,6 @@ if (videoModal) {
 		videoIframe.src = '';
 	});
 }
+
+
 

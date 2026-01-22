@@ -16,6 +16,7 @@
 	<script src="js/jquery-3.7.1.min.js" defer></script>
 	<script src="js/bootstrap.bundle.min.js" defer></script>
 	<script src="js/aos.js" defer></script>
+	<script src="js/i18n.js" defer></script>
 	<script src="js/dsr.js" defer></script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -30,28 +31,29 @@
 				</a>
 				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 					<li class="nav-item nav-reportdamage">
-						<a class="nav-link" href="#welcome">Schadenfall melden</a>
+						<a class="nav-link" href="#welcome" data-i18n="nav.reportDamage">Schadenfall melden</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
+							aria-expanded="false" data-i18n="nav.services">
 							Leistungen
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#services">Sachverständiger</a></li>
-							<li><a class="dropdown-item" href="#">Anwalt</a></li>
-							<li><a class="dropdown-item" href="#">Leihwagen</a></li>
-							<li><a class="dropdown-item" href="#">Werkstatt</a></li>
+							<li><a class="dropdown-item" href="#services" data-i18n="nav.expert">Sachverständiger</a>
+							</li>
+							<li><a class="dropdown-item" href="#" data-i18n="nav.lawyer">Anwalt</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n="nav.rentalCar">Leihwagen</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n="nav.workshop">Werkstatt</a></li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
+							aria-expanded="false" data-i18n="nav.knowledge">
 							Wissenswelt
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">FAQ</a></li>
-							<li><a class="dropdown-item" href="#">Blog</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n="nav.faq">FAQ</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n="nav.blog">Blog</a></li>
 							<li><a class="dropdown-item" href="#">#dsrklärt</a></li>
 							<li><a class="dropdown-item" href="#">Downloads</a></li>
 						</ul>
@@ -59,21 +61,29 @@
 
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
+							aria-expanded="false" data-i18n="nav.dsr24">
 							DSR24
 						</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#about">Über uns</a></li>
-							<li><a class="dropdown-item" href="#">Kontakt</a></li>
-							<li><a class="dropdown-item" href="#">News</a></li>
-							<li><a class="dropdown-item" href="#">Jobs</a></li>
+							<li><a class="dropdown-item" href="#about" data-i18n="nav.aboutUs">Über uns</a></li>
+							<li><a class="dropdown-item" href="#team" data-i18n="nav.team">Team</a></li>
+							<li><a class="dropdown-item" href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n="nav.news">News</a></li>
+							<li><a class="dropdown-item" href="#" data-i18n="nav.jobs">Jobs</a></li>
 						</ul>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="#reviews">Kundenstimmen</a>
+						<a class="nav-link" href="#reviews" data-i18n="nav.reviews">Kundenstimmen</a>
 					</li>
 				</ul>
+				<div class="d-flex align-items-center">
+					<div class="btn-group" role="group" aria-label="Language switcher">
+						<button type="button" class="btn btn-sm btn-outline-light lang-btn active"
+							data-lang="de">DE</button>
+						<button type="button" class="btn btn-sm btn-outline-light lang-btn" data-lang="en">EN</button>
+					</div>
+				</div>
 				<!-- <form role="search">
 				<i class="fa-solid fa-magnifying-glass"></i>
 				<input class="form-control" type="search" placeholder="Suchen" aria-label="Search">
@@ -89,41 +99,47 @@
 		</div>
 	</nav>
 
+
+
 	<main>
+		<!--WELCOME SECTION-->
 		<section class="container-fluid sectwelcome" id="welcome">
 			<div data-aos="fade-up">
-				<h1>Du hattest einen<br class="d-none d-lg-inline"> unverschuldeten Autounfall<span>?</span></h1>
-				<p>Die <strong>DSR24</strong> hilft dir <strong>kostenfrei</strong>!</p>
+				<h1 data-i18n="welcome.title">Du hattest einen<br class="d-none d-lg-inline"> unverschuldeten
+					Autounfall<span>?</span></h1>
+				<p data-i18n="welcome.subtitle">Die <strong>DSR24</strong> hilft dir <strong>kostenfrei</strong>!</p>
 			</div>
 			<a href="/schaden-melden/" data-aos="zoom-in">
 				<i class="fa-solid fa-caret-right d-none d-xl-inline"></i>
-				Hier Schadenfall melden
+				<span data-i18n="welcome.button">Hier Schadenfall melden</span>
 				<i class="fa-solid fa-caret-left d-none d-xl-inline"></i>
 			</a>
 		</section>
 
+		<!--ABOUT SECTION-->
 		<section class="sectabout py-5" id="about">
 			<div class="container">
-
 				<div class="row align-items-center">
 					<div class="col-lg-6" data-aos="fade-right">
-						<h2 class="fw-bold mb-3">Um titulo bue top</h2>
-						<p class="fst-italic text-muted mb-4">Substitulo incrivel e maravilhoso</p>
+						<h2 class="fw-bold mb-3" data-i18n="about.title">Um titulo bue top</h2>
+						<p class="fst-italic text-muted mb-4" data-i18n="about.subtitle">Substitulo incrivel e
+							maravilhoso</p>
 						<ul class="list-unstyled mb-4">
 							<li class="d-flex mb-2">
 								<i class="fa-solid fa-check-double me-2 mt-1"></i>
-								<span>Cenas que quiserem 1</span>
+								<span data-i18n="about.feature1">Cenas que quiserem 1</span>
 							</li>
 							<li class="d-flex mb-2">
 								<i class="fa-solid fa-check-double me-2 mt-1"></i>
-								<span>Cenas que quiserem 2</span>
+								<span data-i18n="about.feature2">Cenas que quiserem 2</span>
 							</li>
 							<li class="d-flex mb-2">
 								<i class="fa-solid fa-check-double me-2 mt-1"></i>
-								<span>Cenas que quiserem 4.</span>
+								<span data-i18n="about.feature3">Cenas que quiserem 4.</span>
 							</li>
 						</ul>
-						<p>rato roeu a rolha do rato, tres tristes tigres (mais conteudo top q quiserem)</p>
+						<p data-i18n="about.description">rato roeu a rolha do rato, tres tristes tigres (mais conteudo
+							top q quiserem)</p>
 					</div>
 					<div class="col-lg-5 offset-lg-1" data-aos="fade-left">
 						<img src="img/patricio.jpeg" alt="About" class="img-fluid rounded">
@@ -201,8 +217,8 @@
 								<i class="fa-solid fa-clipboard-list fa-2x yellow-icon"></i>
 							</div>
 							<div>
-								<h5 class="fw-bold ">Teste 1</h5>
-								<p class="text-muted mb-0">Bom dia</p>
+								<h5 class="fw-bold" data-i18n="features.feature1Title">Teste 1</h5>
+								<p class="text-muted mb-0" data-i18n="features.feature1Desc">Bom dia</p>
 							</div>
 						</div>
 						<div class="d-flex mb-4">
@@ -210,8 +226,8 @@
 								<i class="fa-solid fa-gem fa-2x yellow-icon"></i>
 							</div>
 							<div>
-								<h5 class="fw-bold ">Teste 2</h5>
-								<p class="text-muted mb-0">Boa tarde</p>
+								<h5 class="fw-bold" data-i18n="features.feature2Title">Teste 2</h5>
+								<p class="text-muted mb-0" data-i18n="features.feature2Desc">Boa tarde</p>
 							</div>
 						</div>
 						<div class="d-flex mb-4">
@@ -219,8 +235,8 @@
 								<i class="fa-solid fa-image fa-2x yellow-icon"></i>
 							</div>
 							<div>
-								<h5 class="fw-bold ">Teste 3</h5>
-								<p class="text-muted mb-0">Boa noite</p>
+								<h5 class="fw-bold" data-i18n="features.feature3Title">Teste 3</h5>
+								<p class="text-muted mb-0" data-i18n="features.feature3Desc">Boa noite</p>
 							</div>
 						</div>
 						<div class="d-flex">
@@ -228,8 +244,8 @@
 								<i class="fa-solid fa-shield fa-2x yellow-icon"></i>
 							</div>
 							<div>
-								<h5 class="fw-bold ">Teste 4</h5>
-								<p class="text-muted mb-0">Boa semana</p>
+								<h5 class="fw-bold" data-i18n="features.feature4Title">Teste 4</h5>
+								<p class="text-muted mb-0" data-i18n="features.feature4Desc">Boa semana</p>
 							</div>
 						</div>
 					</div>
@@ -242,10 +258,10 @@
 			<div class="container" data-aos="fade-up">
 				<div class="mb-4">
 					<p class="fw-bold text-uppercase mb-1 aux">
-						<span class="aux-text">Services</span>
+						<span class="aux-text" data-i18n="services.heading">Services</span>
 						<span class="aux-line"></span>
 					</p>
-					<h2 class="fw-bold">CHECK OUR SERVICES</h2>
+					<h2 class="fw-bold" data-i18n="services.title">CHECK OUR SERVICES</h2>
 				</div>
 				<div class="row g-4">
 					<div class="col-12 col-md-4">
@@ -255,8 +271,9 @@
 									<use href="/gfx/icons/wrench.svg"></use>
 								</svg>
 							</div>
-							<h5>DSR24 für Werkstatt</h5>
-							<p>Die Ideallinie für Ihr erfolgreiches Schadenmanagement.</p>
+							<h5 data-i18n="services.service1Title">DSR24 für Werkstatt</h5>
+							<p data-i18n="services.service1Desc">Die Ideallinie für Ihr erfolgreiches Schadenmanagement.
+							</p>
 						</div>
 					</div>
 					<div class="col-12 col-md-4">
@@ -266,8 +283,8 @@
 									<use href="/gfx/icons/sachverstaendiger.svg"></use>
 								</svg>
 							</div>
-							<h5>DSR24 für Kfz-Sachverständige</h5>
-							<p>So erhalten Sie Aufträge schnell und unkompliziert.</p>
+							<h5 data-i18n="services.service2Title">DSR24 für Kfz-Sachverständige</h5>
+							<p data-i18n="services.service2Desc">So erhalten Sie Aufträge schnell und unkompliziert.</p>
 						</div>
 					</div>
 					<div class="col-12 col-md-4">
@@ -277,8 +294,8 @@
 									<use href="/gfx/icons/rechtsanwalt.svg"></use>
 								</svg>
 							</div>
-							<h5>DSR24 für Rechtsanwälte</h5>
-							<p>So einfach sichern Sie sich regel­mäßige Mandate.</p>
+							<h5 data-i18n="services.service3Title">DSR24 für Rechtsanwälte</h5>
+							<p data-i18n="services.service3Desc">So einfach sichern Sie sich regel­mäßige Mandate.</p>
 						</div>
 					</div>
 					<div class="col-12 col-md-4">
@@ -288,8 +305,8 @@
 									<use href="/gfx/icons/hook1.svg"></use>
 								</svg>
 							</div>
-							<h5>DSR24 für Abschleppdienste</h5>
-							<p>So sind Sie bei Bergungsbedarf die erste Wahl.</p>
+							<h5 data-i18n="services.service4Title">DSR24 für Abschleppdienste</h5>
+							<p data-i18n="services.service4Desc">So sind Sie bei Bergungsbedarf die erste Wahl.</p>
 						</div>
 					</div>
 					<div class="col-12 col-md-4">
@@ -299,8 +316,9 @@
 									<use href="/gfx/icons/mietwagenfirma.svg"></use>
 								</svg>
 							</div>
-							<h5>DSR24 für Autovermietungen</h5>
-							<p>So sind Sie in Sachen Ersatz­fahr­zeug der Ansprech­partner Nr.1. </p>
+							<h5 data-i18n="services.service5Title">DSR24 für Autovermietungen</h5>
+							<p data-i18n="services.service5Desc">So sind Sie in Sachen Ersatz­fahr­zeug der
+								Ansprech­partner Nr.1. </p>
 						</div>
 					</div>
 					<div class="col-12 col-md-4">
@@ -310,8 +328,9 @@
 									<use href="/gfx/icons/unfall.svg"></use>
 								</svg>
 							</div>
-							<h5>Schnelle Hilfe bei Unfallschäden</h5>
-							<p>Hier bekommen Sie im Fall eines Unfalls alles aus einer Hand!</p>
+							<h5 data-i18n="services.service6Title">Schnelle Hilfe bei Unfallschäden</h5>
+							<p data-i18n="services.service6Desc">Hier bekommen Sie im Fall eines Unfalls alles aus einer
+								Hand!</p>
 						</div>
 					</div>
 
@@ -323,9 +342,10 @@
 		<section id="action" class="sectaction">
 			<div class="action-box py-5">
 				<div class="container text-center">
-					<h1 class="text-body-emphasis">Call To Action</h1>
-					<button type="button" class="btn btn-outline-secondary">Call to action</button>
-					<p class="col-lg-8 mx-auto lead">
+					<h1 class="text-body-emphasis" data-i18n="action.title">Call To Action</h1>
+					<button type="button" class="btn btn-outline-secondary" data-i18n="action.button">Call to
+						action</button>
+					<p class="col-lg-8 mx-auto lead" data-i18n="action.description">
 						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 						mollit anim id est laborum.
@@ -339,16 +359,20 @@
 			<div class="container">
 				<div class="mb-4">
 					<p class="fw-bold text-uppercase mb-1 aux">
-						<span class="aux-text">Portfolio</span>
+						<span class="aux-text" data-i18n="portfolio.heading">Portfolio</span>
 						<span class="aux-line"></span>
 					</p>
-					<h2 class="fw-bold">CHECK OUR PORTFOLIO</h2>
+					<h2 class="fw-bold" data-i18n="portfolio.title">CHECK OUR PORTFOLIO</h2>
 				</div>
 				<div class="portfolio-filters mb-4" data-aos="fade-up">
-					<button class="btn btn-primary btn-sm active" data-filter="all">ALL</button>
-					<button class="btn btn-outline-secondary btn-sm" data-filter="app">APP</button>
-					<button class="btn btn-outline-secondary btn-sm" data-filter="card">CARD</button>
-					<button class="btn btn-outline-secondary btn-sm" data-filter="web">WEB</button>
+					<button class="btn btn-primary btn-sm active" data-filter="all"
+						data-i18n="portfolio.filterAll">ALL</button>
+					<button class="btn btn-outline-secondary btn-sm" data-filter="app"
+						data-i18n="portfolio.filterApp">APP</button>
+					<button class="btn btn-outline-secondary btn-sm" data-filter="card"
+						data-i18n="portfolio.filterCard">CARD</button>
+					<button class="btn btn-outline-secondary btn-sm" data-filter="web"
+						data-i18n="portfolio.filterWeb">WEB</button>
 				</div>
 				<div class="row g-3" data-aos="fade-up">
 					<div class="col-lg-4 col-md-6 portfolio-item" data-category="app">
@@ -387,8 +411,8 @@
 						<img src="img/0106085384.jpeg" alt="Stats" class="img-fluid rounded">
 					</div>
 					<div class="col-lg-6 offset-lg-1" data-aos="fade-left">
-						<h2 class="fw-bold  mb-3">Titulo top</h2>
-						<p class="text-muted mb-4">subtitulo top</p>
+						<h2 class="fw-bold mb-3" data-i18n="stats.title">Titulo top</h2>
+						<p class="text-muted mb-4" data-i18n="stats.subtitle">subtitulo top</p>
 						<div class="row g-4">
 							<div class="col-6">
 								<div class="d-flex">
@@ -396,8 +420,9 @@
 										<i class="fa-regular fa-face-smile fa-2x yellow-icon"></i>
 									</div>
 									<div>
-										<h3 class="fw-bold  mb-0">65</h3>
-										<p class="mb-0"><strong>Happy Clients</strong> tao contentes e assim</p>
+										<h3 class="fw-bold mb-0">65</h3>
+										<p class="mb-0"><strong data-i18n="stats.happyClients">Happy Clients</strong>
+											<span data-i18n="stats.happyClientsDesc">tao contentes e assim</span></p>
 									</div>
 								</div>
 							</div>
@@ -407,8 +432,9 @@
 										<i class="fa-regular fa-newspaper fa-2x yellow-icon"></i>
 									</div>
 									<div>
-										<h3 class="fw-bold  mb-0">85</h3>
-										<p class="mb-0"><strong>Projects</strong> e tal</p>
+										<h3 class="fw-bold mb-0">85</h3>
+										<p class="mb-0"><strong data-i18n="stats.projects">Projects</strong> <span
+												data-i18n="stats.projectsDesc">e tal</span></p>
 									</div>
 								</div>
 							</div>
@@ -418,8 +444,10 @@
 										<i class="fa-regular fa-clock fa-2x yellow-icon"></i>
 									</div>
 									<div>
-										<h3 class="fw-bold  mb-0">35</h3>
-										<p class="mb-0"><strong>Years of experience</strong> bue anos jesus</p>
+										<h3 class="fw-bold mb-0">35</h3>
+										<p class="mb-0"><strong data-i18n="stats.experience">Years of
+												experience</strong> <span data-i18n="stats.experienceDesc">bue anos
+												jesus</span></p>
 									</div>
 								</div>
 							</div>
@@ -429,8 +457,9 @@
 										<i class="fa-solid fa-trophy fa-2x yellow-icon"></i>
 									</div>
 									<div>
-										<h3 class="fw-bold  mb-0">20</h3>
-										<p class="mb-0"><strong>Awards</strong> tenho mais no kickboxe</p>
+										<h3 class="fw-bold mb-0">20</h3>
+										<p class="mb-0"><strong data-i18n="stats.awards">Awards</strong> <span
+												data-i18n="stats.awardsDesc">tenho mais no kickboxe</span></p>
 									</div>
 								</div>
 							</div>
@@ -440,8 +469,183 @@
 			</div>
 		</section>
 
+		<!--TEAM SECTION-->
+		<section class="sectteam py-5 my-5" id="team">
+			<div class="container">
+				<div class="mb-4">
+					<p class="fw-bold text-uppercase mb-1 aux">
+						<span class="aux-text" data-i18n="team.heading">Team</span>
+						<span class="aux-line"></span>
+					</p>
+					<h2 class="fw-bold" data-i18n="team.title">CHECK OUR TEAM</h2>
+				</div>
+				<div class="row g-4" data-aos="fade-up">
+					<div class="col-lg-3 col-md-6">
+						<div class="team-card">
+							<div class="team-img">
+								<img src="img/team/teste4.png" alt="Patricio Da Silva" class="img-fluid">
+							</div>
+							<div class="team-info pt-3">
+								<h5 class="fw-bold mb-0" data-i18n="team.member1Name">Patricio Da Silva</h5>
+								<p class="text-muted small mb-0" data-i18n="team.member1Role">CEO</p>
+								<div class="team-social">
+									<a href="#"><i class="fab fa-linkedin-in"></i></a>
+									<a href="#"><i class="fab fa-twitter"></i></a>
+									<a href="#"><i class="fab fa-instagram"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="team-card">
+							<div class="team-img">
+								<img src="img/team/maria.jpeg" alt="Maria Malato" class="img-fluid"
+									style="object-fit: contain; background-color: #f8f9fa;">
+							</div>
+							<div class="team-info pt-3">
+								<h5 class="fw-bold mb-0" data-i18n="team.member2Name">Maria Malato</h5>
+								<p class="text-muted small mb-0" data-i18n="team.member2Role">Programadora faz de conta
+									e jogadora de futebol</p>
+								<div class="team-social">
+									<a href="#"><i class="fab fa-linkedin-in"></i></a>
+									<a href="#"><i class="fab fa-twitter"></i></a>
+									<a href="#"><i class="fab fa-instagram"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="team-card">
+							<div class="team-img">
+								<img src="img/team/teste4.png" alt="Nadine Heinzel" class="img-fluid">
+							</div>
+							<div class="team-info pt-3">
+								<h5 class="fw-bold  mb-0" data-i18n="team.member3Name">Nadine Heinzel</h5>
+								<p class="text-muted small mb-0" data-i18n="team.member3Role">Marketing Assistent</p>
+								<div class="team-social">
+									<a href="#"><i class="fab fa-linkedin-in"></i></a>
+									<a href="#"><i class="fab fa-twitter"></i></a>
+									<a href="#"><i class="fab fa-instagram"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="team-card">
+							<div class="team-img">
+								<img src="img/team/teste4.png" alt="Leandro Ferreira" class="img-fluid">
+							</div>
+							<div class="team-info pt-3">
+								<h5 class="fw-bold  mb-0" data-i18n="team.member4Name">Leandro Ferreira</h5>
+								<p class="text-muted small mb-0" data-i18n="team.member4Role">Melhor programador da
+									DSR24</p>
+								<div class="team-social">
+									<a href="#"><i class="fab fa-linkedin-in"></i></a>
+									<a href="#"><i class="fab fa-twitter"></i></a>
+									<a href="#"><i class="fab fa-instagram"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!--CONTACT SECTION-->
+		<section id="contact" class="sectcontact py-5">
+			<div class="container" data-aos="fade-up">
+				<div class="mb-4">
+					<p class="fw-bold text-uppercase mb-1 aux">
+						<span class="aux-text" data-i18n="contact.heading">Contact</span>
+						<span class="aux-line w-2"></span>
+					</p>
+					<h2 class="fw-bold" data-i18n="contact.title">GET IN TOUCH</h2>
+				</div>
+				<div class="mb-4">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4894.295768251796!2d9.25241347222842!3d52.16800464969099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba880a59edba83%3A0xe27d5fac4ccd76bd!2sDSR24%20Deutsche%20Schadenregulierung%20GmbH!5e0!3m2!1spt-BR!2spt!4v1769086422085!5m2!1spt-BR!2spt"
+						width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="row align-items-start gy-5">
+					<div class="col-md-10 col-lg-6">
+						<div class="row mb-4 align-items-center">
+							<div class="col-auto d-flex align-items-center">
+								<svg class="contact-svg" aria-hidden="true">
+									<use href="/gfx/icons/location-dot.svg"></use>
+								</svg>
+							</div>
+							<div class="col-auto d-flex flex-column justify-content-center">
+								<h4 class="fw-bold mb-1" data-i18n="contact.location">Location:</h4>
+								<p class="fst text-muted mb-0" data-i18n="contact.locationText">Segelhorster Str. 2,
+									31840 Hessisch Oldendorf, Germany
+								</p>
+							</div>
+						</div>
 
+						<div class="row mb-4 align-items-center">
+							<div class="col-auto d-flex align-items-center">
+								<svg class="contact-svg" aria-hidden="true">
+									<use href="/gfx/icons/envelope.svg"></use>
+								</svg>
+							</div>
+							<div class="col-auto d-flex flex-column justify-content-center">
+								<h4 class="fw-bold mb-1" data-i18n="contact.email">Email:</h4>
+								<p class="fst text-muted mb-0" data-i18n="contact.emailText">info@dsr24.de
+								</p>
+							</div>
+						</div>
+						<div class="row mb-4 align-items-center">
+							<div class="col-auto d-flex align-items-center">
+								<svg class="contact-svg" aria-hidden="true">
+									<use href="/gfx/icons/phone.svg"></use>
+								</svg>
+							</div>
+							<div class="col-auto d-flex flex-column justify-content-center">
+								<h4 class="fw-bold mb-1" data-i18n="contact.call">Call:</h4>
+								<p class="fst text-muted mb-0" data-i18n="contact.callText">0800 - 321 24 24
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-10 col-lg-6">
+						<form>
+							<div class="row justify-content-center">
+								<div class="col-md-6">
+									<div class="mb-3">
+										<input class="form-control " placeholder="Your Name" type="text"
+											data-i18n="contact.formName" data-i18n-attr="placeholder">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<input class="form-control " placeholder="Your Email" type="email"
+											data-i18n="contact.formEmail" data-i18n-attr="placeholder">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="mb-3">
+										<input class="form-control " placeholder="Subject" type="text"
+											data-i18n="contact.formSubject" data-i18n-attr="placeholder">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="mb-4">
+										<textarea class="form-control " placeholder="Message" rows="4"
+											data-i18n="contact.formMessage" data-i18n-attr="placeholder"></textarea>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="d-grid">
+										<button class="btn btn-yellow" type="submit" data-i18n="contact.formButton">Send
+											message</button>
+									</div>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!--REVIEWS SECTION-->
 		<section id="reviews" class="sectreviews">
@@ -469,13 +673,15 @@
 										</div>
 										<div class="col-lg-7">
 											<div class="d-flex flex-column justify-content-center my-5 px-3 img-text">
-												<p class="review">"We have received the best service from this person.
+												<p class="review" data-i18n="reviews.review1">"We have received the best
+													service from this person.
 													We
 													will definitely hire for our next project."</p>
 												<div class="person">
-													<p class="m-0">Jason Walker</p>
+													<p class="m-0" data-i18n="reviews.reviewer1Name">Jason Walker</p>
 												</div>
-												<p class="designation">Graphics Designer</p>
+												<p class="designation" data-i18n="reviews.reviewer1Role">Graphics
+													Designer</p>
 											</div>
 										</div>
 
@@ -490,13 +696,15 @@
 										</div>
 										<div class="col-lg-7">
 											<div class=" d-flex flex-column justify-content-center my-5 px-3 img-text">
-												<p class="review">"We have received the best service from this person.
+												<p class="review" data-i18n="reviews.review2">"We have received the best
+													service from this person.
 													We
 													will definitely hire for our next project."</p>
 												<div class="person">
-													<p class="m-0">Mike Jones</p>
+													<p class="m-0" data-i18n="reviews.reviewer2Name">Mike Jones</p>
 												</div>
-												<p class="designation">Human Resource Manager</p>
+												<p class="designation" data-i18n="reviews.reviewer2Role">Human Resource
+													Manager</p>
 											</div>
 										</div>
 
@@ -511,13 +719,15 @@
 										</div>
 										<div class="col-lg-7">
 											<div class=" d-flex flex-column justify-content-center my-5 px-3 img-text">
-												<p class="review">"We have received the best service from this person.
+												<p class="review" data-i18n="reviews.review3">"We have received the best
+													service from this person.
 													We
 													will definitely hire for our next project."</p>
 												<div class="person">
-													<p class="m-0">Stephen Jones</p>
+													<p class="m-0" data-i18n="reviews.reviewer3Name">Stephen Jones</p>
 												</div>
-												<p class="designation">Web Developer</p>
+												<p class="designation" data-i18n="reviews.reviewer3Role">Web Developer
+												</p>
 											</div>
 										</div>
 
@@ -535,138 +745,9 @@
 			</div>
 		</section>
 
-		<!--TEAM SECTION-->
-		<section class="sectteam py-5 my-5" id="team">
-			<div class="container">
-				<div class="mb-4">
-					<p class="fw-bold text-uppercase mb-1 aux">
-						<span class="aux-text">Team</span>
-						<span class="aux-line"></span>
-					</p>
-					<h2 class="fw-bold">CHECK OUR TEAM</h2>
-				</div>
-				<div class="row g-4" data-aos="fade-up">
-					<div class="col-lg-3 col-md-6">
-						<div class="team-card">
-							<div class="team-img">
-								<img src="img/team/teste4.png" alt="Patricio Da Silva" class="img-fluid">
-							</div>
-							<div class="team-info pt-3">
-								<h5 class="fw-bold  mb-0">Patricio Da Silva</h5>
-								<p class="text-muted small mb-0">CEO</p>
-								<div class="team-social">
-									<a href="#"><i class="fab fa-linkedin-in"></i></a>
-									<a href="#"><i class="fab fa-twitter"></i></a>
-									<a href="#"><i class="fab fa-instagram"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="team-card">
-							<div class="team-img">
-								<img src="img/team/maria.jpeg" alt="Maria Malato" class="img-fluid"
-									style="object-fit: contain; background-color: #f8f9fa;">
-							</div>
-							<div class="team-info pt-3">
-								<h5 class="fw-bold mb-0">Maria Malato</h5>
-								<p class="text-muted small mb-0">Programadora faz de conta e jogadora de futebol</p>
-								<div class="team-social">
-									<a href="#"><i class="fab fa-linkedin-in"></i></a>
-									<a href="#"><i class="fab fa-twitter"></i></a>
-									<a href="#"><i class="fab fa-instagram"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="team-card">
-							<div class="team-img">
-								<img src="img/team/teste4.png" alt="Nadine Heinzel" class="img-fluid">
-							</div>
-							<div class="team-info pt-3">
-								<h5 class="fw-bold  mb-0">Nadine Heinzel</h5>
-								<p class="text-muted small mb-0">Marketing Assistent</p>
-								<div class="team-social">
-									<a href="#"><i class="fab fa-linkedin-in"></i></a>
-									<a href="#"><i class="fab fa-twitter"></i></a>
-									<a href="#"><i class="fab fa-instagram"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-6">
-						<div class="team-card">
-							<div class="team-img">
-								<img src="img/team/teste4.png" alt="Leandro Ferreira" class="img-fluid">
-							</div>
-							<div class="team-info pt-3">
-								<h5 class="fw-bold  mb-0">Leandro Ferreira</h5>
-								<p class="text-muted small mb-0">Melhor programador da DSR24</p>
-								<div class="team-social">
-									<a href="#"><i class="fab fa-linkedin-in"></i></a>
-									<a href="#"><i class="fab fa-twitter"></i></a>
-									<a href="#"><i class="fab fa-instagram"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--CONTACT SECTION-->
-		<section id="contact" class="sectcontact py-5">
-			<div class="container" data-aos="fade-up">
-				<div class="mb-4">
-					<p class="fw-bold text-uppercase mb-1 aux">
-						<span class="aux-text">Contact</span>
-						<span class="aux-line w-2"></span>
-					</p>
-					<h2 class="fw-bold">GET IN TOUCH</h2>
-				</div>
-				<div class="mb-4">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4894.295768251796!2d9.25241347222842!3d52.16800464969099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba880a59edba83%3A0xe27d5fac4ccd76bd!2sDSR24%20Deutsche%20Schadenregulierung%20GmbH!5e0!3m2!1spt-BR!2spt!4v1769086422085!5m2!1spt-BR!2spt"
-						width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				<div class="row align-items-center gy-5">
-					<div class="col-md-10 col-lg-6">
-						<form>
-							<div class="row justify-content-center">
-								<div class="col-md-6">
-									<div class="mb-3">
-										<input class="form-control bg-light" placeholder="First name" type="text">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="mb-3">
-										<input class="form-control bg-light" placeholder="Last name" type="text">
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="mb-3">
-										<textarea class="form-control bg-light" placeholder="Your message"
-											rows="4"></textarea>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="d-grid">
-										<button class="btn btn-primary" type="submit">Send message</button>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-md-10 col-lg-6">
-						<p> hello</p>
-					</div>
-				</div>
-			</div>
-		</section>
 	</main>
 
+	<!-- FOOTER -->
 	<footer class="footer">
 		<div class="container py-5">
 			<div class="row gy-4">
@@ -674,12 +755,14 @@
 				<div class="col-lg-4 col-md-6">
 					<img src="gfx/dsr_weiss.png" alt="DSR24" class="footer-logo mb-3">
 
-					<p class="small mb-1">DSR Deutsche Schadenregulierung GmbH</p>
-					<p class="small mb-1">Münchhausenring 11</p>
-					<p class="small mb-3">31840 Hessisch Oldendorf</p>
+					<p class="small mb-1" data-i18n="footer.company">DSR Deutsche Schadenregulierung GmbH</p>
+					<p class="small mb-1" data-i18n="footer.address1">Münchhausenring 11</p>
+					<p class="small mb-3" data-i18n="footer.address2">31840 Hessisch Oldendorf</p>
 
-					<p class="small mb-1"><strong>Telefon:</strong> 0800 - 321 24 24</p>
-					<p class="small"><strong>E-Mail:</strong> info@dsr24.de</p>
+					<p class="small mb-1"><strong data-i18n="footer.phone">Telefon:</strong> <span
+							data-i18n="footer.phoneNumber">0800 - 321 24 24</span></p>
+					<p class="small"><strong data-i18n="footer.email">E-Mail:</strong> <span
+							data-i18n="footer.emailAddress">info@dsr24.de</span></p>
 
 					<div class="footer-social mt-3">
 						<a href="#"><i class="fab fa-instagram"></i></a>
@@ -692,46 +775,47 @@
 
 				<!-- Column 2-->
 				<div class="col-lg-2 col-md-6">
-					<h5>Useful Links</h5>
+					<h5 data-i18n="footer.usefulLinks">Useful Links</h5>
 					<ul class="footer-links">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Terms of service</a></li>
-						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#" data-i18n="footer.home">Home</a></li>
+						<li><a href="#" data-i18n="footer.aboutUs">About us</a></li>
+						<li><a href="#" data-i18n="footer.services">Services</a></li>
+						<li><a href="#" data-i18n="footer.terms">Terms of service</a></li>
+						<li><a href="#" data-i18n="footer.privacy">Privacy policy</a></li>
 					</ul>
 				</div>
 
 				<!-- Column 3 -->
 				<div class="col-lg-3 col-md-6">
-					<h5>Our Services</h5>
+					<h5 data-i18n="footer.ourServices">Our Services</h5>
 					<ul class="footer-links">
-						<li><a href="#">Web Design</a></li>
-						<li><a href="#">Web Development</a></li>
-						<li><a href="#">Product Management</a></li>
-						<li><a href="#">Marketing</a></li>
-						<li><a href="#">Graphic Design</a></li>
+						<li><a href="#" data-i18n="footer.webDesign">Web Design</a></li>
+						<li><a href="#" data-i18n="footer.webDevelopment">Web Development</a></li>
+						<li><a href="#" data-i18n="footer.productManagement">Product Management</a></li>
+						<li><a href="#" data-i18n="footer.marketing">Marketing</a></li>
+						<li><a href="#" data-i18n="footer.graphicDesign">Graphic Design</a></li>
 					</ul>
 				</div>
 
 				<!-- Column 4 -->
 				<div class="col-lg-3 col-md-6">
-					<h5>Our Newsletter</h5>
-					<p class="small">
+					<h5 data-i18n="footer.newsletter">Our Newsletter</h5>
+					<p class="small" data-i18n="footer.newsletterDesc">
 						Tamen quem nulla quae legam multos aute sint culpa legam noster magna
 					</p>
 
 					<form class="footer-newsletter">
 						<input type="email" placeholder="">
-						<button type="submit">Subscribe</button>
+						<button type="submit" data-i18n="footer.subscribe">Subscribe</button>
 					</form>
 				</div>
 			</div>
 		</div>
 		<div class="footer-bottom text-center py-3">
-			<p class="mb-1">© Copyright DSR24. All Rights Reserved</p>
+			<p class="mb-1" data-i18n="footer.copyright">© Copyright DSR24. All Rights Reserved</p>
 		</div>
 	</footer>
+
 
 	<!-- Video Modal -->
 	<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
