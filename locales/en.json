@@ -23,22 +23,22 @@
     "button": "Report Damage Here"
   },
   "about": {
-    "title": "An Awesome Title",
-    "subtitle": "Amazing and wonderful subtitle",
-    "feature1": "Things you want 1",
-    "feature2": "Things you want 2",
-    "feature3": "Things you want 4.",
-    "description": "Mouse chewed the mouse's cork, three sad tigers (more top content you want)"
+    "title": "Your Reliable Partner for Accident Claims",
+    "subtitle": "Professional claims management with years of experience",
+    "feature1": "Free consultation and support",
+    "feature2": "Fast and straightforward processing",
+    "feature3": "Maximum compensation for you",
+    "description": "At DSR24, you're in good hands. We handle all aspects of your claim and ensure you get what you're entitled to."
   },
   "features": {
-    "feature1Title": "Test 1",
-    "feature1Desc": "Good morning",
-    "feature2Title": "Test 2",
-    "feature2Desc": "Good afternoon",
-    "feature3Title": "Test 3",
-    "feature3Desc": "Good night",
-    "feature4Title": "Test 4",
-    "feature4Desc": "Good week"
+    "feature1Title": "Free Consultation",
+    "feature1Desc": "We provide comprehensive and free advice on all matters related to your claim",
+    "feature2Title": "Fast Processing",
+    "feature2Desc": "With our years of experience, we process your claim quickly and efficiently",
+    "feature3Title": "Maximum Compensation",
+    "feature3Desc": "We use all legal means to secure the maximum compensation for you",
+    "feature4Title": "Personal Support",
+    "feature4Desc": "You have a dedicated contact person who guides you throughout the entire process"
   },
   "services": {
     "heading": "Services",
@@ -70,8 +70,8 @@
     "filterWeb": "WEB"
   },
   "stats": {
-    "title": "Top Title",
-    "subtitle": "top subtitle",
+    "title": "DSR24 in Numbers",
+    "subtitle": "Our success speaks for itself",
     "happyClients": "Happy Clients",
     "happyClientsDesc": "so happy and such",
     "projects": "Projects",
@@ -87,11 +87,11 @@
     "member1Name": "Patricio Da Silva",
     "member1Role": "CEO",
     "member2Name": "Maria Malato",
-    "member2Role": "Pretend programmer and soccer player",
+    "member2Role": "Developer and Soccer Player",
     "member3Name": "Nadine Heinzel",
     "member3Role": "Marketing Assistant",
     "member4Name": "Leandro Ferreira",
-    "member4Role": "Best programmer at DSR24"
+    "member4Role": "Lead Developer at DSR24"
   },
   "contact": {
     "heading": "Contact",

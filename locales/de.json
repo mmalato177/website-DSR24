@@ -23,22 +23,22 @@
     "button": "Hier Schadenfall melden"
   },
   "about": {
-    "title": "Um titulo bue top",
-    "subtitle": "Substitulo incrivel e maravilhoso",
-    "feature1": "Cenas que quiserem 1",
-    "feature2": "Cenas que quiserem 2",
-    "feature3": "Cenas que quiserem 4.",
-    "description": "rato roeu a rolha do rato, tres tristes tigres (mais conteudo top q quiserem)"
+    "title": "Ihr zuverlässiger Partner bei Unfallschäden",
+    "subtitle": "Professionelle Schadenregulierung mit jahrelanger Erfahrung",
+    "feature1": "Kostenlose Beratung und Betreuung",
+    "feature2": "Schnelle und unkomplizierte Abwicklung",
+    "feature3": "Maximale Schadensersatzleistung für Sie",
+    "description": "Bei DSR24 sind Sie in guten Händen. Wir kümmern uns um alle Aspekte Ihres Schadenfalls und sorgen dafür, dass Sie zu Ihrem Recht kommen."
   },
   "features": {
-    "feature1Title": "Teste 1",
-    "feature1Desc": "Bom dia",
-    "feature2Title": "Teste 2",
-    "feature2Desc": "Boa tarde",
-    "feature3Title": "Teste 3",
-    "feature3Desc": "Boa noite",
-    "feature4Title": "Teste 4",
-    "feature4Desc": "Boa semana"
+    "feature1Title": "Kostenfreie Beratung",
+    "feature1Desc": "Wir beraten Sie umfassend und kostenfrei zu allen Fragen rund um Ihren Schadenfall",
+    "feature2Title": "Schnelle Abwicklung",
+    "feature2Desc": "Durch unsere langjährige Erfahrung wickeln wir Ihren Schadenfall schnell und effizient ab",
+    "feature3Title": "Maximale Entschädigung",
+    "feature3Desc": "Wir setzen alle rechtlichen Möglichkeiten ein, um Ihnen die maximale Entschädigung zu sichern",
+    "feature4Title": "Persönliche Betreuung",
+    "feature4Desc": "Sie haben einen festen Ansprechpartner, der Sie während des gesamten Prozesses begleitet"
   },
   "services": {
     "heading": "Leistungen",
@@ -70,8 +70,8 @@
     "filterWeb": "WEB"
   },
   "stats": {
-    "title": "Titulo top",
-    "subtitle": "subtitulo top",
+    "title": "DSR24 in Zahlen",
+    "subtitle": "Unsere Erfolge sprechen für sich",
     "happyClients": "Zufriedene Kunden",
     "happyClientsDesc": "sehr zufrieden",
     "projects": "Projekte",
@@ -87,11 +87,11 @@
     "member1Name": "Patricio Da Silva",
     "member1Role": "CEO",
     "member2Name": "Maria Malato",
-    "member2Role": "Programadora faz de conta e jogadora de futebol",
+    "member2Role": "Entwicklerin und Fußballspielerin",
     "member3Name": "Nadine Heinzel",
     "member3Role": "Marketing Assistent",
     "member4Name": "Leandro Ferreira",
-    "member4Role": "Melhor programador da DSR24"
+    "member4Role": "Lead Developer bei DSR24"
   },
   "contact": {
     "heading": "Kontakt",
