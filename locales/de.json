@@ -73,25 +73,25 @@
     "title": "DSR24 in Zahlen",
     "subtitle": "Unsere Erfolge sprechen für sich",
     "happyClients": "Zufriedene Kunden",
-    "happyClientsDesc": "sehr zufrieden",
+    "happyClientsDesc": "-",
     "projects": "Projekte",
-    "projectsDesc": "erfolgreich abgeschlossen",
+    "projectsDesc": "-",
     "experience": "Jahre Erfahrung",
-    "experienceDesc": "Expertenwissen",
+    "experienceDesc": "-",
     "awards": "Auszeichnungen",
-    "awardsDesc": "erhalten"
+    "awardsDesc": "-"
   },
   "team": {
     "heading": "Team",
     "title": "UNSER TEAM",
     "member1Name": "Patricio Da Silva",
     "member1Role": "CEO",
-    "member2Name": "Maria Malato",
-    "member2Role": "Entwicklerin und Fußballspielerin",
+    "member2Name": "Katharina Lastowski",
+    "member2Role": "Marketing Manager",
     "member3Name": "Nadine Heinzel",
     "member3Role": "Marketing Assistent",
-    "member4Name": "Leandro Ferreira",
-    "member4Role": "Lead Developer bei DSR24"
+    "member4Name": "---",
+    "member4Role": "---"
   },
   "contact": {
     "heading": "Kontakt",

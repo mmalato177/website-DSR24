@@ -368,19 +368,31 @@
 			</section>
 
 			<!--CALL TO ACTION SECTION-->
-			<section id="action" class="sectaction">
-				<div class="action-box py-5">
-					<div class="container text-center">
-						<h1 class="text-body-emphasis" data-i18n="action.title">Call To Action</h1>
-						<button type="button" class="btn btn-outline-secondary" data-i18n="action.button">Call to
-							action</button>
-						<p class="col-lg-8 mx-auto lead" data-i18n="action.description">
+		<section id="action" class="sectaction position-relative overflow-hidden">
+			<div class="cta-gradient-bg"></div>
+			<div class="container position-relative" style="z-index: 2;">
+				<div class="row align-items-center py-4 my-3">
+					<div class="col-lg-8 mx-auto text-center" data-aos="zoom-in">
+						<div class="cta-icon mb-3">
+							<i class="fa-solid fa-bullhorn fa-3x"></i>
+						</div>
+						<h2 class="display-5 fw-bold text-white mb-3" data-i18n="action.title">Call To Action</h2>
+						<p class="lead text-white mb-4 opacity-90" data-i18n="action.description">
 							Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 							pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
 							mollit anim id est laborum.
 						</p>
+						<button type="button" class="btn btn-cta btn-lg px-4 py-2 shadow-lg" data-i18n="action.button">
+							Call to action
+							<i class="fa-solid fa-arrow-right ms-2"></i>
+						</button>
 					</div>
 				</div>
+			</div>
+			<div class="cta-shapes">
+				<div class="shape shape-1"></div>
+				<div class="shape shape-2"></div>
+				<div class="shape shape-3"></div>
 			</section>
 
 			<!--PORTFOLIO SECTION-->
@@ -452,7 +464,7 @@
 											<h3 class="fw-bold mb-0">65</h3>
 											<p class="mb-0"><strong data-i18n="stats.happyClients">Happy
 													Clients</strong>
-												<span data-i18n="stats.happyClientsDesc">tao contentes e assim</span>
+												<span data-i18n="stats.happyClientsDesc">-</span>
 											</p>
 										</div>
 									</div>
@@ -465,7 +477,7 @@
 										<div>
 											<h3 class="fw-bold mb-0">85</h3>
 											<p class="mb-0"><strong data-i18n="stats.projects">Projects</strong> <span
-													data-i18n="stats.projectsDesc">e tal</span></p>
+													data-i18n="stats.projectsDesc">-</span></p>
 										</div>
 									</div>
 								</div>
@@ -477,8 +489,8 @@
 										<div>
 											<h3 class="fw-bold mb-0">35</h3>
 											<p class="mb-0"><strong data-i18n="stats.experience">Years of
-													experience</strong> <span data-i18n="stats.experienceDesc">bue anos
-													jesus</span></p>
+													experience</strong> <span data-i18n="stats.experienceDesc">-</span></p>
+													
 										</div>
 									</div>
 								</div>
@@ -490,7 +502,7 @@
 										<div>
 											<h3 class="fw-bold mb-0">20</h3>
 											<p class="mb-0"><strong data-i18n="stats.awards">Awards</strong> <span
-													data-i18n="stats.awardsDesc">tenho mais no kickboxe</span></p>
+													data-i18n="stats.awardsDesc">-</span></p>
 										</div>
 									</div>
 								</div>
@@ -514,7 +526,7 @@
 						<div class="col-lg-3 col-md-6">
 							<div class="team-card">
 								<div class="team-img">
-									<img src="img/team/teste4.png" alt="Patricio Da Silva" class="img-fluid">
+									<img src="img/team/icon-user.jpg" alt="Patricio Da Silva" class="img-fluid">
 								</div>
 								<div class="team-info pt-3">
 									<h5 class="fw-bold mb-0" data-i18n="team.member1Name">Patricio Da Silva</h5>
@@ -530,14 +542,12 @@
 						<div class="col-lg-3 col-md-6">
 							<div class="team-card">
 								<div class="team-img">
-									<img src="img/team/maria.jpeg" alt="Maria Malato" class="img-fluid"
+									<img src="img/team/icon-user.jpg" alt="Katharina Lastowski" class="img-fluid"
 										style="object-fit: contain; background-color: #f8f9fa;">
 								</div>
 								<div class="team-info pt-3">
-									<h5 class="fw-bold mb-0" data-i18n="team.member2Name">Maria Malato</h5>
-									<p class="text-muted small mb-0" data-i18n="team.member2Role">Programadora faz de
-										conta
-										e jogadora de futebol</p>
+									<h5 class="fw-bold mb-0" data-i18n="team.member2Name">Katharina Lastowski</h5>
+									<p class="text-muted small mb-0" data-i18n="team.member2Role">Marketing Manager</p>
 									<div class="team-social">
 										<a href="#"><i class="fab fa-linkedin-in"></i></a>
 										<a href="#"><i class="fab fa-twitter"></i></a>
@@ -549,7 +559,7 @@
 						<div class="col-lg-3 col-md-6">
 							<div class="team-card">
 								<div class="team-img">
-									<img src="img/team/teste4.png" alt="Nadine Heinzel" class="img-fluid">
+									<img src="img/team/icon-user.jpg" alt="Nadine Heinzel" class="img-fluid">
 								</div>
 								<div class="team-info pt-3">
 									<h5 class="fw-bold  mb-0" data-i18n="team.member3Name">Nadine Heinzel</h5>
@@ -566,12 +576,12 @@
 						<div class="col-lg-3 col-md-6">
 							<div class="team-card">
 								<div class="team-img">
-									<img src="img/team/teste4.png" alt="Leandro Ferreira" class="img-fluid">
+									<img src="img/team/icon-user.jpg" alt="---" class="img-fluid">
 								</div>
 								<div class="team-info pt-3">
-									<h5 class="fw-bold  mb-0" data-i18n="team.member4Name">Leandro Ferreira</h5>
-									<p class="text-muted small mb-0" data-i18n="team.member4Role">Melhor programador da
-										DSR24</p>
+									<h5 class="fw-bold  mb-0" data-i18n="team.member4Name">---</h5>
+									<p class="text-muted small mb-0" data-i18n="team.member4Role">---
+										--</p>
 									<div class="team-social">
 										<a href="#"><i class="fab fa-linkedin-in"></i></a>
 										<a href="#"><i class="fab fa-twitter"></i></a>
@@ -583,105 +593,7 @@
 					</div>
 				</div>
 			</section>
-
-			<!--CONTACT SECTION-->
-			<section id="contact" class="sectcontact py-5">
-				<div class="container" data-aos="fade-up">
-					<div class="mb-4">
-						<p class="fw-bold text-uppercase mb-1 aux">
-							<span class="aux-text" data-i18n="contact.heading">Contact</span>
-							<span class="aux-line w-2"></span>
-						</p>
-						<h2 class="fw-bold" data-i18n="contact.title">GET IN TOUCH</h2>
-					</div>
-					<div class="mb-4">
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4894.295768251796!2d9.25241347222842!3d52.16800464969099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba880a59edba83%3A0xe27d5fac4ccd76bd!2sDSR24%20Deutsche%20Schadenregulierung%20GmbH!5e0!3m2!1spt-BR!2spt!4v1769086422085!5m2!1spt-BR!2spt"
-							width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"></iframe>
-					</div>
-					<div class="row align-items-start gy-5">
-						<div class="col-md-10 col-lg-6">
-							<div class="row mb-4 align-items-center">
-								<div class="col-auto d-flex align-items-center">
-									<svg class="contact-svg" aria-hidden="true">
-										<use href="/gfx/icons/location-dot.svg"></use>
-									</svg>
-								</div>
-								<div class="col-auto d-flex flex-column justify-content-center">
-									<h4 class="fw-bold mb-1" data-i18n="contact.location">Location:</h4>
-									<p class="fst text-muted mb-0" data-i18n="contact.locationText">Segelhorster Str. 2,
-										31840 Hessisch Oldendorf, Germany
-									</p>
-								</div>
-							</div>
-
-							<div class="row mb-4 align-items-center">
-								<div class="col-auto d-flex align-items-center">
-									<svg class="contact-svg" aria-hidden="true">
-										<use href="/gfx/icons/envelope.svg"></use>
-									</svg>
-								</div>
-								<div class="col-auto d-flex flex-column justify-content-center">
-									<h4 class="fw-bold mb-1" data-i18n="contact.email">Email:</h4>
-									<p class="fst text-muted mb-0" data-i18n="contact.emailText">info@dsr24.de
-									</p>
-								</div>
-							</div>
-							<div class="row mb-4 align-items-center">
-								<div class="col-auto d-flex align-items-center">
-									<svg class="contact-svg" aria-hidden="true">
-										<use href="/gfx/icons/phone.svg"></use>
-									</svg>
-								</div>
-								<div class="col-auto d-flex flex-column justify-content-center">
-									<h4 class="fw-bold mb-1" data-i18n="contact.call">Call:</h4>
-									<p class="fst text-muted mb-0" data-i18n="contact.callText">0800 - 321 24 24
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-10 col-lg-6">
-							<form>
-								<div class="row justify-content-center">
-									<div class="col-md-6">
-										<div class="mb-3">
-											<input class="form-control " placeholder="Your Name" type="text"
-												data-i18n="contact.formName" data-i18n-attr="placeholder">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="mb-3">
-											<input class="form-control " placeholder="Your Email" type="email"
-												data-i18n="contact.formEmail" data-i18n-attr="placeholder">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="mb-3">
-											<input class="form-control " placeholder="Subject" type="text"
-												data-i18n="contact.formSubject" data-i18n-attr="placeholder">
-										</div>
-									</div>
-									<div class="col-md-12">
-										<div class="mb-4">
-											<textarea class="form-control " placeholder="Message" rows="4"
-												data-i18n="contact.formMessage" data-i18n-attr="placeholder"></textarea>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="d-grid">
-											<button class="btn btn-yellow" type="submit"
-												data-i18n="contact.formButton">Send
-												message</button>
-										</div>
-									</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!--REVIEWS SECTION-->
+            			<!--REVIEWS SECTION-->
 			<section id="reviews" class="sectreviews">
 				<div class="container-fluid background-review" data-aos="fade-up">
 					<div class="d-flex align-items-center py-2 mh-100">
@@ -788,6 +700,104 @@
 					</div>
 				</div>
 			</section>
+			<!--CONTACT SECTION-->
+			<section id="contact" class="sectcontact py-5">
+				<div class="container" data-aos="fade-up">
+					<div class="mb-4">
+						<p class="fw-bold text-uppercase mb-1 aux">
+							<span class="aux-text" data-i18n="contact.heading">Contact</span>
+							<span class="aux-line w-2"></span>
+						</p>
+						<h2 class="fw-bold" data-i18n="contact.title">GET IN TOUCH</h2>
+					</div>
+					<div class="mb-4">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4894.295768251796!2d9.25241347222842!3d52.16800464969099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba880a59edba83%3A0xe27d5fac4ccd76bd!2sDSR24%20Deutsche%20Schadenregulierung%20GmbH!5e0!3m2!1spt-BR!2spt!4v1769086422085!5m2!1spt-BR!2spt"
+							width="100%" height="270px" style="border:0;" allowfullscreen="" loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+					<div class="row align-items-start gy-5">
+						<div class="col-md-10 col-lg-6">
+							<div class="row mb-4 align-items-center">
+								<div class="col-auto d-flex align-items-center">
+									<svg class="contact-svg" aria-hidden="true">
+										<use href="/gfx/icons/location-dot.svg"></use>
+									</svg>
+								</div>
+								<div class="col-auto d-flex flex-column justify-content-center">
+									<h4 class="fw-bold mb-1" data-i18n="contact.location">Location:</h4>
+									<p class="fst text-muted mb-0" data-i18n="contact.locationText">Segelhorster Str. 2,
+										31840 Hessisch Oldendorf, Germany
+									</p>
+								</div>
+							</div>
+
+							<div class="row mb-4 align-items-center">
+								<div class="col-auto d-flex align-items-center">
+									<svg class="contact-svg" aria-hidden="true">
+										<use href="/gfx/icons/envelope.svg"></use>
+									</svg>
+								</div>
+								<div class="col-auto d-flex flex-column justify-content-center">
+									<h4 class="fw-bold mb-1" data-i18n="contact.email">Email:</h4>
+									<p class="fst text-muted mb-0" data-i18n="contact.emailText">info@dsr24.de
+									</p>
+								</div>
+							</div>
+							<div class="row mb-4 align-items-center">
+								<div class="col-auto d-flex align-items-center">
+									<svg class="contact-svg" aria-hidden="true">
+										<use href="/gfx/icons/phone.svg"></use>
+									</svg>
+								</div>
+								<div class="col-auto d-flex flex-column justify-content-center">
+									<h4 class="fw-bold mb-1" data-i18n="contact.call">Call:</h4>
+									<p class="fst text-muted mb-0" data-i18n="contact.callText">0800 - 321 24 24
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-10 col-lg-6">
+							<form>
+								<div class="row justify-content-center">
+									<div class="col-md-6">
+										<div class="mb-3">
+											<input class="form-control " placeholder="Your Name" type="text"
+												data-i18n="contact.formName" data-i18n-attr="placeholder">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="mb-3">
+											<input class="form-control " placeholder="Your Email" type="email"
+												data-i18n="contact.formEmail" data-i18n-attr="placeholder">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="mb-3">
+											<input class="form-control " placeholder="Subject" type="text"
+												data-i18n="contact.formSubject" data-i18n-attr="placeholder">
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="mb-4">
+											<textarea class="form-control " placeholder="Message" rows="4"
+												data-i18n="contact.formMessage" data-i18n-attr="placeholder"></textarea>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="d-grid">
+											<button class="btn btn-yellow" type="submit"
+												data-i18n="contact.formButton">Send
+												message</button>
+										</div>
+									</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
 
 		</main>
 
@@ -862,14 +872,15 @@
 
 
 		<!-- Video Modal -->
-		<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered modal-lg">
-				<div class="modal-content bg-dark">
-					<div class="modal-header border-0">
-						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body p-0">
+	<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
+		<div class="modal-dialog modal-dialog-centered modal-xl">
+			<div class="modal-content bg-dark border-0">
+				<div class="modal-header border-0 p-2 d-flex justify-content-between align-items-center">
+					<small class="text-white-50 ms-3">Pressione ESC ou clique fora para fechar</small>
+					<button type="button" class="btn-close btn-close-white shadow-lg" data-bs-dismiss="modal"
+						aria-label="Close" title="Fechar vídeo"></button>
+				</div>
+				<div class="modal-body p-3">
 						<div class="ratio ratio-16x9">
 							<iframe id="videoIframe" src="" title="Video" frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

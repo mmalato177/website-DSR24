@@ -604,12 +604,162 @@ section.sectservices h1 span {
 /****************************************/
 /************ Action SECTION ************/
 /****************************************/
-.sectaction .action-box {
-  background-image: url('../gfx/welcome2.avif');
-  background-color: rgba(25,89,156,0.4);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+.sectaction {
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cta-gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--dsr-blue) 0%, var(--dsr-blue-dark) 50%, #003d6b 100%);
+  z-index: 0;
+}
+
+.cta-gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(241, 217, 13, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(31, 110, 191, 0.2) 0%, transparent 50%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.cta-icon {
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+.cta-icon i {
+  color: var(--dsr-yellow);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.btn-cta {
+  background: var(--dsr-yellow);
+  color: var(--dsr-blue-dark);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta:hover {
+  background: #ffd700;
+  color: var(--dsr-blue-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(241, 217, 13, 0.4) !important;
+}
+
+.btn-cta:active {
+  transform: translateY(-1px);
+}
+
+.btn-cta i {
+  transition: transform 0.3s ease;
+}
+
+.btn-cta:hover i {
+  transform: translateX(5px);
+}
+
+/* Formas decorativas animadas */
+.cta-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(241, 217, 13, 0.1);
+  animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  bottom: -50px;
+  right: 10%;
+  animation-delay: 5s;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.shape-3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  right: -75px;
+  animation-delay: 10s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(240deg);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cta-icon i {
+    font-size: 3rem !important;
+  }
+  
+  .sectaction .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .btn-cta {
+    padding: 0.75rem 2rem !important;
+  }
 }
 
 /****************************************/
@@ -1048,6 +1198,65 @@ section.sectreviews p{
 
 .footer-bottom span {
   color: #f1d90d;
+}
+
+/****************************************/
+/********** Video Modal Styles **********/
+/****************************************/
+#videoModal .modal-content {
+  background: rgba(0, 0, 0, 0.95) !important;
+}
+
+#videoModal .btn-close {
+  background: var(--dsr-yellow);
+  border-radius: 50%;
+  padding: 0.75rem;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#videoModal .btn-close:hover {
+  background: #ffd700;
+  transform: scale(1.1) rotate(90deg);
+}
+
+#videoModal .btn-close:focus {
+  box-shadow: 0 0 0 0.25rem rgba(241, 217, 13, 0.5);
+}
+
+/* Permite clicar fora do modal para fechar */
+#videoModal .modal-dialog {
+  pointer-events: none;
+}
+
+#videoModal .modal-content {
+  pointer-events: all;
+}
+
+/* Efeito ao abrir o modal */
+#videoModal.show .modal-dialog {
+  animation: modalZoomIn 0.3s ease;
+}
+
+@keyframes modalZoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Estilo para o backdrop mais escuro */
+#videoModal .modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 
