@@ -28,12 +28,14 @@ document.addEventListener("scroll", function () {
 	}
 });
 
+/*******************************/
+/******  BRANDS SLIDER ******/
+/*******************************/
 
-const track = document.querySelector(".partners-track");
+const track = document.querySelector(".brands-track");
 const dots = document.querySelectorAll(".dot");
 
-// quanto anda por clique (ajusta!)
-const STEP = 320; // px
+const STEP = 320; 
 
 dots.forEach(dot => {
 	dot.addEventListener("click", () => {
@@ -57,14 +59,14 @@ portfolioFilters.forEach(filter => {
 			btn.classList.remove("active", "btn-primary");
 			btn.classList.add("btn-outline-secondary");
 		});
-		
+
 		// Add active class to clicked button
 		filter.classList.add("active", "btn-primary");
 		filter.classList.remove("btn-outline-secondary");
-		
+
 		// Get filter category
 		const category = filter.dataset.filter;
-		
+
 		// Filter items
 		portfolioItems.forEach(item => {
 			if (category === "all" || item.dataset.category === category) {
@@ -85,11 +87,83 @@ if (videoModal) {
 	videoModal.addEventListener('show.bs.modal', function () {
 		videoIframe.src = videoUrl + '?autoplay=1';
 	});
-	
+
 	videoModal.addEventListener('hide.bs.modal', function () {
 		videoIframe.src = '';
 	});
 }
+
+// Accessibility Menu
+
+document.addEventListener("DOMContentLoaded", () => {
+	const toggleBtn = document.getElementById("accessibility-toggle");
+	const menu = document.getElementById("accessibility-menu");
+	const closeBtn = document.getElementById("close-menu");
+	const content = document.getElementById("main-content");
+
+	/* Reset button */
+	document.getElementById('reset-btn').addEventListener('click', function (e) {
+		e.preventDefault();
+		resetAll();
+	});
+
+	function resetAll() {
+		content.classList.remove("high-contrast", "invert-colors", "bw");
+		fontSize = 16;
+		content.style.fontSize = fontSize + "px";
+	}
+
+	/*get initial font size*/
+	let fontSize = parseFloat(getComputedStyle(content).fontSize);
+
+	/* Open menu */
+	toggleBtn.addEventListener("click", () => {
+		menu.classList.add("open");
+		toggleBtn.style.opacity = "0";
+		toggleBtn.style.pointerEvents = "none";
+	});
+
+	/* Close menu */
+	closeBtn.addEventListener("click", () => {
+		menu.classList.remove("open");
+		toggleBtn.style.opacity = "1";
+		toggleBtn.style.pointerEvents = "auto";
+	});
+
+	/* Menu actions */
+	menu.querySelectorAll("button[data-action]").forEach(btn => {
+		btn.addEventListener("click", () => {
+			const action = btn.dataset.action;
+
+			switch (action) {
+				case "high-contrast":
+					content.classList.toggle("high-contrast");
+					break;
+
+				case "invert-colors":
+					content.classList.toggle("invert-colors");
+					break;
+
+				case "bw":
+					content.classList.toggle("bw");
+					break;
+
+				case "font-increase":
+					fontSize += 2;
+					content.style.fontSize = fontSize + "px";
+					break;
+
+				case "font-decrease":
+					fontSize = Math.max(12, fontSize - 2);
+					content.style.fontSize = fontSize + "px";
+					break;
+			}
+		});
+
+	});
+
+});
+
 
 
 
