@@ -109,6 +109,21 @@
     "formButton": "Nachricht senden"
   },
   "reviews": {
+    "heading": "Kundenstimmen",
+    "title": "ECHTE ERFOLGSGESCHICHTEN",
+    "readMore": "Geschichte lesen",
+    "review1Quote": "DSR24 hat mir geholfen, 2.500€ von der gegnerischen Versicherung zu erhalten!",
+    "customer1Name": "Jane Doe",
+    "customer1Info": "32 Jahre, Ärztin",
+    "customer1Preview": "Parkplatzunfall • Vollständige Schadensregulierung",
+    "review2Quote": "Schnell, professionell und ohne Stress. Ich kann DSR24 wirklich empfehlen!",
+    "customer2Name": "Michael Schmidt",
+    "customer2Info": "45 Jahre, Ingenieur",
+    "customer2Preview": "Auffahrunfall • Anwalt & Gutachter inkl.",
+    "review3Quote": "DSR24 hat sich um alles gekümmert. Ich musste mich um nichts sorgen!",
+    "customer3Name": "Sarah Müller",
+    "customer3Info": "28 Jahre, Lehrerin",
+    "customer3Preview": "Kreuzungsunfall • Komplettservice",
     "review1": "Wir haben den besten Service von dieser Person erhalten. Wir werden sie definitiv für unser nächstes Projekt engagieren.",
     "reviewer1Name": "Jason Walker",
     "reviewer1Role": "Grafikdesigner",
@@ -118,6 +133,19 @@
     "review3": "Wir haben den besten Service von dieser Person erhalten. Wir werden sie definitiv für unser nächstes Projekt engagieren.",
     "reviewer3Name": "Stephen Jones",
     "reviewer3Role": "Webentwickler"
+  },
+  "useCase": {
+    "backToReviews": "Zurück zu Kundenstimmen",
+    "situation": "Die Situation",
+    "problem": "Die Herausforderung",
+    "solution": "Wie DSR24 geholfen hat",
+    "result": "Das Ergebnis",
+    "servicesUsed": "Genutzte Leistungen",
+    "timeline": "Zeitverlauf",
+    "ctaTitle": "Hatten Sie auch einen Unfall?",
+    "ctaDescription": "Lassen Sie sich kostenfrei von DSR24 helfen – genau wie unsere zufriedenen Kunden!",
+    "ctaButton": "Schadenfall melden",
+    "moreStories": "Weitere Erfolgsgeschichten"
   },
   "footer": {
     "company": "DSR Deutsche Schadenregulierung GmbH",

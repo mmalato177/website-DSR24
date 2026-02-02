@@ -109,6 +109,21 @@
     "formButton": "Send message"
   },
   "reviews": {
+    "heading": "Customer Reviews",
+    "title": "REAL SUCCESS STORIES",
+    "readMore": "Read Story",
+    "review1Quote": "DSR24 helped me get €2,500 from the opponent's insurance!",
+    "customer1Name": "Jane Doe",
+    "customer1Info": "32 years old, Medical Doctor",
+    "customer1Preview": "Parking Lot Accident • Full Damage Compensation",
+    "review2Quote": "Fast, professional and stress-free. I can really recommend DSR24!",
+    "customer2Name": "Michael Schmidt",
+    "customer2Info": "45 years old, Engineer",
+    "customer2Preview": "Rear-end Collision • Lawyer & Expert Included",
+    "review3Quote": "DSR24 took care of everything. I didn't have to worry about anything!",
+    "customer3Name": "Sarah Müller",
+    "customer3Info": "28 years old, Teacher",
+    "customer3Preview": "Intersection Accident • Complete Service",
     "review1": "We have received the best service from this person. We will definitely hire for our next project.",
     "reviewer1Name": "Jason Walker",
     "reviewer1Role": "Graphics Designer",
@@ -118,6 +133,19 @@
     "review3": "We have received the best service from this person. We will definitely hire for our next project.",
     "reviewer3Name": "Stephen Jones",
     "reviewer3Role": "Web Developer"
+  },
+  "useCase": {
+    "backToReviews": "Back to Customer Reviews",
+    "situation": "The Situation",
+    "problem": "The Challenge",
+    "solution": "How DSR24 Helped",
+    "result": "The Result",
+    "servicesUsed": "Services Used",
+    "timeline": "Timeline",
+    "ctaTitle": "Did you also have an accident?",
+    "ctaDescription": "Let DSR24 help you for free – just like our satisfied customers!",
+    "ctaButton": "Report Damage",
+    "moreStories": "More Success Stories"
   },
   "footer": {
     "company": "DSR Deutsche Schadenregulierung GmbH",
