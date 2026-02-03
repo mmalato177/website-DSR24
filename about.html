@@ -19,47 +19,13 @@
     <script src="js/aos.js" defer></script>
     <script src="js/i18n.js" defer></script>
     <script src="js/dsr.js" defer></script>
+    <script src="/js/partials.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-xl fixed-top">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="mobileNaviToggler">
-                <a class="navbar-brand" href="index.html">
-                    <img src="gfx/dsr_weiss.png" alt="DSR24 Logo" class="logo">
-                </a>
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#welcome" data-i18n="nav.reportDamage">Schadenfall
-                            melden</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#services" data-i18n="nav.services">Leistungen</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#about" data-i18n="nav.dsr24">DSR24</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#reviews" data-i18n="nav.reviews">Kundenstimmen</a>
-                    </li>
-                </ul>
-                <div class="d-flex align-items-center">
-                    <div class="btn-group" role="group" aria-label="Language switcher">
-                        <button type="button" class="btn btn-sm btn-outline-light lang-btn active"
-                            data-lang="de">DE</button>
-                        <button type="button" class="btn btn-sm btn-outline-light lang-btn" data-lang="en">EN</button>
-                    </div>
-                </div>
-            </div>
-            <button class="navbar-toggler" type="button" aria-label="Navigation ein- oder ausklappen"
-                data-bs-toggle="collapse" data-bs-target="#mobileNaviToggler" aria-controls="mobileNaviToggler"
-                aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+    <div id="navbar"></div>
     <!-- Main Content-->
     <main class="use-case-main">
         <!-- Header with Back Button -->
@@ -82,7 +48,6 @@
                 <div class="row align-items-center">
                     <div class="col-md-6" data-aos="fade-right">
                         <h2 class="fw-bold" data-i18n="aboutpage.title"></h2>
-
                         <p class="fst-italic text-muted mb-4" data-i18n="aboutpage.subtitle">
                         </p>
                     </div>
@@ -93,7 +58,17 @@
                 </div>
 
             </div>
+        </section>
+
+        <section>
             <div class="container" data-aos="fade-up">
+                <div class="mb-4">
+                    <p class="fw-bold text-uppercase mb-1 aux">
+                        <span class="aux-text" data-i18n="aboutpage.videoSubtitle"></span>
+                        <span class="aux-line"></span>
+                    </p>
+                    <h2 class="fw-bold" data-i18n="aboutpage.videoTitle"></h2>
+                </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
                         <div class="video-thumbnail position-relative rounded overflow-hidden mt-5">
@@ -110,10 +85,17 @@
                     </div>
                 </div>
             </div>
-
         </section>
+
         <section class="timeline-section py-5">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
+                <div class="mb-4">
+                    <p class="fw-bold text-uppercase mb-1 aux">
+                        <span class="aux-text" data-i18n="aboutpage.timelineSubtitle"></span>
+                        <span class="aux-line"></span>
+                    </p>
+                    <h2 class="fw-bold" data-i18n="aboutpage.timelineTitle"></h2>
+                </div>
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="card">
@@ -189,10 +171,8 @@
                                                                 <p class="mb-0 mt-2 pt-1 text-muted"
                                                                     data-i18n="aboutpage.timeline4"></p>
 
-                                                                <button type="button"
-                                                                    class="btn btn-success btn-rounded waves-effect waves-light mt-4">See
-                                                                    more detail
-                                                                </button>
+                                                                <a href="#" class="mt-1 d-flex float-end">Read more...
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -209,8 +189,6 @@
                                                             <div class="timeline-text">
                                                                 <p class="mb-0 mt-2 pt-1 text-muted"
                                                                     data-i18n="aboutpage.timeline5"></p>
-
-                                                                <a href="#">Read more</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -237,12 +215,12 @@
 
                                             <li>
                                                 <div class="date bg-light position-relative">
-                                                    <h5 class="text-uppercase fw-bold mb-0 fs-16 text-center">Step 7</h5>
-                                                    <div class="timeline-date bg-primary text-center position-absolute" data-i18n="aboutpage.stamp">
-                                                        Goal
-                                                    </div>
-                                                </div>
+                                                    <span class="goal-ribbon" data-i18n="aboutpage.stamp"></span>
 
+                                                    <h5 class="text-uppercase fw-bold mb-0 fs-16 text-center">
+                                                        Step 7
+                                                    </h5>
+                                                </div>
 
                                                 <div class="card">
                                                     <div class="card-body">
@@ -268,6 +246,8 @@
         </section>
 
     </main>
+    <!-- Footer -->
+    <div id="footer"></div>
 </body>
 
 </html>
