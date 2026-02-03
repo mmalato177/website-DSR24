@@ -1532,5 +1532,58 @@ section.sectreviews p{
 }
 
 
+/****************************************/
+/************ subpages header ***********/
+/****************************************/
+
+/* Header Section */
+.subpage-header {
+  padding-top: 60px;
+  padding-bottom: 60px;
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 2px solid #dee2e6;
+  position: relative;
+}
+
+.subpage-header .hashtag {
+  color: var(--dsr-yellow);
+  font-weight: 800;
+}
+
+.subpage-header h1 {
+  color: var(--dsr-blue);
+  margin-bottom: 1rem;
+}
+
+.subpage-main{
+  padding-top: 80px;
+}
+
+
+/* ========================================
+   HEADER WITH BACK BUTTON
+   ======================================== */
+
+
+.back-link {
+  color: var(--dsr-blue);
+  text-decoration: none;
+  font-weight: 600;
+  background: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+}
+
+.back-link:hover {
+  background: var(--dsr-yellow);
+  color: var(--dsr-blue-dark);
+  transform: translateX(-5px);
+  box-shadow: 0 4px 12px rgba(25, 89, 156, 0.3);
+}
+
 
 

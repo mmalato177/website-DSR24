@@ -18,46 +18,14 @@
 	<script src="js/bootstrap.bundle.min.js" defer></script>
 	<script src="js/aos.js" defer></script>
 	<script src="js/i18n.js" defer></script>
+	<script src="js/partials.js" defer></script>
 	<script src="js/use-case.js" defer></script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-xl fixed-top">
-		<div class="container">
-			<div class="collapse navbar-collapse" id="mobileNaviToggler">
-				<a class="navbar-brand" href="index.html">
-					<img src="gfx/dsr_weiss.png" alt="DSR24 Logo" class="logo">
-				</a>
-				<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link" href="index.html#welcome" data-i18n="nav.reportDamage">Schadenfall melden</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="index.html#services" data-i18n="nav.services">Leistungen</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="index.html#about" data-i18n="nav.dsr24">DSR24</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="index.html#reviews" data-i18n="nav.reviews">Kundenstimmen</a>
-					</li>
-				</ul>
-				<div class="d-flex align-items-center">
-					<div class="btn-group" role="group" aria-label="Language switcher">
-						<button type="button" class="btn btn-sm btn-outline-light lang-btn active" data-lang="de">DE</button>
-						<button type="button" class="btn btn-sm btn-outline-light lang-btn" data-lang="en">EN</button>
-					</div>
-				</div>
-			</div>
-			<button class="navbar-toggler" type="button" aria-label="Navigation ein- oder ausklappen"
-				data-bs-toggle="collapse" data-bs-target="#mobileNaviToggler" aria-controls="mobileNaviToggler"
-				aria-expanded="false">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-		</div>
-	</nav>
+	<div id="navbar"></div>
 
 	<main class="use-case-main">
 		<!-- Header with Back Button -->
@@ -221,32 +189,7 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="footer py-5" style="background-color: var(--dsr-blue); color: white;">
-		<div class="container">
-			<div class="row gy-4">
-				<div class="col-lg-4 col-md-6">
-					<img src="gfx/dsr_weiss.png" alt="DSR24" style="max-width: 150px; margin-bottom: 20px;">
-					<p class="small mb-1" data-i18n="footer.company">DSR Deutsche Schadenregulierung GmbH</p>
-					<p class="small mb-1" data-i18n="footer.address1">Münchhausenring 11</p>
-					<p class="small mb-3" data-i18n="footer.address2">31840 Hessisch Oldendorf</p>
-					<p class="small mb-1"><strong data-i18n="footer.phone">Telefon:</strong> <span data-i18n="footer.phoneNumber">0800 - 321 24 24</span></p>
-					<p class="small"><strong data-i18n="footer.email">E-Mail:</strong> <span data-i18n="footer.emailAddress">info@dsr24.de</span></p>
-				</div>
-				<div class="col-lg-2 col-md-6">
-					<h5 class="mb-3" data-i18n="footer.usefulLinks">Useful Links</h5>
-					<ul class="list-unstyled">
-						<li class="mb-2"><a href="index.html" class="text-white text-decoration-none" data-i18n="footer.home">Home</a></li>
-						<li class="mb-2"><a href="index.html#about" class="text-white text-decoration-none" data-i18n="footer.aboutUs">About us</a></li>
-						<li class="mb-2"><a href="index.html#services" class="text-white text-decoration-none" data-i18n="footer.services">Services</a></li>
-					</ul>
-				</div>
-			</div>
-			<hr style="border-color: rgba(255,255,255,0.2); margin: 30px 0;">
-			<div class="text-center">
-				<p class="mb-0 small" data-i18n="footer.copyright">© Copyright DSR24. All Rights Reserved</p>
-			</div>
-		</div>
-	</footer>
+	<div id="footer"></div>
 </body>
 
 </html>
