@@ -28,7 +28,8 @@
     "feature1": "Free consultation and support",
     "feature2": "Fast and straightforward processing",
     "feature3": "Maximum compensation for you",
-    "description": "At DSR24, you're in good hands. We handle all aspects of your claim and ensure you get what you're entitled to."
+    "description": "At DSR24, you're in good hands. We handle all aspects of your claim and ensure you get what you're entitled to.",
+    "button":"More about us"
   },
   "features": {
     "feature1Title": "Free Consultation",
@@ -177,5 +178,23 @@
     "newsletterDesc": "Tamen quem nulla quae legam multos aute sint culpa legam noster magna",
     "subscribe": "Subscribe",
     "copyright": "© Copyright DSR24. All Rights Reserved"
+  },
+
+  "aboutpage":{
+    "title": "We are here for you",
+    "heading": "Learn more about us",
+    "subtitle":"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecatcupida tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "videoTitle":"Overview of Our Company",
+    "videoSubtitle":"DSR24 Introduction Video",
+    "timelineTitle":"Damage Regulation Process",
+    "timelineSubtitle":"Settlement Process",
+    "timeline1":"You report your damage to us and receive a confirmation email.",
+    "timeline2":"We review your case and contact you if any information is missing. If you need a rental car, we will arrange an informational meeting with you.",
+    "timeline3":"The expert will usually contact you within 48 hours to inspect your vehicle. If we only need a cost estimate from a repair shop due to the low amount of damage, we will contact you.",
+    "timeline4":"We will determine the insurance company of the other party involved in the accident and our legal department will identify itself to them as your legal representative.",
+    "timeline5":"Once the expert opinion is available, our legal department will calculate your claims for damages against the other party's liability insurance company. They have between 4-8 weeks to process this.",
+    "timeline6":"After the payment deadline has expired, we will send a reminder to the insurance company. The insurance company may still need evidence (witnesses, pictures/videos or the e-file (release by authorities can take up to 8 weeks)) in order to confirm liability.",
+    "timeline7":"Confirmation of liability by the opposing insurance company and fictitious payment of the damage amount or repair of your vehicle. We will review any settlement from the opposing insurance company (ratio, reduction, etc.) and consult with you.",
+    "stamp":"Goal"
   }
 }
