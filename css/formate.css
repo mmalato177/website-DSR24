@@ -38,6 +38,7 @@
 	--dsr-success-active-a:#D6F3BD;
 	--dsr-success-active-b:#B9E199;
 	--dsr-navbarheight:82px;
+  --footer-height:400px;
 }
 
 body, div, nav, section, main, li, p, a, button, h1, h2, h3, h4, h5, h6, input, select, option, label {
@@ -54,7 +55,7 @@ body {
 	background-color:#fff;
 	padding:0;
 	margin:0;
-  min-height: 2000px;
+  min-height: 100%;
 }
 
 .btn-primary {
@@ -601,7 +602,19 @@ section.sectservices h1 span {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   border-color: var(--dsr-yellow); /* or any accent color */
+  cursor: pointer;
 }
+.sectservices .service-box a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* OR, since <a> is wrapping the div, target it directly */
+.sectservices a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .service-icon {
   margin-bottom: 18px;
@@ -1557,8 +1570,13 @@ section.sectreviews p{
 
 .subpage-main{
   padding-top: 80px;
-}
+  min-height: calc(100vh - var(--dsr-footerheight) - var(--dsr-navbarheight));
+  flex: 1 0 auto; /* preenche todo o espaço restante */
 
+}
+#footer {
+  flex-shrink: 0; /* garante que o footer fique no final */
+}
 
 /* ========================================
    HEADER WITH BACK BUTTON

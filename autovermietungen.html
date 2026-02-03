@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Autovermietungen - DSR24">
+    <meta name="author" content="DSR24">
+    <title>Autovermietungen - DSR24</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/solid.min.css" rel="stylesheet">
+    <link href="css/brands.min.css" rel="stylesheet">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/formate.css" rel="stylesheet">
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/aos.js" defer></script>
+    <script src="js/i18n.js" defer></script>
+    <script src="js/dsr.js" defer></script>
+    <script src="/js/partials.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
+    <button id="accessibility-toggle" aria-label="Open accessibility menu">
+        <svg class="menu-svg">
+            <use href="/gfx/icons/wheelchair-move.svg"></use>
+        </svg>
+    </button>
+
+    <!-- Accessibility Menu -->
+    <div id="accessibility-menu" aria-label="Accessibility menu">
+        <div class="menu-actions">
+            <button id="close-menu" aria-label="Close menu">✖</button>
+            <a href="#" id="reset-btn" data-action="reset" onclick="resetAll(); return false;">Reset</a>
+        </div>
+        <button data-action="high-contrast">High Contrast</button>
+        <button data-action="invert-colors">Invert Colors</button>
+        <button data-action="bw">Black & White</button>
+        <button data-action="font-increase">A+</button>
+        <button data-action="font-decrease">A-</button>
+    </div>
+
+    <div id="main-content">
+        <!-- Navigation -->
+        <div id="navbar"></div>
+        <!-- Main Content-->
+        <main class="subpage-main">
+            <!-- Header with Back Button -->   
+            <section class="subpage-header">
+                <div class="container">
+                    <div class="text-center" data-aos="fade-up">
+                        <h1 class="display-4 fw-bold mb-3">
+                            <span class="hashtag">#</span>Autovermietungen
+                        </h1>
+                        <p class="lead text-muted mb-4">
+                            Wichtige Begriffe rund um Unfallschäden einfach erklärt
+                        </p>
+                        <p class="text-muted">
+                            Klicken Sie auf eine Karte, um die Erklärung zu sehen
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+            <div class="container pt-3">
+                <a href="index.html#about" class="back-link d-inline-flex align-items-center">
+                    <i class="fas fa-arrow-left me-3"></i>
+                    <span data-i18n="about.backtoAbout">Zurück zu Kundenstimmen</span>
+                </a>
+            </div>
+
+
+            <section class="sectabout" id="about">
+                <div class="container">
+                    <div class="mb-0">
+                        <p class="fw-bold text-uppercase aux">
+                            <span class="aux-text" data-i18n="aboutpage.heading"></span>
+                            <span class="aux-line"></span>
+                        </p>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-6" data-aos="fade-right">
+                            <h2 class="fw-bold" data-i18n="aboutpage.title"></h2>
+                            <p class="fst-italic text-muted mb-4" data-i18n="aboutpage.subtitle">
+                            </p>
+                        </div>
+
+                        <div class="col-md-5 offset-sm-1" data-aos="fade-left">
+                            <img src="img/patricio.jpeg" alt="About" class="img-fluid rounded">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        <!-- Footer -->
+        <div id="footer"></div>
+    </div>
+</body>
+
+</html>
