@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="DSR24 erklärt - Wichtige Begriffe rund um Unfallschäden einfach erklärt">
+	<meta name="author" content="DSR24">
+	<title>#dsrklärt - DSR24</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/solid.min.css" rel="stylesheet">
+	<link href="css/brands.min.css" rel="stylesheet">
+	<link href="css/fontawesome.min.css" rel="stylesheet">
+	<link href="css/aos.css" rel="stylesheet">
+	<link href="css/formate.css" rel="stylesheet">
+	<link href="css/dsrklaert.css" rel="stylesheet">
+	<script src="js/jquery-3.7.1.min.js" defer></script>
+	<script src="js/bootstrap.bundle.min.js" defer></script>
+	<script src="js/aos.js" defer></script>
+	<script src="js/i18n.js" defer></script>
+	<script src="js/dsr.js" defer></script>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
+
+	<button id="accessibility-toggle" aria-label="Open accessibility menu">
+		<svg class="menu-svg">
+			<use href="/gfx/icons/wheelchair-move.svg"></use>
+		</svg>
+	</button>
+
+	<!-- Accessibility Menu -->
+	<div id="accessibility-menu" aria-label="Accessibility menu">
+		<div class="menu-actions">
+			<button id="close-menu" aria-label="Close menu">✖</button>
+			<a href="#" id="reset-btn" data-action="reset" onclick="resetAll(); return false;">Reset</a>
+		</div>
+		<button data-action="high-contrast">High Contrast</button>
+		<button data-action="invert-colors">Invert Colors</button>
+		<button data-action="bw">Black & White</button>
+		<button data-action="font-increase">A+</button>
+		<button data-action="font-decrease">A-</button>
+	</div>
+
+	<div id="main-content">
+		<nav class="navbar navbar-expand-xl fixed-top">
+			<div class="container">
+				<div class="collapse navbar-collapse" id="mobileNaviToggler">
+					<a class="navbar-brand" href="index.html">
+						<img src="gfx/dsr_weiss.png" alt="DSR24 Logo" class="logo">
+					</a>
+					<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+						<li class="nav-item nav-reportdamage">
+							<a class="nav-link" href="index.html#welcome" data-i18n="nav.reportDamage">Schadenfall melden</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false" data-i18n="nav.services">
+								Leistungen
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="index.html#services"
+										data-i18n="nav.expert">Sachverständiger</a>
+								</li>
+								<li><a class="dropdown-item" href="#" data-i18n="nav.lawyer">Anwalt</a></li>
+								<li><a class="dropdown-item" href="#" data-i18n="nav.rentalCar">Leihwagen</a></li>
+								<li><a class="dropdown-item" href="#" data-i18n="nav.workshop">Werkstatt</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false" data-i18n="nav.knowledge">
+								Wissenswelt
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#" data-i18n="nav.faq">FAQ</a></li>
+								<li><a class="dropdown-item" href="#" data-i18n="nav.blog">Blog</a></li>
+								<li><a class="dropdown-item active" href="dsrklaert.html">#dsrklärt</a></li>
+								<li><a class="dropdown-item" href="#">Downloads</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+								aria-expanded="false" data-i18n="nav.dsr24">
+								DSR24
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="index.html#about" data-i18n="nav.aboutUs">Über uns</a></li>
+								<li><a class="dropdown-item" href="index.html#team" data-i18n="nav.team">Team</a></li>
+								<li><a class="dropdown-item" href="index.html#contact" data-i18n="nav.contact">Kontakt</a></li>
+								<li><a class="dropdown-item" href="#" data-i18n="nav.news">News</a></li>
+								<li><a class="dropdown-item" href="#" data-i18n="nav.jobs">Jobs</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="index.html#reviews" data-i18n="nav.reviews">Kundenstimmen</a>
+						</li>
+					</ul>
+					<div class="d-flex align-items-center">
+						<div class="btn-group" role="group" aria-label="Language switcher">
+							<button type="button" class="btn btn-sm btn-outline-light lang-btn active"
+								data-lang="de">DE</button>
+							<button type="button" class="btn btn-sm btn-outline-light lang-btn"
+								data-lang="en">EN</button>
+						</div>
+					</div>
+				</div>
+				<button class="navbar-toggler" type="button" aria-label="Navigation ein- oder ausklappen"
+					data-bs-toggle="collapse" data-bs-target="#mobileNaviToggler" aria-controls="mobileNaviToggler"
+					aria-expanded="false">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+			</div>
+		</nav>
+
+
+		<main>
+			<!--HEADER SECTION-->
+			<section class="dsrklaert-header">
+				<div class="container">
+					<div class="text-center" data-aos="fade-up">
+						<h1 class="display-4 fw-bold mb-3">
+							<span class="hashtag">#</span>dsrklärt
+						</h1>
+						<p class="lead text-muted mb-4">
+							Wichtige Begriffe rund um Unfallschäden einfach erklärt
+						</p>
+						<p class="text-muted">
+							Klicken Sie auf eine Karte, um die Erklärung zu sehen
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!--FLIP CARDS SECTION-->
+			<section class="dsrklaert-cards py-5">
+				<div class="container">
+					<div class="row g-4">
+						
+						<!-- Card 1: Schadengutachten -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-file-invoice"></i>
+										</div>
+										<h3>Schadengutachten</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Schadengutachten</h4>
+										<p>Ein Schadengutachten ist eine detaillierte Bewertung der Unfallschäden an Ihrem Fahrzeug durch einen unabhängigen Kfz-Sachverständigen. Es dokumentiert Art und Umfang der Schäden sowie die Reparaturkosten.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 2: Nutzungsausfall -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-car-burst"></i>
+										</div>
+										<h3>Nutzungsausfall</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Nutzungsausfall</h4>
+										<p>Nutzungsausfall bezeichnet die Entschädigung für den Zeitraum, in dem Sie Ihr beschädigtes Fahrzeug nicht nutzen können. Diese wird unabhängig davon gezahlt, ob Sie tatsächlich ein Ersatzfahrzeug mieten.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 3: Mietwagen -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-car"></i>
+										</div>
+										<h3>Mietwagen</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Mietwagen</h4>
+										<p>Nach einem unverschuldeten Unfall haben Sie Anspruch auf ein Ersatzfahrzeug. Die Kosten trägt die gegnerische Versicherung. Der Mietwagen sollte in Ausstattung und Klasse Ihrem beschädigten Fahrzeug entsprechen.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 4: Restwert -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-euro-sign"></i>
+										</div>
+										<h3>Restwert</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Restwert</h4>
+										<p>Der Restwert ist der Wert, den Ihr beschädigtes Fahrzeug noch hat. Bei einem wirtschaftlichen Totalschaden wird dieser vom Wiederbeschaffungswert abgezogen, um die Entschädigungssumme zu berechnen.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 5: Merkantiler Minderwert -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-chart-line"></i>
+										</div>
+										<h3>Merkantiler Minderwert</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Merkantiler Minderwert</h4>
+										<p>Auch nach fachgerechter Reparatur verliert ein Unfallfahrzeug an Wert. Dieser Wertverlust wird als merkantiler Minderwert bezeichnet und kann von der gegnerischen Versicherung geltend gemacht werden.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 6: Wiederbeschaffungswert -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-calculator"></i>
+										</div>
+										<h3>Wiederbeschaffungswert</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Wiederbeschaffungswert</h4>
+										<p>Der Wiederbeschaffungswert ist der Betrag, den Sie aufwenden müssten, um ein vergleichbares Fahrzeug gleichen Typs und Alters mit ähnlicher Laufleistung zu erwerben. Dies ist die Grundlage für die Entschädigung bei Totalschaden.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 7: Totalschaden -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-car-crash"></i>
+										</div>
+										<h3>Totalschaden</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Totalschaden</h4>
+										<p>Von einem Totalschaden spricht man, wenn die Reparaturkosten den Wiederbeschaffungswert übersteigen. Es gibt den wirtschaftlichen und den technischen Totalschaden. Bei Ersterem ist eine Reparatur unwirtschaftlich, bei Letzterem technisch nicht mehr möglich.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 8: Haftpflichtversicherung -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-shield-halved"></i>
+										</div>
+										<h3>Haftpflichtversicherung</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Haftpflichtversicherung</h4>
+										<p>Die Kfz-Haftpflichtversicherung ist gesetzlich vorgeschrieben und deckt Schäden ab, die Sie anderen mit Ihrem Fahrzeug zufügen. Bei einem unverschuldeten Unfall zahlt die Haftpflicht des Unfallverursachers Ihre Schäden.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 9: Reparaturkostenübernahme -->
+						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+							<div class="flip-card">
+								<div class="flip-card-inner">
+									<div class="flip-card-front">
+										<div class="card-icon">
+											<i class="fa-solid fa-wrench"></i>
+										</div>
+										<h3>Reparaturkosten</h3>
+										<p class="flip-hint">Klicken zum Umdrehen</p>
+									</div>
+									<div class="flip-card-back">
+										<h4>Reparaturkosten</h4>
+										<p>Bei einem unverschuldeten Unfall übernimmt die gegnerische Versicherung die vollständigen Reparaturkosten. Sie haben freie Werkstattwahl und Anspruch auf Reparatur mit Originalteilen in einer Fachwerkstatt.</p>
+										<div class="back-icon">
+											<i class="fa-solid fa-rotate-left"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!--CTA SECTION-->
+			<section class="dsrklaert-cta py-5">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-8 text-center" data-aos="fade-up">
+							<h2 class="fw-bold mb-3">Noch Fragen?</h2>
+							<p class="lead text-muted mb-4">
+								Unser Team steht Ihnen gerne zur Verfügung und beantwortet alle Ihre Fragen rund um Unfallschäden.
+							</p>
+							<a href="index.html#contact" class="btn btn-yellow btn-lg px-5">
+								Kontakt aufnehmen
+								<i class="fa-solid fa-arrow-right ms-2"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="container py-5">
+				<div class="row gy-4">
+					<!-- Column 1-->
+					<div class="col-lg-4 col-md-6">
+						<img src="gfx/dsr_weiss.png" alt="DSR24" class="footer-logo mb-3">
+
+						<p class="small mb-1" data-i18n="footer.company">DSR Deutsche Schadenregulierung GmbH</p>
+						<p class="small mb-1" data-i18n="footer.address1">Münchhausenring 11</p>
+						<p class="small mb-3" data-i18n="footer.address2">31840 Hessisch Oldendorf</p>
+
+						<p class="small mb-1"><strong data-i18n="footer.phone">Telefon:</strong> <span
+								data-i18n="footer.phoneNumber">0800 - 321 24 24</span></p>
+						<p class="small"><strong data-i18n="footer.email">E-Mail:</strong> <span
+								data-i18n="footer.emailAddress">info@dsr24.de</span></p>
+
+						<div class="footer-social mt-3">
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-facebook"></i></a>
+							<a href="#"><i class="fab fa-skype"></i></a>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						</div>
+					</div>
+
+					<!-- Column 2-->
+					<div class="col-lg-2 col-md-6">
+						<h5 data-i18n="footer.usefulLinks">Useful Links</h5>
+						<ul class="footer-links">
+							<li><a href="index.html" data-i18n="footer.home">Home</a></li>
+							<li><a href="index.html#about" data-i18n="footer.aboutUs">About us</a></li>
+							<li><a href="index.html#services" data-i18n="footer.services">Services</a></li>
+							<li><a href="#" data-i18n="footer.terms">Terms of service</a></li>
+							<li><a href="#" data-i18n="footer.privacy">Privacy policy</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 3 -->
+					<div class="col-lg-3 col-md-6">
+						<h5 data-i18n="footer.ourServices">Our Services</h5>
+						<ul class="footer-links">
+							<li><a href="#" data-i18n="footer.webDesign">Web Design</a></li>
+							<li><a href="#" data-i18n="footer.webDevelopment">Web Development</a></li>
+							<li><a href="#" data-i18n="footer.productManagement">Product Management</a></li>
+							<li><a href="#" data-i18n="footer.marketing">Marketing</a></li>
+							<li><a href="#" data-i18n="footer.graphicDesign">Graphic Design</a></li>
+						</ul>
+					</div>
+
+					<!-- Column 4 -->
+					<div class="col-lg-3 col-md-6">
+						<h5 data-i18n="footer.newsletter">Our Newsletter</h5>
+						<p class="small" data-i18n="footer.newsletterDesc">
+							Tamen quem nulla quae legam multos aute sint culpa legam noster magna
+						</p>
+
+						<form class="footer-newsletter">
+							<input type="email" placeholder="">
+							<button type="submit" data-i18n="footer.subscribe">Subscribe</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom text-center py-3">
+				<p class="mb-1" data-i18n="footer.copyright">© Copyright DSR24. All Rights Reserved</p>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>

@@ -134,6 +134,12 @@
     "reviewer3Name": "Stephen Jones",
     "reviewer3Role": "Webentwickler"
   },
+  "quickAccess": {
+    "dsrklaert": "#dsrklärt",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "downloads": "Downloads"
+  },
   "useCase": {
     "backToReviews": "Zurück zu Kundenstimmen",
     "situation": "Die Situation",

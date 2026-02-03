@@ -1091,6 +1091,145 @@ section.sectreviews p{
   transform: translateY(-3px);
 }
 
+/****************************************/
+/******** QUICK ACCESS ICONS SECTION ****/
+/****************************************/
+
+.sectquickaccess {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-access-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: white;
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.quick-access-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--dsr-blue) 0%, var(--dsr-bluehover) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.quick-access-card:hover::before {
+  opacity: 1;
+}
+
+.quick-access-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(25, 89, 156, 0.2);
+}
+
+.quick-icon-wrapper {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--dsr-blue) 0%, var(--dsr-bluehover) 100%);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(25, 89, 156, 0.25);
+}
+
+.quick-access-card:hover .quick-icon-wrapper {
+  background: var(--dsr-yellow);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(241, 217, 13, 0.4);
+}
+
+.quick-icon {
+  width: 45px;
+  height: 45px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.quick-access-card:hover .quick-icon {
+  color: var(--dsr-blue);
+  transform: scale(1.05);
+}
+
+.quick-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dsr-blue);
+  margin: 0;
+  text-align: center;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.quick-access-card:hover .quick-title {
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quick-access-card {
+    min-height: 160px;
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .quick-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .quick-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .quick-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .quick-access-card {
+    min-height: 140px;
+    padding: 1.25rem 0.5rem;
+  }
+  
+  .quick-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .quick-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .quick-title {
+    font-size: 0.85rem;
+  }
+}
+
 
 /****************************************/
 /************ CONTACT SECTION ***********/
