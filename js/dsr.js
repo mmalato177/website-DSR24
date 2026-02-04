@@ -100,12 +100,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	const menu = document.getElementById("accessibility-menu");
 	const closeBtn = document.getElementById("close-menu");
 	const content = document.getElementById("main-content");
+	const resetBtn = document.getElementById('reset-btn');
 
 	/* Reset button */
-	document.getElementById('reset-btn').addEventListener('click', function (e) {
-		e.preventDefault();
-		resetAll();
-	});
+	if (resetBtn) {
+		resetBtn.addEventListener('click', function (e) {
+			e.preventDefault();
+			resetAll();
+		});
+	}
 
 	function resetAll() {
 		content.classList.remove("high-contrast", "invert-colors", "bw");

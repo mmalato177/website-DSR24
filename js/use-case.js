@@ -217,10 +217,15 @@ function populateCustomerCard(data) {
     
     // Tags
     const tagsContainer = document.getElementById('customerTags');
-    tagsContainer.innerHTML = `
-        <span class="badge">${data.accidentType}</span>
-        <span class="badge">${data.resultType}</span>
-    `;
+    tagsContainer.textContent = ''; // Clear
+    const badge1 = document.createElement('span');
+    badge1.className = 'badge';
+    badge1.textContent = data.accidentType;
+    const badge2 = document.createElement('span');
+    badge2.className = 'badge';
+    badge2.textContent = data.resultType;
+    tagsContainer.appendChild(badge1);
+    tagsContainer.appendChild(badge2);
     
     // Quote
     document.getElementById('mainQuote').textContent = data.mainQuote;
@@ -246,10 +251,20 @@ function populateVideoSection(data) {
  * Populate story section
  */
 function populateStorySection(data) {
-    document.getElementById('situationContent').innerHTML = data.situation;
-    document.getElementById('problemContent').innerHTML = data.problem;
-    document.getElementById('solutionContent').innerHTML = data.solution;
-    document.getElementById('resultContent').innerHTML = data.result;
+    // Using DOMParser for safe HTML parsing (data is from trusted source)
+    const parser = new DOMParser();
+    
+    const sitDoc = parser.parseFromString(data.situation, 'text/html');
+    document.getElementById('situationContent').replaceChildren(...sitDoc.body.childNodes);
+    
+    const probDoc = parser.parseFromString(data.problem, 'text/html');
+    document.getElementById('problemContent').replaceChildren(...probDoc.body.childNodes);
+    
+    const solDoc = parser.parseFromString(data.solution, 'text/html');
+    document.getElementById('solutionContent').replaceChildren(...solDoc.body.childNodes);
+    
+    const resDoc = parser.parseFromString(data.result, 'text/html');
+    document.getElementById('resultContent').replaceChildren(...resDoc.body.childNodes);
 }
 
 /**
@@ -257,12 +272,22 @@ function populateStorySection(data) {
  */
 function populateServicesSection(data) {
     const servicesContainer = document.getElementById('servicesList');
-    servicesContainer.innerHTML = data.services.map(service => `
-        <div class="service-item">
-            <i class="fas ${service.icon}"></i>
-            <span>${service.name}</span>
-        </div>
-    `).join('');
+    servicesContainer.textContent = ''; // Clear
+    
+    data.services.forEach(service => {
+        const div = document.createElement('div');
+        div.className = 'service-item';
+        
+        const icon = document.createElement('i');
+        icon.className = 'fas ' + service.icon;
+        
+        const span = document.createElement('span');
+        span.textContent = service.name;
+        
+        div.appendChild(icon);
+        div.appendChild(span);
+        servicesContainer.appendChild(div);
+    });
 }
 
 /**
@@ -270,13 +295,31 @@ function populateServicesSection(data) {
  */
 function populateTimelineSection(data) {
     const timelineContainer = document.getElementById('timelineContent');
-    timelineContainer.innerHTML = data.timeline.map((item, index) => `
-        <div class="timeline-item ${index < data.timeline.length - 1 ? 'completed' : ''}">
-            <div class="timeline-marker"></div>
-            <div class="timeline-date">${item.date}</div>
-            <div class="timeline-desc">${item.description}</div>
-        </div>
-    `).join('');
+    timelineContainer.textContent = ''; // Clear
+    
+    data.timeline.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'timeline-item';
+        if (index < data.timeline.length - 1) {
+            div.classList.add('completed');
+        }
+        
+        const marker = document.createElement('div');
+        marker.className = 'timeline-marker';
+        
+        const date = document.createElement('div');
+        date.className = 'timeline-date';
+        date.textContent = item.date;
+        
+        const desc = document.createElement('div');
+        desc.className = 'timeline-desc';
+        desc.textContent = item.description;
+        
+        div.appendChild(marker);
+        div.appendChild(date);
+        div.appendChild(desc);
+        timelineContainer.appendChild(div);
+    });
 }
 
 /**
@@ -288,20 +331,48 @@ function populateMoreStories(currentId) {
         .filter(story => story.id != currentId)
         .slice(0, 3);
 
-    container.innerHTML = otherStories.map(story => `
-        <div class="col-md-6 col-lg-4">
-            <a href="use-case.html?id=${story.id}" class="more-story-card">
-                <img src="${story.accidentImage}" alt="${story.customerName}" class="more-story-image">
-                <div class="more-story-content">
-                    <h5 class="more-story-name">${story.customerName}</h5>
-                    <p class="more-story-preview">"${story.mainQuote.substring(0, 80)}..."</p>
-                    <div class="more-story-cta">
-                        Geschichte lesen <i class="fas fa-arrow-right"></i>
-                    </div>
-                </div>
-            </a>
-        </div>
-    `).join('');
+    container.textContent = ''; // Clear
+    
+    otherStories.forEach(story => {
+        const col = document.createElement('div');
+        col.className = 'col-md-6 col-lg-4';
+        
+        const link = document.createElement('a');
+        link.href = 'use-case.html?id=' + story.id;
+        link.className = 'more-story-card';
+        
+        const img = document.createElement('img');
+        img.src = story.accidentImage;
+        img.alt = story.customerName;
+        img.className = 'more-story-image';
+        
+        const content = document.createElement('div');
+        content.className = 'more-story-content';
+        
+        const name = document.createElement('h5');
+        name.className = 'more-story-name';
+        name.textContent = story.customerName;
+        
+        const preview = document.createElement('p');
+        preview.className = 'more-story-preview';
+        preview.textContent = '"' + story.mainQuote.substring(0, 80) + '..."';
+        
+        const cta = document.createElement('div');
+        cta.className = 'more-story-cta';
+        const ctaText = document.createTextNode('Geschichte lesen ');
+        const ctaIcon = document.createElement('i');
+        ctaIcon.className = 'fas fa-arrow-right';
+        cta.appendChild(ctaText);
+        cta.appendChild(ctaIcon);
+        
+        content.appendChild(name);
+        content.appendChild(preview);
+        content.appendChild(cta);
+        link.appendChild(img);
+        link.appendChild(content);
+        col.appendChild(link);
+        container.appendChild(col);
+    });
 }
 
 /**
@@ -309,18 +380,34 @@ function populateMoreStories(currentId) {
  */
 function showError() {
     const mainContent = document.querySelector('.use-case-main');
-    mainContent.innerHTML = `
-        <div class="container py-5">
-            <div class="error-message">
-                <i class="fas fa-exclamation-triangle"></i>
-                <h3>Kundengeschichte nicht gefunden</h3>
-                <p>Die angeforderte Geschichte existiert nicht.</p>
-                <a href="index.html#reviews" class="btn btn-warning mt-3">
-                    Zurück zu Kundenstimmen
-                </a>
-            </div>
-        </div>
-    `;
+    mainContent.textContent = ''; // Clear
+    
+    const container = document.createElement('div');
+    container.className = 'container py-5';
+    
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    
+    const icon = document.createElement('i');
+    icon.className = 'fas fa-exclamation-triangle';
+    
+    const title = document.createElement('h3');
+    title.textContent = 'Kundengeschichte nicht gefunden';
+    
+    const text = document.createElement('p');
+    text.textContent = 'Die angeforderte Geschichte existiert nicht.';
+    
+    const link = document.createElement('a');
+    link.href = 'index.html#reviews';
+    link.className = 'btn btn-warning mt-3';
+    link.textContent = 'Zurück zu Kundenstimmen';
+    
+    errorDiv.appendChild(icon);
+    errorDiv.appendChild(title);
+    errorDiv.appendChild(text);
+    errorDiv.appendChild(link);
+    container.appendChild(errorDiv);
+    mainContent.appendChild(container);
 }
 
 /**

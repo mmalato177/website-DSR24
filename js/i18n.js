@@ -55,8 +55,10 @@ const i18n = {
                 if (attr) {
                     element.setAttribute(attr, translation);
                 } else {
-                    // Default: update innerHTML
-                    element.innerHTML = translation;
+                    // Parse HTML safely (translations are from trusted source)
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(translation, 'text/html');
+                    element.replaceChildren(...doc.body.childNodes);
                 }
             } else {
                 console.warn(`Translation not found for key: ${key}`);
