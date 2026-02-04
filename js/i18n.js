@@ -109,3 +109,10 @@ if (document.readyState === 'loading') {
 } else {
     i18n.init();
 }
+
+document.addEventListener('partial:loaded', () => {
+    i18n.setupLanguageSwitcher();
+    i18n.updateActiveButton();
+    i18n.updatePageLanguage();
+});
+

@@ -29,7 +29,7 @@
     "feature2": "Schnelle und unkomplizierte Abwicklung",
     "feature3": "Maximale Schadensersatzleistung für Sie",
     "description": "Bei DSR24 sind Sie in guten Händen. Wir kümmern uns um alle Aspekte Ihres Schadenfalls und sorgen dafür, dass Sie zu Ihrem Recht kommen.",
-    "button":" Mehr über uns erfahren"
+    "button": " Mehr über uns erfahren"
   },
   "features": {
     "feature1Title": "Kostenfreie Beratung",
@@ -180,21 +180,66 @@
     "copyright": "© Copyright DSR24. Alle Rechte vorbehalten"
   },
 
-  "aboutpage":{
+  "aboutpage": {
+    "headerTitle":"Über uns",
+    "headerSubtitle1":"Lerne mehr über DSR24",
+    "headerSubtitle2":"Ihr zuverlässiger Partner bei Unfallschäden",
+    "backToAbout": "Zurück zu Über uns",
     "title": "Wir für euch",
     "heading": "Lerne uns besser kennen",
-    "subtitle":"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecatcupida tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "videoTitle":"Unser Unternehmen im Überblick",
-    "videoSubtitle":"DSR24 Vorstellungsvideo",
-    "timelineTitle":"Ablauf der Schadenregulierung",
-    "timelineSubtitle":"Abrechnungsprozess",
-    "timeline1":"Du meldest deinen Schaden bei uns und erhältst eine Bestätigungs-E-Mail.",
-    "timeline2":"Wir prüfen deinen Fall und melden uns, wenn Informationen fehlen sollten. Solltest du einen Mietwagen brauchen, führen wir mit dir ein Informationsgespräch.",
-    "timeline3":"Der Sachverständige meldet sich i.d.R. binnen 48 Std. bei dir, um dein Fahrzeug zu begutachten. Sollten wir aufgrund einer geringen Schadenhöhe nur einen Kostenvoranschlag einer Werkstatt benötigen, melden wir uns bei dir.",
-    "timeline4":"Wir ermitteln die Versicherung des Unfallgegners und unsere Rechtsabteilung legitimiert sich ggü. dieser als dein Rechtsbeistand.",
-    "timeline5":"Nach Vorliegen des Gutachtens beziffert unsere Rechtsabteilung deine Schadenersatzansprüche ggü. der gegnerischen Haftpflichtversicherung. Diese hat zwischen 4-8 Wochen Zeit für die Bearbeitung.",
-    "timeline6":"Nach Ablauf der Zahlungsfrist erinnern wir die Versicherung. Evtl. benötigt die Versicherung noch Nachweise (Zeugen, Bilder/Videos oder die E-Akte (Herausgabe durch Behörden kann bis zu 8 Wochen dauern)), um die Haftung bestätigen zu können.",
-    "timeline7":"Haftungsbestätigung der gegnerischen Versicherung und fiktive Zahlung der Schadensumme oder Reparatur deines Fahrzeugs. Jede Abrechnung der gegnerischen Versicherung wird von uns geprüft (Quote, Kürzung o.Ä.) und Rücksprache mit dir gehalten.",
-    "stamp":"Ziel"
+    "subtitle": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecatcupida tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "videoTitle": "Unser Unternehmen im Überblick",
+    "videoSubtitle": "DSR24 Vorstellungsvideo",
+    "timelineTitle": "Ablauf der Schadenregulierung",
+    "timelineSubtitle": "Abrechnungsprozess",
+    "timeline1": "Du meldest deinen Schaden bei uns und erhältst eine Bestätigungs-E-Mail.",
+    "timeline2": "Wir prüfen deinen Fall und melden uns, wenn Informationen fehlen sollten. Solltest du einen Mietwagen brauchen, führen wir mit dir ein Informationsgespräch.",
+    "timeline3": "Der Sachverständige meldet sich i.d.R. binnen 48 Std. bei dir, um dein Fahrzeug zu begutachten. Sollten wir aufgrund einer geringen Schadenhöhe nur einen Kostenvoranschlag einer Werkstatt benötigen, melden wir uns bei dir.",
+    "timeline4": "Wir ermitteln die Versicherung des Unfallgegners und unsere Rechtsabteilung legitimiert sich ggü. dieser als dein Rechtsbeistand.",
+    "timeline5": "Nach Vorliegen des Gutachtens beziffert unsere Rechtsabteilung deine Schadenersatzansprüche ggü. der gegnerischen Haftpflichtversicherung. Diese hat zwischen 4-8 Wochen Zeit für die Bearbeitung.",
+    "timeline6": "Nach Ablauf der Zahlungsfrist erinnern wir die Versicherung. Evtl. benötigt die Versicherung noch Nachweise (Zeugen, Bilder/Videos oder die E-Akte (Herausgabe durch Behörden kann bis zu 8 Wochen dauern)), um die Haftung bestätigen zu können.",
+    "timeline7": "Haftungsbestätigung der gegnerischen Versicherung und fiktive Zahlung der Schadensumme oder Reparatur deines Fahrzeugs. Jede Abrechnung der gegnerischen Versicherung wird von uns geprüft (Quote, Kürzung o.Ä.) und Rücksprache mit dir gehalten.",
+    "stamp": "Ziel"
+  },
+
+  "werkstatt":{
+    "backLink": "Zurück zu Leistungen",
+    "headerTitle":"Werkstatt",
+    "headerSubtitle1": "Werkstatt - Wichtige Begriffe erklärt",
+    "headerSubtitle2": "Klicken Sie auf eine Karte, um die Erklärung zu sehen",
+    "heading":"Werkstatt"
+  },
+
+  "auto":{
+    "backLink": "Zurück zu Leistungen",
+    "headerTitle":"Autovermietungen",
+    "headerSubtitle1": "Autovermietungen - Wichtige Begriffe erklärt",
+    "headerSubtitle2": "Klicken Sie auf eine Karte, um die Erklärung zu sehen",
+    "heading":"Autovermietungen"
+  },
+
+  "recht":{
+    "backLink": "Zurück zu Leistungen",
+    "headerTitle":"Rechtsanwalt",
+    "headerSubtitle1": "Rechtsanwalt - Wichtige Begriffe erklärt",
+    "headerSubtitle2": "Klicken Sie auf eine Karte, um die Erklärung zu sehen",
+    "heading":"Rechtsanwalt"
+  },
+
+  "absch":{
+    "backLink": "Zurück zu Leistungen",
+    "headerTitle":"Abschleppdienst",
+    "headerSubtitle1": "Abschleppdienst - Wichtige Begriffe erklärt",
+    "headerSubtitle2": "Klicken Sie auf eine Karte, um die Erklärung zu sehen",
+    "heading":"Abschleppdienst"
+  },
+
+  "sachverstaendige":{
+    "backLink": "Zurück zu Leistungen",
+    "headerTitle":"Kfz-Sachverständige",
+    "headerSubtitle1": "Kfz-Sachverständige - Wichtige Begriffe erklärt",
+    "headerSubtitle2": "Klicken Sie auf eine Karte, um die Erklärung zu sehen",
+    "heading":"Kfz-Sachverständige"
   }
+
 }
