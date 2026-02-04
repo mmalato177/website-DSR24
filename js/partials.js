@@ -1,4 +1,4 @@
-async function loadPartial(selector, url) {
+async function loadPartial(selector, url,callback) {
   const res = await fetch(url);
   if (!res.ok) {
     console.error(`Failed to load ${url}`);
@@ -12,8 +12,17 @@ async function loadPartial(selector, url) {
   document
     .querySelector(selector)
     .appendChild(template.content.cloneNode(true));
+  
+  if (callback) callback();
+
 }
 
 // Load navbar & footer
-loadPartial('#navbar', '/partials/navbar.html');
+loadPartial('#navbar', '/partials/navbar.html', () => {
+    i18n.setupLanguageSwitcher();
+    i18n.updateActiveButton();
+    i18n.updatePageLanguage();
+});
 loadPartial('#footer', '/partials/footer.html');
+
+
