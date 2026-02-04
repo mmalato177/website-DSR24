@@ -1,28 +1,20 @@
-async function loadPartial(selector, url,callback) {
+async function loadPartial(selector, url) {
   const res = await fetch(url);
-  if (!res.ok) {
-    console.error(`Failed to load ${url}`);
-    return;
-  }
+  if (!res.ok) return;
 
   const html = await res.text();
   const template = document.createElement('template');
   template.innerHTML = html;
 
-  document
-    .querySelector(selector)
+  document.querySelector(selector)
     .appendChild(template.content.cloneNode(true));
-  
-  if (callback) callback();
 
+  // 🔔 fire event instead of calling i18n
+  document.dispatchEvent(new CustomEvent('partial:loaded', {
+    detail: { selector, url }
+  }));
 }
 
 // Load navbar & footer
-loadPartial('#navbar', '/partials/navbar.html', () => {
-    i18n.setupLanguageSwitcher();
-    i18n.updateActiveButton();
-    i18n.updatePageLanguage();
-});
+loadPartial('#navbar', '/partials/navbar.html');
 loadPartial('#footer', '/partials/footer.html');
-
-

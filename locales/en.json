@@ -181,6 +181,10 @@
   },
 
   "aboutpage":{
+    "headerTitle":"About us",
+    "headerSubtitle1":"Learn more about DSR24",
+    "headerSubtitle2":"Your reliable partner for accident claims",
+    "backToAbout": "Back to About Us",
     "title": "We are here for you",
     "heading": "Learn more about us",
     "subtitle":"lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecatcupida tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -196,5 +200,45 @@
     "timeline6":"After the payment deadline has expired, we will send a reminder to the insurance company. The insurance company may still need evidence (witnesses, pictures/videos or the e-file (release by authorities can take up to 8 weeks)) in order to confirm liability.",
     "timeline7":"Confirmation of liability by the opposing insurance company and fictitious payment of the damage amount or repair of your vehicle. We will review any settlement from the opposing insurance company (ratio, reduction, etc.) and consult with you.",
     "stamp":"Goal"
+  },
+
+  "werkstatt":{
+    "backLink": "Back to Services",
+    "headerTitle":"Workshop",
+    "headerSubtitle1":"Information on workshop-related terms",
+    "headerSubtitle2":"Click on a card to see the explanation",
+    "heading":"Workshop"
+  },
+
+  "auto":{
+    "backLink": "Back to Services",
+    "headerTitle":"Car Rentals",
+    "headerSubtitle1":"Important terms related to car rentals",
+    "headerSubtitle2":"Click on a card to see the explanation",
+    "heading":"Car Rentals"
+  },
+
+  "recht":{
+    "backLink": "Back to Services",
+    "headerTitle":"Lawyer",
+    "headerSubtitle1":"Important legal terms related to accident damage",
+    "headerSubtitle2":"Click on a card to see the explanation",
+    "heading":"Lawyer"
+  },
+
+  "absch":{
+    "backLink": "Back to Services",
+    "headerTitle":"Towing Services",
+    "headerSubtitle1":"Important terms related to towing services",
+    "headerSubtitle2":"Click on a card to see the explanation",
+    "heading":"Towing Services"
+  },
+
+  "sachverstaendige":{
+    "backLink": "Back to Services",
+    "headerTitle":"Vehicle Experts",
+    "headerSubtitle1":"Important terms related to vehicle experts",
+    "headerSubtitle2":"Click on a card to see the explanation",
+    "heading":"Vehicle Experts"
   }
 }
