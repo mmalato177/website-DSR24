@@ -18,6 +18,7 @@
 	<script src="js/aos.js" defer></script>
 	<script src="js/i18n.js" defer></script>
 	<script src="js/dsr.js" defer></script>
+	<script src="js/partials.js" defer></script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
@@ -43,84 +44,8 @@
 	</div>
 
 	<div id="main-content">
-		<nav class="navbar navbar-expand-xl fixed-top">
-			<div class="container">
-				<div class="collapse navbar-collapse" id="mobileNaviToggler">
-					<a class="navbar-brand" href="#">
-						<img src="gfx/dsr_weiss.png" alt="DSR24 Logo" class="logo">
-					</a>
-					<ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-						<li class="nav-item nav-reportdamage">
-							<a class="nav-link" href="#welcome" data-i18n="nav.reportDamage">Schadenfall melden</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-								aria-expanded="false" data-i18n="nav.services">
-								Leistungen
-							</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#services"
-										data-i18n="nav.expert">Sachverständiger</a>
-								</li>
-								<li><a class="dropdown-item" href="#" data-i18n="nav.lawyer">Anwalt</a></li>
-								<li><a class="dropdown-item" href="#" data-i18n="nav.rentalCar">Leihwagen</a></li>
-								<li><a class="dropdown-item" href="#" data-i18n="nav.workshop">Werkstatt</a></li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-								aria-expanded="false" data-i18n="nav.knowledge">
-								Wissenswelt
-							</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#" data-i18n="nav.faq">FAQ</a></li>
-								<li><a class="dropdown-item" href="#" data-i18n="nav.blog">Blog</a></li>
-								<li><a class="dropdown-item" href="dsrklaert.html">#dsrklärt</a></li>
-								<li><a class="dropdown-item" href="#">Downloads</a></li>
-							</ul>
-						</li>
-
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-								aria-expanded="false" data-i18n="nav.dsr24">
-								DSR24
-							</a>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#about" data-i18n="nav.aboutUs">Über uns</a></li>
-								<li><a class="dropdown-item" href="#team" data-i18n="nav.team">Team</a></li>
-								<li><a class="dropdown-item" href="#contact" data-i18n="nav.contact">Kontakt</a></li>
-								<li><a class="dropdown-item" href="#" data-i18n="nav.news">News</a></li>
-								<li><a class="dropdown-item" href="#" data-i18n="nav.jobs">Jobs</a></li>
-							</ul>
-						</li>
-
-						<li class="nav-item">
-							<a class="nav-link" href="#reviews" data-i18n="nav.reviews">Kundenstimmen</a>
-						</li>
-					</ul>
-					<div class="d-flex align-items-center">
-						<div class="btn-group" role="group" aria-label="Language switcher">
-							<button type="button" class="btn btn-sm btn-outline-light lang-btn active"
-								data-lang="de">DE</button>
-							<button type="button" class="btn btn-sm btn-outline-light lang-btn"
-								data-lang="en">EN</button>
-						</div>
-					</div>
-					<!-- <form role="search">
-				<i class="fa-solid fa-magnifying-glass"></i>
-				<input class="form-control" type="search" placeholder="Suchen" aria-label="Search">
-				<button class="btn btn-outline-success" type="submit">Search</button>
-			</form> -->
-				</div>
-				<button class="navbar-toggler" type="button" aria-label="Navigation ein- oder ausklappen"
-					data-bs-toggle="collapse" data-bs-target="#mobileNaviToggler" aria-controls="mobileNaviToggler"
-					aria-expanded="false">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-			</div>
-		</nav>
-
+		
+		<div id="navbar"></div>
 
 		<main>
 			<!--WELCOME SECTION-->
@@ -906,74 +831,7 @@
 
 		</main>
 
-		<!-- FOOTER -->
-		<footer class="footer">
-			<div class="container py-5">
-				<div class="row gy-4">
-					<!-- Column 1-->
-					<div class="col-lg-4 col-md-6">
-						<img src="gfx/dsr_weiss.png" alt="DSR24" class="footer-logo mb-3">
-
-						<p class="small mb-1" data-i18n="footer.company">DSR Deutsche Schadenregulierung GmbH</p>
-						<p class="small mb-1" data-i18n="footer.address1">Münchhausenring 11</p>
-						<p class="small mb-3" data-i18n="footer.address2">31840 Hessisch Oldendorf</p>
-
-						<p class="small mb-1"><strong data-i18n="footer.phone">Telefon:</strong> <span
-								data-i18n="footer.phoneNumber">0800 - 321 24 24</span></p>
-						<p class="small"><strong data-i18n="footer.email">E-Mail:</strong> <span
-								data-i18n="footer.emailAddress">info@dsr24.de</span></p>
-
-						<div class="footer-social mt-3">
-							<a href="#"><i class="fab fa-instagram"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-facebook"></i></a>
-							<a href="#"><i class="fab fa-skype"></i></a>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
-						</div>
-					</div>
-
-					<!-- Column 2-->
-					<div class="col-lg-2 col-md-6">
-						<h5 data-i18n="footer.usefulLinks">Useful Links</h5>
-						<ul class="footer-links">
-							<li><a href="#" data-i18n="footer.home">Home</a></li>
-							<li><a href="#" data-i18n="footer.aboutUs">About us</a></li>
-							<li><a href="#" data-i18n="footer.services">Services</a></li>
-							<li><a href="#" data-i18n="footer.terms">Terms of service</a></li>
-							<li><a href="#" data-i18n="footer.privacy">Privacy policy</a></li>
-						</ul>
-					</div>
-
-					<!-- Column 3 -->
-					<div class="col-lg-3 col-md-6">
-						<h5 data-i18n="footer.ourServices">Our Services</h5>
-						<ul class="footer-links">
-							<li><a href="#" data-i18n="footer.webDesign">Web Design</a></li>
-							<li><a href="#" data-i18n="footer.webDevelopment">Web Development</a></li>
-							<li><a href="#" data-i18n="footer.productManagement">Product Management</a></li>
-							<li><a href="#" data-i18n="footer.marketing">Marketing</a></li>
-							<li><a href="#" data-i18n="footer.graphicDesign">Graphic Design</a></li>
-						</ul>
-					</div>
-
-					<!-- Column 4 -->
-					<div class="col-lg-3 col-md-6">
-						<h5 data-i18n="footer.newsletter">Our Newsletter</h5>
-						<p class="small" data-i18n="footer.newsletterDesc">
-							Tamen quem nulla quae legam multos aute sint culpa legam noster magna
-						</p>
-
-						<form class="footer-newsletter">
-							<input type="email" placeholder="">
-							<button type="submit" data-i18n="footer.subscribe">Subscribe</button>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom text-center py-3">
-				<p class="mb-1" data-i18n="footer.copyright">© Copyright DSR24. All Rights Reserved</p>
-			</div>
-		</footer>
+		<div id="footer"></div>
 
 
 		<!-- Video Modal -->

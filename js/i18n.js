@@ -8,7 +8,6 @@ const i18n = {
         // Check if language is saved in localStorage
         const savedLang = localStorage.getItem('preferredLanguage') || 'de';
         await this.loadLanguage(savedLang);
-        this.setupLanguageSwitcher();
     },
 
     // Load language file
@@ -80,15 +79,22 @@ const i18n = {
 
     // Setup language switcher buttons
     setupLanguageSwitcher() {
-        const buttons = document.querySelectorAll('.lang-btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('click', async (e) => {
-                const lang = e.target.getAttribute('data-lang');
-                if (lang !== this.currentLang) {
-                    await this.loadLanguage(lang);
-                }
-            });
+    const buttons = document.querySelectorAll('.lang-btn');
+
+    buttons.forEach(btn => {
+        // avoid binding the same button twice
+        if (btn.dataset.i18nBound) return;
+
+        btn.dataset.i18nBound = 'true';
+
+        btn.addEventListener('click', async (e) => {
+            const lang = e.currentTarget.getAttribute('data-lang');
+            if (lang !== this.currentLang) {
+                await this.loadLanguage(lang);
+            }
         });
+    });
+
     },
 
     // Get translation by key
