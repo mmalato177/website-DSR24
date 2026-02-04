@@ -59,12 +59,12 @@ body {
 }
 
 .btn-primary {
-	background:linear-gradient( #6396CB, #19599C, #005694 );
-	border-color:#005694;
+	background:var(--dsr-blue);
+	border-color:var(--dsr-blue-dark);
 	color:#fff;
 }
 .btn-primary:hover {
-	background:linear-gradient( #75A1CD, #2064AA, #0462A4 );
+	background:var(--dsr-bluehover);
 }
 .btn-primary:active {
 	background:linear-gradient( #19599C, #005694 );
@@ -1113,6 +1113,11 @@ section.sectreviews p{
 /****************************************/
 /******** QUICK ACCESS ICONS SECTION ****/
 /****************************************/
+
+#news-and-jobs, #quick-access {
+  scroll-margin-top: 100px;
+}
+
 
 .sectquickaccess {
   background: #fff;

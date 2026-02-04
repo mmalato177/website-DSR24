@@ -16,5 +16,10 @@ async function loadPartial(selector, url) {
 }
 
 // Load navbar & footer
+loadPartial('#accessibility', '/partials/accessibility.html', () => {
+	initAccessibilityMenu();
+});
+
+
 loadPartial('#navbar', '/partials/navbar.html');
 loadPartial('#footer', '/partials/footer.html');
