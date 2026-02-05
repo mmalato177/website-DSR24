@@ -15,11 +15,18 @@ async function loadPartial(selector, url, init) {
 }
 
 /* load components */
-loadPartial("#accessibility", "/partials/accessibilityMenu.html", () => {
-  window.initAccessibilityMenu?.();
-});
+async function loadAllPartials() {
+  await loadPartial("#accessibility", "/partials/accessibilityMenu.html", () => {
+    window.initAccessibilityMenu?.();
+  });
 
-loadPartial("#navbar", "/partials/navbar.html");
-loadPartial("#footer", "/partials/footer.html");
+  await loadPartial("#navbar", "/partials/navbar.html");
+  await loadPartial("#footer", "/partials/footer.html");
+
+  // Dispatch event to notify that all partials are loaded
+  document.dispatchEvent(new Event('partial:loaded'));
+}
+
+loadAllPartials();
 
 
