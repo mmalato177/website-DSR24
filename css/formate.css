@@ -578,17 +578,23 @@ section.sectservices h1 span {
 	color:var( --dsr-yellow );
 }
 
- .aux {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+.section-title {
+  display: inline-block; /* shrink-wraps to h2 width */
 }
 
- .aux-line {
-  width: 10vw;
+.aux {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%; /* same width as h2 */
+}
+
+.aux-line {
+  flex: 1;              /* fills remaining space */
   height: 5px;
   background-color: var(--dsr-yellow);
 }
+
 
 
 .sectservices .service-box {

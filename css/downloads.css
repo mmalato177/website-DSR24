@@ -1,10 +1,9 @@
 /* Downloads Page Styles */
 
 #downloads-section {
-    padding-top: calc(var(--dsr-navbarheight) + 60px);
+    padding-top: 0;
     padding-bottom: 80px;
     min-height: calc(100vh - var(--footer-height));
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .section-title {
@@ -46,7 +45,7 @@
     width: 70px;
     height: 70px;
     background: linear-gradient(135deg, var(--dsr-blue), var(--dsr-bluehover));
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,7 +89,7 @@
     display: inline-block;
     padding: 3px 10px;
     background: #f0f0f0;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .btn-download {
@@ -123,10 +122,10 @@
 /* Info Box */
 .info-box {
     background: white;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 40px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border: 3px solid var(--dsr-blue);
+    border: 2px solid var(--dsr-blue);
     display: flex;
     align-items: center;
     gap: 30px;

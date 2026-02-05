@@ -1,7 +1,7 @@
 /* Blog Page Styles */
 
 #blog-section {
-    padding-top: calc(var(--dsr-navbarheight) + 60px);
+    padding-top: 2rem;
     padding-bottom: 80px;
     min-height: calc(100vh - var(--footer-height));
 }
