@@ -18,178 +18,184 @@
 	<script src="js/bootstrap.bundle.min.js" defer></script>
 	<script src="js/aos.js" defer></script>
 	<script src="js/i18n.js" defer></script>
+	<script src="js/accessibility.js" defer></script>
 	<script src="js/partials.js" defer></script>
 	<script src="js/use-case.js" defer></script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-	<!-- Navigation -->
-	<div id="navbar"></div>
+	<div id="accessibility"></div>
+	<div id="main-content">
+		<!-- Navigation -->
+		<div id="navbar"></div>
 
-	<main class="use-case-main">
-		<!-- Header with Back Button -->
-		<section class="use-case-header">
-			<div class="container">
-				<a href="index.html#reviews" class="back-link d-inline-flex align-items-center">
-					<i class="fas fa-arrow-left me-2"></i>
-					<span data-i18n="useCase.backToReviews">Zurück zu Kundenstimmen</span>
-				</a>
-			</div>
-		</section>
+		<main class="use-case-main">
+			<!-- Header with Back Button -->
+			<section class="use-case-header">
+				<div class="container">
+					<a href="index.html#reviews" class="back-link d-inline-flex align-items-center">
+						<i class="fas fa-arrow-left me-2"></i>
+						<span data-i18n="useCase.backToReviews">Zurück zu Kundenstimmen</span>
+					</a>
+				</div>
+			</section>
 
-		<!-- Customer Info & Story Section -->
-		<section class="customer-story-section py-5 pt-4">
-			<div class="container">
-				<div class="row gy-5">
-					<!-- Left: Customer Photo & Info -->
-					<div class="col-lg-4">
-						<div class="customer-card" data-aos="fade-right">
-							<div class="customer-photo-wrapper">
-								<img id="customerPhoto" src="img/image.png" alt="Customer" class="customer-photo">
-							</div>
-							<div class="customer-info-card">
-								<h2 class="customer-name" id="customerName">Wird geladen...</h2>
-								<p class="customer-details" id="customerInfo">Wird geladen...</p>
-								<div class="customer-tags" id="customerTags"></div>
-								
-								<!-- Quote -->
-								<div class="customer-quote mt-4">
-									<i class="fas fa-quote-left quote-icon"></i>
-									<p class="quote-text" id="mainQuote">Wird geladen...</p>
+			<!-- Customer Info & Story Section -->
+			<section class="customer-story-section py-5 pt-4">
+				<div class="container">
+					<div class="row gy-5">
+						<!-- Left: Customer Photo & Info -->
+						<div class="col-lg-4">
+							<div class="customer-card" data-aos="fade-right">
+								<div class="customer-photo-wrapper">
+									<img id="customerPhoto" src="img/image.png" alt="Customer" class="customer-photo">
 								</div>
-							</div>
-						</div>
-					</div>
+								<div class="customer-info-card">
+									<h2 class="customer-name" id="customerName">Wird geladen...</h2>
+									<p class="customer-details" id="customerInfo">Wird geladen...</p>
+									<div class="customer-tags" id="customerTags"></div>
 
-					<!-- Right: Story Content -->
-					<div class="col-lg-8">
-						<!-- Accident Photo -->
-						<div class="accident-photo-section mb-5" data-aos="fade-left">
-							<div class="accident-photo-wrapper">
-								<img id="accidentImage" src="img/placeholder.jpg" alt="Unfallsituation" class="accident-photo">
-								<div class="photo-badge">
-									<i class="fas fa-car-crash me-2"></i>
-									<span>Unfallsituation</span>
+									<!-- Quote -->
+									<div class="customer-quote mt-4">
+										<i class="fas fa-quote-left quote-icon"></i>
+										<p class="quote-text" id="mainQuote">Wird geladen...</p>
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<!-- Video Section (if exists) -->
-						<div class="video-section mb-5" id="videoSection" style="display: none;" data-aos="fade-left" data-aos-delay="100">
-							<div class="video-wrapper">
-								<video id="dashcamVideo" controls class="w-100">
-									<source src="" type="video/mp4">
-									Ihr Browser unterstützt das Video-Tag nicht.
-								</video>
-								<p class="video-caption mt-2 text-muted small">
-									<i class="fas fa-video me-2"></i>Dashcam Video
-								</p>
-							</div>
-						</div>
-
-						<!-- Story Blocks -->
-						<div class="story-blocks">
-							<!-- Situation -->
-							<div class="story-block" data-aos="fade-left" data-aos-delay="100">
-								<div class="story-header">
-									<div class="story-icon-wrapper bg-danger-soft">
-										<i class="fas fa-car-crash text-danger"></i>
+						<!-- Right: Story Content -->
+						<div class="col-lg-8">
+							<!-- Accident Photo -->
+							<div class="accident-photo-section mb-5" data-aos="fade-left">
+								<div class="accident-photo-wrapper">
+									<img id="accidentImage" src="img/placeholder.jpg" alt="Unfallsituation"
+										class="accident-photo">
+									<div class="photo-badge">
+										<i class="fas fa-car-crash me-2"></i>
+										<span>Unfallsituation</span>
 									</div>
-									<h3 data-i18n="useCase.situation">Die Situation</h3>
-								</div>
-								<div class="story-content" id="situationContent">
-									<p>Wird geladen...</p>
 								</div>
 							</div>
 
-							<!-- Problem -->
-							<div class="story-block" data-aos="fade-left" data-aos-delay="200">
-								<div class="story-header">
-									<div class="story-icon-wrapper bg-warning-soft">
-										<i class="fas fa-exclamation-triangle text-warning"></i>
+							<!-- Video Section (if exists) -->
+							<div class="video-section mb-5" id="videoSection" style="display: none;"
+								data-aos="fade-left" data-aos-delay="100">
+								<div class="video-wrapper">
+									<video id="dashcamVideo" controls class="w-100">
+										<source src="" type="video/mp4">
+										Ihr Browser unterstützt das Video-Tag nicht.
+									</video>
+									<p class="video-caption mt-2 text-muted small">
+										<i class="fas fa-video me-2"></i>Dashcam Video
+									</p>
+								</div>
+							</div>
+
+							<!-- Story Blocks -->
+							<div class="story-blocks">
+								<!-- Situation -->
+								<div class="story-block" data-aos="fade-left" data-aos-delay="100">
+									<div class="story-header">
+										<div class="story-icon-wrapper bg-danger-soft">
+											<i class="fas fa-car-crash text-danger"></i>
+										</div>
+										<h3 data-i18n="useCase.situation">Die Situation</h3>
 									</div>
-									<h3 data-i18n="useCase.problem">Die Herausforderung</h3>
-								</div>
-								<div class="story-content" id="problemContent">
-									<p>Wird geladen...</p>
-								</div>
-							</div>
-
-							<!-- Solution -->
-							<div class="story-block" data-aos="fade-left" data-aos-delay="300">
-								<div class="story-header">
-									<div class="story-icon-wrapper bg-primary-soft">
-										<i class="fas fa-hands-helping text-primary"></i>
+									<div class="story-content" id="situationContent">
+										<p>Wird geladen...</p>
 									</div>
-									<h3 data-i18n="useCase.solution">Wie DSR24 geholfen hat</h3>
 								</div>
-								<div class="story-content" id="solutionContent">
-									<p>Wird geladen...</p>
-								</div>
-							</div>
 
-							<!-- Result -->
-							<div class="story-block" data-aos="fade-left" data-aos-delay="400">
-								<div class="story-header">
-									<div class="story-icon-wrapper bg-success-soft">
-										<i class="fas fa-trophy text-success"></i>
+								<!-- Problem -->
+								<div class="story-block" data-aos="fade-left" data-aos-delay="200">
+									<div class="story-header">
+										<div class="story-icon-wrapper bg-warning-soft">
+											<i class="fas fa-exclamation-triangle text-warning"></i>
+										</div>
+										<h3 data-i18n="useCase.problem">Die Herausforderung</h3>
 									</div>
-									<h3 data-i18n="useCase.result">Das Ergebnis</h3>
+									<div class="story-content" id="problemContent">
+										<p>Wird geladen...</p>
+									</div>
 								</div>
-								<div class="story-content" id="resultContent">
-									<p>Wird geladen...</p>
-								</div>
-							</div>
-						</div>
 
-						<!-- Services & Timeline in 2 columns -->
-						<div class="row mt-5">
-							<div class="col-md-6" data-aos="fade-up">
-								<div class="services-card">
-									<h4 class="mb-4" data-i18n="useCase.servicesUsed">Genutzte Leistungen</h4>
-									<div id="servicesList" class="services-grid"></div>
+								<!-- Solution -->
+								<div class="story-block" data-aos="fade-left" data-aos-delay="300">
+									<div class="story-header">
+										<div class="story-icon-wrapper bg-primary-soft">
+											<i class="fas fa-hands-helping text-primary"></i>
+										</div>
+										<h3 data-i18n="useCase.solution">Wie DSR24 geholfen hat</h3>
+									</div>
+									<div class="story-content" id="solutionContent">
+										<p>Wird geladen...</p>
+									</div>
+								</div>
+
+								<!-- Result -->
+								<div class="story-block" data-aos="fade-left" data-aos-delay="400">
+									<div class="story-header">
+										<div class="story-icon-wrapper bg-success-soft">
+											<i class="fas fa-trophy text-success"></i>
+										</div>
+										<h3 data-i18n="useCase.result">Das Ergebnis</h3>
+									</div>
+									<div class="story-content" id="resultContent">
+										<p>Wird geladen...</p>
+									</div>
 								</div>
 							</div>
-							<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-								<div class="timeline-card">
-									<h4 class="mb-4" data-i18n="useCase.timeline">Zeitverlauf</h4>
-									<div id="timelineContent" class="timeline"></div>
+
+							<!-- Services & Timeline in 2 columns -->
+							<div class="row mt-5">
+								<div class="col-md-6" data-aos="fade-up">
+									<div class="services-card">
+										<h4 class="mb-4" data-i18n="useCase.servicesUsed">Genutzte Leistungen</h4>
+										<div id="servicesList" class="services-grid"></div>
+									</div>
+								</div>
+								<div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+									<div class="timeline-card">
+										<h4 class="mb-4" data-i18n="useCase.timeline">Zeitverlauf</h4>
+										<div id="timelineContent" class="timeline"></div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- CTA Section -->
-		<section class="cta-section py-5">
-			<div class="container text-center" data-aos="zoom-in">
-				<h2 class="fw-bold mb-3" data-i18n="useCase.ctaTitle">Hatten Sie auch einen Unfall?</h2>
-				<p class="lead mb-4" data-i18n="useCase.ctaDescription">
-					Lassen Sie sich kostenfrei von DSR24 helfen – genau wie unsere zufriedenen Kunden!
-				</p>
-				<a href="index.html#welcome" class="btn btn-warning btn-lg px-5 py-3">
-					<span data-i18n="useCase.ctaButton">Schadenfall melden</span>
-					<i class="fas fa-arrow-right ms-2"></i>
-				</a>
-			</div>
-		</section>
-
-		<!-- More Stories -->
-		<section class="more-stories py-5 bg-light">
-			<div class="container">
-				<h3 class="fw-bold mb-4 text-center" data-i18n="useCase.moreStories">Weitere Erfolgsgeschichten</h3>
-				<div id="moreStoriesContent" class="row g-4">
-					<!-- Dynamically loaded -->
+			<!-- CTA Section -->
+			<section class="cta-section py-5">
+				<div class="container text-center" data-aos="zoom-in">
+					<h2 class="fw-bold mb-3" data-i18n="useCase.ctaTitle">Hatten Sie auch einen Unfall?</h2>
+					<p class="lead mb-4" data-i18n="useCase.ctaDescription">
+						Lassen Sie sich kostenfrei von DSR24 helfen – genau wie unsere zufriedenen Kunden!
+					</p>
+					<a href="index.html#welcome" class="btn btn-warning btn-lg px-5 py-3">
+						<span data-i18n="useCase.ctaButton">Schadenfall melden</span>
+						<i class="fas fa-arrow-right ms-2"></i>
+					</a>
 				</div>
-			</div>
-		</section>
-	</main>
+			</section>
 
-	<!-- Footer -->
-	<div id="footer"></div>
+			<!-- More Stories -->
+			<section class="more-stories py-5 bg-light">
+				<div class="container">
+					<h3 class="fw-bold mb-4 text-center" data-i18n="useCase.moreStories">Weitere Erfolgsgeschichten</h3>
+					<div id="moreStoriesContent" class="row g-4">
+						<!-- Dynamically loaded -->
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<div id="footer"></div>
+	</div>
 </body>
 
 </html>
