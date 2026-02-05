@@ -20,7 +20,7 @@
 	<script src="js/i18n.js" defer></script>
 	<script src="js/dsr.js" defer></script>
 	<script src="js/accessibility.js" defer></script>
-    <script src="js/partials.js" defer></script>
+	<script src="js/partials.js" defer></script>
 	<script src="js/blog.js" defer></script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -30,7 +30,7 @@
 	<div id="accessibility"></div>
 
 	<div id="main-content">
-		
+
 		<div id="navbar"></div>
 
 		<main class="subpage-main">
@@ -63,14 +63,13 @@
 			<section id="blog-section">
 				<div class="container">
 					<!-- Search Bar -->
-					<div class="row mb-5" data-aos="fade-up" data-aos-delay="200">
+					<div class="row mb-2" data-aos="fade-up" data-aos-delay="200">
 						<div class="col-12 col-lg-8 mx-auto">
 							<div class="search-container">
 								<i class="fas fa-search search-icon"></i>
-								<input type="text" id="blog-search" class="form-control search-input" 
-									   data-i18n="[placeholder]blogPage.searchPlaceholder"
-									   placeholder="Suche nach Thema, Stichwort..." 
-									   aria-label="Blog durchsuchen">
+								<input type="text" id="blog-search" class="form-control search-input"
+									data-i18n="[placeholder]blogPage.searchPlaceholder"
+									placeholder="Suche nach Thema, Stichwort..." aria-label="Blog durchsuchen">
 								<button id="clear-search" class="clear-search-btn" aria-label="Suche löschen">
 									<i class="fas fa-times"></i>
 								</button>
@@ -79,14 +78,19 @@
 					</div>
 
 					<!-- Blog Categories Filter -->
-					<div class="row mb-4" data-aos="fade-up" data-aos-delay="250">
+					<div class="row mb-5" data-aos="fade-up" data-aos-delay="250">
 						<div class="col-12">
 							<div class="category-filters">
-								<button class="btn-category active" data-category="all" data-i18n="blogPage.categoryAll">Alle</button>
-								<button class="btn-category" data-category="news" data-i18n="blogPage.categoryNews">Neuigkeiten</button>
-								<button class="btn-category" data-category="tips" data-i18n="blogPage.categoryTips">Tipps & Tricks</button>
-								<button class="btn-category" data-category="legal" data-i18n="blogPage.categoryLegal">Recht & Versicherung</button>
-								<button class="btn-category" data-category="guides" data-i18n="blogPage.categoryGuides">Ratgeber</button>
+								<button class="btn-category active" data-category="all"
+									data-i18n="blogPage.categoryAll">Alle</button>
+								<button class="btn-category" data-category="news"
+									data-i18n="blogPage.categoryNews">Neuigkeiten</button>
+								<button class="btn-category" data-category="tips"
+									data-i18n="blogPage.categoryTips">Tipps & Tricks</button>
+								<button class="btn-category" data-category="legal"
+									data-i18n="blogPage.categoryLegal">Recht & Versicherung</button>
+								<button class="btn-category" data-category="guides"
+									data-i18n="blogPage.categoryGuides">Ratgeber</button>
 							</div>
 						</div>
 					</div>
@@ -94,10 +98,12 @@
 					<!-- Blog Posts Grid -->
 					<div class="row" id="blog-grid">
 						<!-- Blog Post 1 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300" data-category="tips">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300"
+							data-category="tips">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-1.jpg" alt="Unfallstelle sichern" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-1.jpg" alt="Unfallstelle sichern"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryTips">Tipps & Tricks</span>
 									</div>
@@ -107,22 +113,24 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 28. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 5 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post1Title">5 wichtige Schritte nach einem Autounfall</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post1Title">5 wichtige Schritte nach
+										einem Autounfall</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post1Excerpt">
-										Was Sie unmittelbar nach einem Verkehrsunfall beachten müssen, um Ihre Ansprüche zu sichern. Ein praktischer Leitfaden.
+										Was Sie unmittelbar nach einem Verkehrsunfall beachten müssen, um Ihre Ansprüche
+										zu sichern. Ein praktischer Leitfaden.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="1">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="1">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
 
 						<!-- Blog Post 2 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="350" data-category="legal">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="350"
+							data-category="legal">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-2.jpg" alt="Versicherungsrecht" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-2.jpg" alt="Versicherungsrecht"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryLegal">Recht & Versicherung</span>
 									</div>
@@ -132,22 +140,24 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 25. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 8 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post2Title">Neue Regelungen für Schadenregulierung 2026</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post2Title">Neue Regelungen für
+										Schadenregulierung 2026</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post2Excerpt">
-										Diese Änderungen im Versicherungsrecht sollten Sie kennen. Wichtige Updates für Geschädigte.
+										Diese Änderungen im Versicherungsrecht sollten Sie kennen. Wichtige Updates für
+										Geschädigte.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="2">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="2">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
 
 						<!-- Blog Post 3 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400" data-category="guides">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400"
+							data-category="guides">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-3.jpg" alt="Gutachten verstehen" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-3.jpg" alt="Gutachten verstehen"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryGuides">Ratgeber</span>
 									</div>
@@ -157,22 +167,24 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 22. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 6 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post3Title">Gutachten richtig verstehen und nutzen</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post3Title">Gutachten richtig verstehen
+										und nutzen</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post3Excerpt">
-										Was steht eigentlich in einem Schadensgutachten? Wir erklären die wichtigsten Begriffe und Werte.
+										Was steht eigentlich in einem Schadensgutachten? Wir erklären die wichtigsten
+										Begriffe und Werte.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="3">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="3">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
 
 						<!-- Blog Post 4 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="450" data-category="news">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="450"
+							data-category="news">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-4.jpg" alt="DSR24 News" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-4.jpg" alt="DSR24 News"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryNews">Neuigkeiten</span>
 									</div>
@@ -182,22 +194,24 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 20. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 3 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post4Title">DSR24 erweitert Partnernetzwerk</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post4Title">DSR24 erweitert
+										Partnernetzwerk</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post4Excerpt">
-										Noch mehr Werkstätten, Gutachter und Anwälte in unserem Netzwerk für noch besseren Service.
+										Noch mehr Werkstätten, Gutachter und Anwälte in unserem Netzwerk für noch
+										besseren Service.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="4">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="4">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
 
 						<!-- Blog Post 5 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500" data-category="tips">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500"
+							data-category="tips">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-5.jpg" alt="Mietwagen Tipps" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-5.jpg" alt="Mietwagen Tipps"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryTips">Tipps & Tricks</span>
 									</div>
@@ -207,22 +221,24 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 18. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 4 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post5Title">Mietwagen: Das müssen Sie wissen</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post5Title">Mietwagen: Das müssen Sie
+										wissen</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post5Excerpt">
-										Anspruch, Dauer, Fahrzeugklasse - alles Wichtige rund um den Ersatzwagen nach einem Unfall.
+										Anspruch, Dauer, Fahrzeugklasse - alles Wichtige rund um den Ersatzwagen nach
+										einem Unfall.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="5">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="5">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
 
 						<!-- Blog Post 6 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="550" data-category="legal">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="550"
+							data-category="legal">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-6.jpg" alt="Schmerzensgeld" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-6.jpg" alt="Schmerzensgeld"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryLegal">Recht & Versicherung</span>
 									</div>
@@ -232,22 +248,24 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 15. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 7 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post6Title">Schmerzensgeld: Berechnung und Ansprüche</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post6Title">Schmerzensgeld: Berechnung
+										und Ansprüche</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post6Excerpt">
-										Wie wird Schmerzensgeld berechnet? Welche Faktoren spielen eine Rolle? Ein Überblick.
+										Wie wird Schmerzensgeld berechnet? Welche Faktoren spielen eine Rolle? Ein
+										Überblick.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="6">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="6">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
 
 						<!-- Blog Post 7 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600" data-category="guides">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="600"
+							data-category="guides">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-7.jpg" alt="Werkstattwahl" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-7.jpg" alt="Werkstattwahl"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryGuides">Ratgeber</span>
 									</div>
@@ -257,22 +275,23 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 12. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 5 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post7Title">Die richtige Werkstatt finden</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post7Title">Die richtige Werkstatt finden
+									</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post7Excerpt">
 										Markenwerkstatt oder freie Werkstatt? Worauf Sie bei der Auswahl achten sollten.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="7">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="7">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
 
 						<!-- Blog Post 8 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="650" data-category="tips">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="650"
+							data-category="tips">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-8.jpg" alt="Unfallfotos" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-8.jpg" alt="Unfallfotos"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryTips">Tipps & Tricks</span>
 									</div>
@@ -282,22 +301,24 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 10. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 4 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post8Title">Unfallstelle richtig dokumentieren</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post8Title">Unfallstelle richtig
+										dokumentieren</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post8Excerpt">
-										Welche Fotos sind wichtig? Wie dokumentiere ich den Unfallort optimal? Praktische Tipps.
+										Welche Fotos sind wichtig? Wie dokumentiere ich den Unfallort optimal?
+										Praktische Tipps.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="8">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="8">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
 
 						<!-- Blog Post 9 -->
-						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="700" data-category="news">
+						<div class="col-12 col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="700"
+							data-category="news">
 							<article class="blog-card">
 								<div class="blog-image">
-									<img src="img/blog/blog-9.jpg" alt="Digitalisierung" onerror="this.src='https://placehold.co/400x250/19599C/ffffff?text=DSR24+Blog'">
+									<img src="img/blog/blog-9.jpg" alt="Digitalisierung"
+										onerror="this.src='https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog'">
 									<div class="blog-category">
 										<span data-i18n="blogPage.categoryNews">Neuigkeiten</span>
 									</div>
@@ -307,13 +328,12 @@
 										<span class="blog-date"><i class="far fa-calendar"></i> 8. Jan 2026</span>
 										<span class="blog-reading-time"><i class="far fa-clock"></i> 6 Min</span>
 									</div>
-									<h3 class="blog-title" data-i18n="blogPage.post9Title">Digitalisierung der Schadenabwicklung</h3>
+									<h3 class="blog-title" data-i18n="blogPage.post9Title">Digitalisierung der
+										Schadenabwicklung</h3>
 									<p class="blog-excerpt" data-i18n="blogPage.post9Excerpt">
 										Wie moderne Technologie die Unfallabwicklung beschleunigt und vereinfacht.
 									</p>
-									<a href="#" class="btn-read-more" data-post-id="9">
-										<span data-i18n="blogPage.readMore">Weiterlesen</span> <i class="fas fa-arrow-right"></i>
-									</a>
+									<a href="#" class="btn-read-more" data-post-id="9">Weiterlesen</a>
 								</div>
 							</article>
 						</div>
@@ -323,8 +343,10 @@
 					<div class="row" id="no-results" style="display: none;">
 						<div class="col-12 text-center py-5">
 							<i class="fas fa-search" style="font-size: 3rem; color: var(--dsr-blue); opacity: 0.5;"></i>
-							<h3 class="mt-3" style="color: var(--dsr-blue);" data-i18n="blogPage.noResults">Keine Ergebnisse gefunden</h3>
-							<p data-i18n="blogPage.noResultsDesc">Versuchen Sie es mit anderen Suchbegriffen oder wählen Sie eine andere Kategorie.</p>
+							<h3 class="mt-3" style="color: var(--dsr-blue);" data-i18n="blogPage.noResults">Keine
+								Ergebnisse gefunden</h3>
+							<p data-i18n="blogPage.noResultsDesc">Versuchen Sie es mit anderen Suchbegriffen oder wählen
+								Sie eine andere Kategorie.</p>
 						</div>
 					</div>
 

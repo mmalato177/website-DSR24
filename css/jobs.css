@@ -26,7 +26,7 @@
 
 .badge {
     padding: 5px 8px;
-    border-radius: 3px;
+    border-radius: 8px;
     letter-spacing: 0.5px;
     font-size: 12px;
     background-color: var(--dsr-yellow);
@@ -51,4 +51,37 @@ color: var(--dsr-blue);
 
 .title {
     font-weight: bold;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 20px 30px;
+}
+
+.modal-title {
+    color: var(--dsr-blue);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#job-content h3{
+    font-weight: 600;
+}
+
+
+.modal-header .btnclose{
+    color:var(--dsr-blue);
+    
+}
+
+.modal-body {
+    padding: 30px;
 }

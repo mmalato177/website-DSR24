@@ -26,89 +26,7 @@
     margin-bottom: 3rem;
 }
 
-/* Search Container */
-.search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
 
-.search-icon {
-    position: absolute;
-    left: 20px;
-    color: var(--dsr-blue);
-    font-size: 1.2rem;
-    z-index: 2;
-}
-
-.search-input {
-    padding: 15px 50px 15px 55px;
-    font-size: 1.1rem;
-    border: 2px solid var(--dsr-blue);
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    width: 100%;
-}
-
-.search-input:focus {
-    outline: none;
-    border-color: var(--dsr-bluehover);
-    box-shadow: 0 0 0 0.2rem rgba(25, 89, 156, 0.15);
-}
-
-.clear-search-btn {
-    position: absolute;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #999;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    display: none;
-    z-index: 2;
-}
-
-.clear-search-btn:hover {
-    color: var(--dsr-blue);
-}
-
-.clear-search-btn.active {
-    display: block;
-}
-
-/* Category Filters */
-.category-filters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-}
-
-.btn-category {
-    padding: 10px 24px;
-    border: 2px solid var(--dsr-blue);
-    background-color: white;
-    color: var(--dsr-blue);
-    border-radius: 25px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-}
-
-.btn-category:hover {
-    background-color: var(--dsr-blue);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.btn-category.active {
-    background-color: var(--dsr-blue);
-    color: white;
-    box-shadow: 0 4px 12px rgba(25, 89, 156, 0.3);
-}
 
 /* Blog Cards */
 .blog-card {
@@ -157,11 +75,11 @@
 .blog-category span {
     display: inline-block;
     padding: 6px 16px;
-    background: var(--dsr-yellow);
-    color: var(--dsr-blue-dark);
+    border: 1px solid #e0e0e0;
+    color: white;
+    background-color: var(--dsr-blue);
+    border-radius: 8px;
     font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -219,16 +137,16 @@
 .btn-read-more {
     display: inline-flex;
     align-items: center;
-    padding: 10px 24px;
+    padding: 6px 20px;
     background: var(--dsr-yellow);
     color: var(--dsr-blue-dark);
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
+    border-radius: 8px;
     transition: all 0.3s ease;
     font-size: 0.95rem;
-    align-self: flex-start;
+    align-self: flex-end;
 }
+
 
 .btn-read-more:hover {
     background: var(--dsr-bluehover);
