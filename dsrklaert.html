@@ -17,7 +17,8 @@
 	<script src="js/jquery-3.7.1.min.js" defer></script>
 	<script src="js/bootstrap.bundle.min.js" defer></script>
 	<script src="js/aos.js" defer></script>
-	<script src="js/partials.js" defer></script>
+	<script src="js/accessibility.js" defer></script>
+    <script src="js/partials.js" defer></script>
 	<script src="js/i18n.js" defer></script>
 	<script src="js/dsr.js" defer></script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -25,29 +26,11 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
 
-	<button id="accessibility-toggle" aria-label="Open accessibility menu">
-		<svg class="menu-svg">
-			<use href="/gfx/icons/wheelchair-move.svg"></use>
-		</svg>
-	</button>
-
-	<!-- Accessibility Menu -->
-	<div id="accessibility-menu" aria-label="Accessibility menu">
-		<div class="menu-actions">
-			<button id="close-menu" aria-label="Close menu">✖</button>
-			<a href="#" id="reset-btn" data-action="reset">Reset</a>
-		</div>
-		<button data-action="high-contrast">High Contrast</button>
-		<button data-action="invert-colors">Invert Colors</button>
-		<button data-action="bw">Black & White</button>
-		<button data-action="font-increase">A+</button>
-		<button data-action="font-decrease">A-</button>
-	</div>
+	<div id="accessibility"></div>
 
 	<div id="main-content">
 		<!-- NAVBAR -->
 		<div id="navbar"></div>
-
 
 		<main class="subpage-main">
 			<!--HEADER SECTION-->
@@ -67,18 +50,18 @@
 				</div>
 			</section>
 
-			 <div class="container pt-3">
-                <a href="index.html" class="back-link d-inline-flex align-items-center">
-                    <i class="fas fa-arrow-left me-3"></i>
-                    <span data-i18n="dsrklaert.backtoIndex">Zurück zu Kundenstimmen</span>
-                </a>
-            </div>
+			<div class="container pt-3">
+				<a href="index.html" class="back-link d-inline-flex align-items-center">
+					<i class="fas fa-arrow-left me-3"></i>
+					<span data-i18n="dsrklaert.backtoIndex">Zurück zu Kundenstimmen</span>
+				</a>
+			</div>
 
 			<!--FLIP CARDS SECTION-->
 			<section class="dsrklaert-cards py-5">
 				<div class="container">
 					<div class="row g-4">
-						
+
 						<!-- Card 1: Schadengutachten -->
 						<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
 							<div class="flip-card">
@@ -92,7 +75,9 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Schadengutachten</h4>
-										<p>Ein Schadengutachten ist eine detaillierte Bewertung der Unfallschäden an Ihrem Fahrzeug durch einen unabhängigen Kfz-Sachverständigen. Es dokumentiert Art und Umfang der Schäden sowie die Reparaturkosten.</p>
+										<p>Ein Schadengutachten ist eine detaillierte Bewertung der Unfallschäden an
+											Ihrem Fahrzeug durch einen unabhängigen Kfz-Sachverständigen. Es
+											dokumentiert Art und Umfang der Schäden sowie die Reparaturkosten.</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -114,7 +99,9 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Nutzungsausfall</h4>
-										<p>Nutzungsausfall bezeichnet die Entschädigung für den Zeitraum, in dem Sie Ihr beschädigtes Fahrzeug nicht nutzen können. Diese wird unabhängig davon gezahlt, ob Sie tatsächlich ein Ersatzfahrzeug mieten.</p>
+										<p>Nutzungsausfall bezeichnet die Entschädigung für den Zeitraum, in dem Sie Ihr
+											beschädigtes Fahrzeug nicht nutzen können. Diese wird unabhängig davon
+											gezahlt, ob Sie tatsächlich ein Ersatzfahrzeug mieten.</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -136,7 +123,9 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Mietwagen</h4>
-										<p>Nach einem unverschuldeten Unfall haben Sie Anspruch auf ein Ersatzfahrzeug. Die Kosten trägt die gegnerische Versicherung. Der Mietwagen sollte in Ausstattung und Klasse Ihrem beschädigten Fahrzeug entsprechen.</p>
+										<p>Nach einem unverschuldeten Unfall haben Sie Anspruch auf ein Ersatzfahrzeug.
+											Die Kosten trägt die gegnerische Versicherung. Der Mietwagen sollte in
+											Ausstattung und Klasse Ihrem beschädigten Fahrzeug entsprechen.</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -158,7 +147,9 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Restwert</h4>
-										<p>Der Restwert ist der Wert, den Ihr beschädigtes Fahrzeug noch hat. Bei einem wirtschaftlichen Totalschaden wird dieser vom Wiederbeschaffungswert abgezogen, um die Entschädigungssumme zu berechnen.</p>
+										<p>Der Restwert ist der Wert, den Ihr beschädigtes Fahrzeug noch hat. Bei einem
+											wirtschaftlichen Totalschaden wird dieser vom Wiederbeschaffungswert
+											abgezogen, um die Entschädigungssumme zu berechnen.</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -180,7 +171,9 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Merkantiler Minderwert</h4>
-										<p>Auch nach fachgerechter Reparatur verliert ein Unfallfahrzeug an Wert. Dieser Wertverlust wird als merkantiler Minderwert bezeichnet und kann von der gegnerischen Versicherung geltend gemacht werden.</p>
+										<p>Auch nach fachgerechter Reparatur verliert ein Unfallfahrzeug an Wert. Dieser
+											Wertverlust wird als merkantiler Minderwert bezeichnet und kann von der
+											gegnerischen Versicherung geltend gemacht werden.</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -202,7 +195,10 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Wiederbeschaffungswert</h4>
-										<p>Der Wiederbeschaffungswert ist der Betrag, den Sie aufwenden müssten, um ein vergleichbares Fahrzeug gleichen Typs und Alters mit ähnlicher Laufleistung zu erwerben. Dies ist die Grundlage für die Entschädigung bei Totalschaden.</p>
+										<p>Der Wiederbeschaffungswert ist der Betrag, den Sie aufwenden müssten, um ein
+											vergleichbares Fahrzeug gleichen Typs und Alters mit ähnlicher Laufleistung
+											zu erwerben. Dies ist die Grundlage für die Entschädigung bei Totalschaden.
+										</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -224,7 +220,10 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Totalschaden</h4>
-										<p>Von einem Totalschaden spricht man, wenn die Reparaturkosten den Wiederbeschaffungswert übersteigen. Es gibt den wirtschaftlichen und den technischen Totalschaden. Bei Ersterem ist eine Reparatur unwirtschaftlich, bei Letzterem technisch nicht mehr möglich.</p>
+										<p>Von einem Totalschaden spricht man, wenn die Reparaturkosten den
+											Wiederbeschaffungswert übersteigen. Es gibt den wirtschaftlichen und den
+											technischen Totalschaden. Bei Ersterem ist eine Reparatur unwirtschaftlich,
+											bei Letzterem technisch nicht mehr möglich.</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -246,7 +245,10 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Haftpflichtversicherung</h4>
-										<p>Die Kfz-Haftpflichtversicherung ist gesetzlich vorgeschrieben und deckt Schäden ab, die Sie anderen mit Ihrem Fahrzeug zufügen. Bei einem unverschuldeten Unfall zahlt die Haftpflicht des Unfallverursachers Ihre Schäden.</p>
+										<p>Die Kfz-Haftpflichtversicherung ist gesetzlich vorgeschrieben und deckt
+											Schäden ab, die Sie anderen mit Ihrem Fahrzeug zufügen. Bei einem
+											unverschuldeten Unfall zahlt die Haftpflicht des Unfallverursachers Ihre
+											Schäden.</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -268,7 +270,9 @@
 									</div>
 									<div class="flip-card-back">
 										<h4>Reparaturkosten</h4>
-										<p>Bei einem unverschuldeten Unfall übernimmt die gegnerische Versicherung die vollständigen Reparaturkosten. Sie haben freie Werkstattwahl und Anspruch auf Reparatur mit Originalteilen in einer Fachwerkstatt.</p>
+										<p>Bei einem unverschuldeten Unfall übernimmt die gegnerische Versicherung die
+											vollständigen Reparaturkosten. Sie haben freie Werkstattwahl und Anspruch
+											auf Reparatur mit Originalteilen in einer Fachwerkstatt.</p>
 										<div class="back-icon">
 											<i class="fa-solid fa-rotate-left"></i>
 										</div>
@@ -288,7 +292,8 @@
 						<div class="col-lg-8 text-center" data-aos="fade-up">
 							<h2 class="fw-bold mb-3">Noch Fragen?</h2>
 							<p class="lead text-muted mb-4">
-								Unser Team steht Ihnen gerne zur Verfügung und beantwortet alle Ihre Fragen rund um Unfallschäden.
+								Unser Team steht Ihnen gerne zur Verfügung und beantwortet alle Ihre Fragen rund um
+								Unfallschäden.
 							</p>
 							<a href="index.html#contact" class="btn btn-yellow btn-lg px-5">
 								Kontakt aufnehmen
@@ -306,4 +311,5 @@
 
 	</div>
 </body>
+
 </html>

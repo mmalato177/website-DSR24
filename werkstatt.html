@@ -18,36 +18,22 @@
     <script src="js/aos.js" defer></script>
     <script src="js/i18n.js" defer></script>
     <script src="js/dsr.js" defer></script>
-    <script src="/js/partials.js"></script>
+    <script src="js/accessibility.js" defer></script>
+    <script src="js/partials.js" defer></script>
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
-    <button id="accessibility-toggle" aria-label="Open accessibility menu">
-        <svg class="menu-svg">
-            <use href="/gfx/icons/wheelchair-move.svg"></use>
-        </svg>
-    </button>
+    <div id="accessibility"></div>
 
-    <!-- Accessibility Menu -->
-    <div id="accessibility-menu" aria-label="Accessibility menu">
-        <div class="menu-actions">
-            <button id="close-menu" aria-label="Close menu">✖</button>
-            <a href="#" id="reset-btn" data-action="reset">Reset</a>
-        </div>
-        <button data-action="high-contrast">High Contrast</button>
-        <button data-action="invert-colors">Invert Colors</button>
-        <button data-action="bw">Black & White</button>
-        <button data-action="font-increase">A+</button>
-        <button data-action="font-decrease">A-</button>
-    </div>
 
     <div id="main-content">
         <!-- Navigation -->
         <div id="navbar"></div>
         <!-- Main Content-->
         <main class="subpage-main">
-            <!-- Header with Back Button -->   
+            <!-- Header with Back Button -->
             <section class="subpage-header">
                 <div class="container">
                     <div class="text-center" data-aos="fade-up">

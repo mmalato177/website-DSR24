@@ -20,6 +20,7 @@ $(document).ready(function () {
 
 document.addEventListener("scroll", function () {
 	const navbar = document.querySelector("nav.navbar");
+	if (!navbar) return;
 
 	if (window.scrollY > 100) {
 		navbar.classList.add("nav-scrolled");
@@ -28,6 +29,7 @@ document.addEventListener("scroll", function () {
 	}
 });
 
+
 /*******************************/
 /******  BRANDS SLIDER ******/
 /*******************************/
@@ -35,18 +37,19 @@ document.addEventListener("scroll", function () {
 const track = document.querySelector(".brands-track");
 const dots = document.querySelectorAll(".dot");
 
-const STEP = 320; 
+if (track && dots.length) {
+	const STEP = 320;
 
-dots.forEach(dot => {
-	dot.addEventListener("click", () => {
-		const step = dot.dataset.step;
+	dots.forEach(dot => {
+		dot.addEventListener("click", () => {
+			const step = dot.dataset.step;
+			track.style.transform = `translateX(-${STEP * step}px)`;
 
-		track.style.transform = `translateX(-${STEP * step}px)`;
-
-		dots.forEach(d => d.classList.remove("active"));
-		dot.classList.add("active");
+			dots.forEach(d => d.classList.remove("active"));
+			dot.classList.add("active");
+		});
 	});
-});
+}
 
 // Portfolio Filter
 const portfolioFilters = document.querySelectorAll(".portfolio-filters button");
@@ -78,6 +81,8 @@ portfolioFilters.forEach(filter => {
 	});
 });
 
+
+
 // Video Modal - Stop video when modal closes
 const videoModal = document.getElementById('videoModal');
 const videoIframe = document.getElementById('videoIframe');
@@ -90,75 +95,6 @@ if (videoModal) {
 
 	videoModal.addEventListener('hide.bs.modal', function () {
 		videoIframe.src = '';
-	});
-}
-
-// Accessibility Menu
-function initAccessibilityMenu() {
-	const toggleBtn = document.getElementById("accessibility-toggle");
-	const menu = document.getElementById("accessibility-menu");
-	const closeBtn = document.getElementById("close-menu");
-	const content = document.getElementById("main-content");
-	const resetBtn = document.getElementById("reset-btn");
-
-	// 🔒 Guard: component not on this page
-	if (!toggleBtn || !menu || !closeBtn || !content) return;
-
-	let fontSize = parseFloat(getComputedStyle(content).fontSize);
-
-	/* Reset */
-	if (resetBtn) {
-		resetBtn.addEventListener("click", e => {
-			e.preventDefault();
-			resetAll();
-		});
-	}
-
-	function resetAll() {
-		content.classList.remove("high-contrast", "invert-colors", "bw");
-		fontSize = 16;
-		content.style.fontSize = fontSize + "px";
-	}
-
-	/* Open menu */
-	toggleBtn.addEventListener("click", () => {
-		menu.classList.add("open");
-		toggleBtn.style.opacity = "0";
-		toggleBtn.style.pointerEvents = "none";
-	});
-
-	/* Close menu */
-	closeBtn.addEventListener("click", () => {
-		menu.classList.remove("open");
-		toggleBtn.style.opacity = "1";
-		toggleBtn.style.pointerEvents = "auto";
-	});
-
-	/* Actions */
-	menu.querySelectorAll("button[data-action]").forEach(btn => {
-		btn.addEventListener("click", () => {
-			const action = btn.dataset.action;
-
-			switch (action) {
-				case "high-contrast":
-					content.classList.toggle("high-contrast");
-					break;
-				case "invert-colors":
-					content.classList.toggle("invert-colors");
-					break;
-				case "bw":
-					content.classList.toggle("bw");
-					break;
-				case "font-increase":
-					fontSize += 2;
-					content.style.fontSize = fontSize + "px";
-					break;
-				case "font-decrease":
-					fontSize = Math.max(12, fontSize - 2);
-					content.style.fontSize = fontSize + "px";
-					break;
-			}
-		});
 	});
 }
 
