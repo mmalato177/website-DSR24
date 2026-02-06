@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DSR24 News - Aktuelle Tipps und Neuigkeiten rund um Unfallschäden">
+    <meta name="author" content="DSR24">
+    <title>News - DSR24</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/solid.min.css" rel="stylesheet">
+    <link href="css/brands.min.css" rel="stylesheet">
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <link href="css/formate.css" rel="stylesheet">
+    <link href="css/jobs.css" rel="stylesheet">
+    <link href="css/news.css" rel="stylesheet">
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/aos.js" defer></script>
+    <script src="js/jobs.js" defer></script>
+
+    <script src="js/i18n.js" defer></script>
+    <script src="js/dsr.js" defer></script>
+    <script src="js/accessibility.js" defer></script>
+    <script src="js/partials.js" defer></script>
+    <script src="js/blog.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css"
+        integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
+
+    <div id="accessibility"></div>
+
+    <div id="main-content">
+
+        <div id="navbar"></div>
+
+        <main class="subpage-main">
+            <section class="subpage-header">
+                <div class="container">
+                    <div class="text-center" data-aos="fade-up">
+                        <h1 class="display-4 fw-bold mb-3">
+                            <span class="hashtag">#</span>
+                            <span class="ms-0" id="job-title"></span>
+                        </h1>
+                        <p class="lead text-muted mb-4">
+                            <span id="job-location"></span>
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <div class="container py-5" data-aos="fade-right">
+                <a href="jobs.html#jobs-section" class="back-link d-inline-flex align-items-center">
+                    <i class="fas fa-arrow-left me-3"></i>
+                    <span data-i18n="newsPage.backToNews">Back</span>
+                </a>
+            </div>
+
+            <section class="job-details-section pt-0 data-aos="fade-up">
+                <div class="container">
+                    <div class="row g-4 align-items-stretch"> 
+                        <!-- Job Details Column -->
+                        <div class="col-lg-7" data-aos="fade-right">
+                            <div class="card shadow-sm rounded p-4 h-100 details-card">
+                                <h3 class="fw-bold mb-3">Job Description</h3>
+                                <p id="job-description" class="text-muted"></p>
+
+                                <h4 class="fw-bold mt-4 mb-3">Requirements</h4>
+                                <ul id="job-requirements" class="list-unstyled mb-0"></ul>
+                                <p data-i18n="aboutpage.subtitle" class="mt-2"></p>
+                            </div>
+                        </div>
+
+                        <!-- Apply Form Column -->
+                        <div class="col-lg-5" data-aos="fade-left">
+                            <div class="card shadow-sm rounded p-4 h-100 bg-light">
+                                <h4 class="fw-bold mb-4">Apply for this position</h4>
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Full name</label>
+                                        <input type="text" class="form-control" placeholder="John Doe" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" placeholder="email@example.com"
+                                            required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">CV (PDF)</label>
+                                        <input type="file" class="form-control" accept=".pdf">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Message</label>
+                                        <textarea class="form-control" rows="4"
+                                            placeholder="Write a short message..."></textarea>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <div id="footer"></div>
+
+    </div>
+
+</body>
+
+</html>

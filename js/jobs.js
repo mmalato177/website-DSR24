@@ -131,27 +131,96 @@ const jobData = {
     },
 };
 
-jobButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        const jobId = this.dataset.jobId;
-        const data = jobData[jobId];
+const jobs = {
+  "web-designer": {
+    title: "Web Designer",
+    location: "Germany · Full time",
+    description: "We are looking for a creative Web Designer to join our team.",
+    requirements: [
+      "Strong UI/UX skills",
+      "HTML, CSS, Figma",
+      "Attention to detail"
+    ]
+  },
+  "frontend-developer": {
+    title: "Front-end Developer",
+    location: "Remote",
+    description: "Join our frontend team working with modern technologies.",
+    requirements: [
+      "JavaScript / React",
+      "REST APIs",
+      "Git experience"
+    ]
+  },
+  "web-developer": {
+    title: "Web Developer",
+    location: "Germany · Full time",
+    description: "We are looking for a skilled Web Developer to build our platform.",
+    requirements: [
+      "Full-stack development",
+      "Node.js, Express",
+      "Database management"
+    ]
+  },
+  "backend-developer": {
+    title: "Back-end Developer",
+    location: "Remote",
+    description: "Join our backend team working with modern technologies.",
+    requirements: [
+      "Node.js / Express",
+      "Database management",
+      "API development"
+    ]
+    },
+    "marketing-trainee": {
+    title: "Marketing Trainee",
+    location: "Germany · Full time",
+    description: "Kickstart your marketing career with us as a trainee.",
+    requirements: [
+      "Passion for marketing",
+      "Strong communication skills",
+      "Eagerness to learn"
+    ]
+  },
+  "analyst": {
+    title: "Analyst",
+    location: "Germany · Full time",
+    description: "We are looking for a data-driven Analyst to join our team.",
+    requirements: [
+      "Data analysis skills",
+      "Experience with SQL and Excel",
+      "Critical thinking"
+    ]
+  }
+};
 
-        if (data && jobModal) {
-            const modalTitle = jobModal.querySelector('#jobModalLabel');
-            const modalContent = jobModal.querySelector('#job-content');
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const jobId = params.get("id");
 
-            if (modalTitle) modalTitle.textContent = data.title;
+  // if job not found, stop
+  if (!jobs[jobId]) return;
 
-            if (modalContent) {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(data.content, 'text/html');
-                modalContent.replaceChildren(...doc.body.childNodes);
-            }
+  // select your DOM elements
+  const titleEl = document.getElementById("job-title");
+  const locationEl = document.getElementById("job-location");
+  const descEl = document.getElementById("job-description");
+  const reqList = document.getElementById("job-requirements");
 
-            const bsModal = new bootstrap.Modal(jobModal);
-            bsModal.show();
-        }
+  // populate content
+  if (titleEl) titleEl.textContent = jobs[jobId].title;
+  if (locationEl) locationEl.textContent = jobs[jobId].location;
+  if (descEl) descEl.textContent = jobs[jobId].description;
+
+  if (reqList) {
+    reqList.innerHTML = ""; // safety
+    jobs[jobId].requirements.forEach(r => {
+      const li = document.createElement("li");
+      li.textContent = r;
+      reqList.appendChild(li);
     });
+  }
 });
+
+

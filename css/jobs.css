@@ -1,57 +1,21 @@
-.jobs-section{
+.jobs-section {
     padding-top: 0px;
 }
+
 .shadow {
-    box-shadow: 0 0 3px rgb(53 64 78 / 20%) ;
+    box-shadow: 0 0 3px rgb(53 64 78 / 20%);
 }
+
 .rounded {
-    border-radius: 5px ;
-}
-.bg-light {
-    background-color: #f7f8fa ;
-}
-
-
-.jobs-section .card {
-  transition:
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.35s ease;
-  will-change: transform, box-shadow;
-}
-
-.jobs-section .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(53, 64, 78, 0.18);
-}
-
-.badge {
-    padding: 5px 8px;
-    border-radius: 8px;
-    letter-spacing: 0.5px;
-    font-size: 12px;
-    background-color: var(--dsr-yellow);
-}
-
-.btn {
-    background-color: var(--dsr-blue);
-    padding: 7px 14px;
-    outline: none;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    transition: all 0.3s;
-    font-weight: 600;
     border-radius: 5px;
 }
 
-a {
-text-decoration:none;  
-color: var(--dsr-blue);  
+.bg-light {
+    background-color: #f7f8fa;
 }
 
-.title {
-    font-weight: bold;
-}
+
+
 
 /* Modal Styles */
 .modal-content {
@@ -72,16 +36,207 @@ color: var(--dsr-blue);
     font-weight: 600;
 }
 
-#job-content h3{
-    font-weight: 600;
-}
+.modal-header .btnclose {
+    color: var(--dsr-blue);
 
-
-.modal-header .btnclose{
-    color:var(--dsr-blue);
-    
 }
 
 .modal-body {
     padding: 30px;
 }
+
+/* Job Card Styles*/
+
+.job-card {
+    background: var(--bs-gray-100);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    padding:1rem;
+}
+.job-card-inner {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s ease;
+}
+
+.job-card:hover .job-card-inner {
+    transform: translateY(-6px);
+}
+
+
+.job-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-left: 4px solid transparent;
+    transition: border-color 0.35s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(53, 64, 78, 0.18);
+}
+
+.job-card:hover::before {
+    border-color: var(--dsr-blue);
+}
+
+.job-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.job-title {
+  font-weight: 600;
+  color: #666;
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+
+.job-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 1rem;
+    color: #6b7280;
+    margin-top: 12px;
+}
+
+.job-meta i {
+    margin-right: 6px;
+    color: var(--dsr-blue);
+}
+
+.job-card-footer {
+    margin-top: 22px;
+}
+
+.btn-apply {
+    background: var(--dsr-blue);
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    z-index: 999;
+}
+
+.btn.btn-apply:hover {
+    background-color: var(--dsr-bluehover);
+    cursor: pointer;
+    color: var(--dsr-yellow);
+}
+
+
+.job-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 8px;
+    letter-spacing: 0.4px;
+    width: fit-content;
+}
+
+/* Variants */
+.badge-fulltime {
+    background: rgba(34, 197, 94, 0.15);
+    color: #15803d;
+}
+
+.badge-remote {
+    background: rgba(59, 130, 246, 0.15);
+    color: #1d4ed8;
+}
+
+.badge-contract {
+    background: rgba(234, 179, 8, 0.2);
+    color: #92400e;
+}
+
+.badge-wfh {
+    background: rgba(168, 85, 247, 0.18);
+    color: #6b21a8;
+}
+
+
+/* Job Description Card */
+.card {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Job Requirements */
+#job-requirements li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+#job-requirements li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--dsr-blue);
+}
+
+/* Apply Form Card */
+.bg-light {
+    background-color: #f9fafc;
+}
+
+.btn-apply {
+    background: var(--dsr-blue);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 12px 18px;
+    transition: all 0.3s ease;
+}
+
+.btn-apply:hover {
+    background: var(--dsr-bluehover);
+    color: var(--dsr-yellow);
+    transform: translateY(-2px);
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+
+.details-card {
+    position: relative;
+    border-left: 4px solid var(--dsr-blue); /* permanent blue border */
+}
+
+/* Optional: add small spacing so content doesn’t touch the border */
+.details-card > * {
+    padding-left: 12px;
+}
+.details-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.row.align-items-stretch {
+    display: flex;
+    align-items: stretch;
+}
+

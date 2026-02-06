@@ -64,9 +64,13 @@ body {
 	background:var(--dsr-blue);
 	border-color:var(--dsr-blue-dark);
 	color:#fff;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .btn-primary:hover {
 	background:var(--dsr-bluehover);
+  transform: translateY(-2px);
 }
 .btn-primary:active {
 	background:linear-gradient( #19599C, #005694 );
