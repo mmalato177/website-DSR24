@@ -6,10 +6,16 @@ async function loadPartial(selector, url, init) {
   if (!res.ok) return;
 
   const html = await res.text();
-  const template = document.createElement("template");
-  template.innerHTML = html;
+  let fragment;
+  if (window.dsrSanitizeFragment) {
+    fragment = window.dsrSanitizeFragment(html);
+  } else {
+    const template = document.createElement("template");
+    template.innerHTML = html;
+    fragment = template.content.cloneNode(true);
+  }
 
-  el.appendChild(template.content.cloneNode(true));
+  el.appendChild(fragment);
 
   init?.(el);
 }

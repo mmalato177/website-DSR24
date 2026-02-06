@@ -251,20 +251,20 @@ function populateVideoSection(data) {
  * Populate story section
  */
 function populateStorySection(data) {
-    // Using DOMParser for safe HTML parsing (data is from trusted source)
-    const parser = new DOMParser();
-    
-    const sitDoc = parser.parseFromString(data.situation, 'text/html');
-    document.getElementById('situationContent').replaceChildren(...sitDoc.body.childNodes);
-    
-    const probDoc = parser.parseFromString(data.problem, 'text/html');
-    document.getElementById('problemContent').replaceChildren(...probDoc.body.childNodes);
-    
-    const solDoc = parser.parseFromString(data.solution, 'text/html');
-    document.getElementById('solutionContent').replaceChildren(...solDoc.body.childNodes);
-    
-    const resDoc = parser.parseFromString(data.result, 'text/html');
-    document.getElementById('resultContent').replaceChildren(...resDoc.body.childNodes);
+    const sanitize = window.dsrSanitizeFragment
+        ? window.dsrSanitizeFragment
+        : (html) => document.createTextNode(html);
+
+    const setContent = (id, html) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.replaceChildren(sanitize(html));
+    };
+
+    setContent('situationContent', data.situation);
+    setContent('problemContent', data.problem);
+    setContent('solutionContent', data.solution);
+    setContent('resultContent', data.result);
 }
 
 /**

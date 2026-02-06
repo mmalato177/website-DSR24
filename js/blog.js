@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearSearchBtn = document.getElementById('clear-search');
     const blogCards = document.querySelectorAll('#blog-grid .col-12');
     const noResults = document.getElementById('no-results');
+    const fallbackImage = 'https://placehold.co/400x250/F7F9FC/666?text=DSR24+Blog';
+
+    document.querySelectorAll('.blog-image img').forEach(img => {
+        img.addEventListener('error', () => {
+            if (img.dataset.fallbackApplied) return;
+            img.dataset.fallbackApplied = 'true';
+            img.src = fallbackImage;
+        });
+    });
 
     if (searchInput) {
         searchInput.addEventListener('input', function() {

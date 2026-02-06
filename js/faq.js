@@ -430,10 +430,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (modalTitle) modalTitle.textContent = data.title;
                 if (modalContent) {
-                    // Using DOMParser for safe HTML parsing
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(data.content, 'text/html');
-                    modalContent.replaceChildren(...doc.body.childNodes);
+                    const safeFragment = window.dsrSanitizeFragment
+                        ? window.dsrSanitizeFragment(data.content)
+                        : document.createTextNode(data.content);
+                    modalContent.replaceChildren(safeFragment);
                 }
                 
                 // Show modal

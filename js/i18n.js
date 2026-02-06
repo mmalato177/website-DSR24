@@ -1,4 +1,73 @@
 // i18n.js - Internationalization support
+function dsrIsSafeUrl(value) {
+    if (!value) return true;
+    const trimmed = value.trim().toLowerCase();
+    if (trimmed.startsWith('#')) return true;
+    if (trimmed.startsWith('/')) return true;
+    if (trimmed.startsWith('./') || trimmed.startsWith('../')) return true;
+    if (trimmed.startsWith('http://') || trimmed.startsWith('https://') || trimmed.startsWith('//')) return true;
+    if (trimmed.startsWith('mailto:') || trimmed.startsWith('tel:')) return true;
+    return false;
+}
+
+function dsrSanitizeHTMLToFragment(html) {
+    const fragment = document.createDocumentFragment();
+    if (typeof html !== 'string') return fragment;
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const unsafeTags = new Set(['script', 'style', 'iframe', 'object', 'embed', 'link', 'meta', 'base']);
+    const urlAttrs = new Set(['href', 'src', 'srcset', 'xlink:href', 'formaction', 'action']);
+
+    const elements = doc.body.querySelectorAll('*');
+    elements.forEach(el => {
+        const tag = el.tagName.toLowerCase();
+        if (unsafeTags.has(tag)) {
+            el.remove();
+            return;
+        }
+
+        Array.from(el.attributes).forEach(attr => {
+            const name = attr.name.toLowerCase();
+            const value = attr.value;
+
+            if (name.startsWith('on') || name === 'style') {
+                el.removeAttribute(attr.name);
+                return;
+            }
+
+            if (urlAttrs.has(name)) {
+                if (name === 'srcset') {
+                    const parts = value.split(',').map(p => p.trim()).filter(Boolean);
+                    const allSafe = parts.every(p => dsrIsSafeUrl(p.split(/\s+/)[0]));
+                    if (!allSafe) {
+                        el.removeAttribute(attr.name);
+                    }
+                    return;
+                }
+
+                if (!dsrIsSafeUrl(value)) {
+                    el.removeAttribute(attr.name);
+                }
+            }
+        });
+
+        if (el.getAttribute('target') === '_blank') {
+            const rel = el.getAttribute('rel') || '';
+            const relParts = rel.split(/\s+/).filter(Boolean);
+            if (!relParts.includes('noopener')) relParts.push('noopener');
+            if (!relParts.includes('noreferrer')) relParts.push('noreferrer');
+            el.setAttribute('rel', relParts.join(' ').trim());
+        }
+    });
+
+    fragment.append(...Array.from(doc.body.childNodes));
+    return fragment;
+}
+
+if (!window.dsrSanitizeFragment) {
+    window.dsrSanitizeFragment = dsrSanitizeHTMLToFragment;
+}
 const i18n = {
     currentLang: 'de', // Default language
     translations: {},
@@ -55,10 +124,8 @@ const i18n = {
                 if (attr) {
                     element.setAttribute(attr, translation);
                 } else {
-                    // Parse HTML safely (translations are from trusted source)
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(translation, 'text/html');
-                    element.replaceChildren(...doc.body.childNodes);
+                    const safeFragment = dsrSanitizeHTMLToFragment(translation);
+                    element.replaceChildren(safeFragment);
                 }
             } else {
                 console.warn(`Translation not found for key: ${key}`);
